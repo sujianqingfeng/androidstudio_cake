@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 选中 -->
+    <item android:drawable="@drawable/home_button_press" android:state_selected="true"></item>
+    <!-- 按下 -->
+    <item android:drawable="@drawable/home_button_press" android:state_pressed="true"></item>
+    <!-- 默认 -->
+    <item android:drawable="@drawable/home_button_normal"></item>
+
+</selector>

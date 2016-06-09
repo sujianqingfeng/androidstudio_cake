@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="text">#ef8080</color>
+    <color name="longin">#ffffff</color>
+    <color name="bt_bg">#5eb6c4</color>
+    <color name="bt_color">#e2d7d7</color>
+    <color name="white">#ffffff</color>
+    <color name="guide_text_press">#8974AE</color>
+    <color name="radiobutton_text_press">#FAD611</color>
+    <color name="radiobutton_text_normal">#7F7F7F</color>
+    <color name="app_background">#FAFCF9</color>
+    <color name="small_drake_line">#E1E1E1</color>
+    <color name="home_bg">#EFEEEE</color>
+    <color name="blue">#18B4ED</color>
+    <color name="white_drak">#D0EFFA</color>
+    <color name="transparent">#00000000</color>
+    <color name="drak">#000000</color>
+    <color name="drak_20">#20000000</color>
+    <color name="red">#f5df1619</color>
+</resources>

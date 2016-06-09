@@ -1,0 +1,52 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    android:orientation="vertical"
+    tools:context="com.sujian.finalandroid.activity.HomeActivity">
+
+    <include layout="@layout/top_title" />
+
+    <com.sujian.finalandroid.ui.TabViewPager
+        android:id="@+id/vp_tab"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/small_drake_line" />
+
+    <RadioGroup
+        android:id="@+id/rg_group"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_home"
+            style="@style/main_tab_bottom"
+            android:checked="true"
+            android:drawableTop="@drawable/home_button_bg_selector"
+            android:text="首页"
+            android:textColor="@color/radiobutton_text_selector" />
+
+        <RadioButton
+            android:id="@+id/rb_cakeshop"
+            style="@style/main_tab_bottom"
+            android:drawableTop="@drawable/shop_button_bg_selector"
+            android:text="蛋糕铺"
+            android:textColor="@color/radiobutton_text_selector" />
+
+        <RadioButton
+            android:id="@+id/rb_shopcar"
+            style="@style/main_tab_bottom"
+            android:drawableTop="@drawable/car_button_bg_selector"
+            android:text="购物车"
+            android:textColor="@color/radiobutton_text_selector" />
+    </RadioGroup>
+
+</LinearLayout>

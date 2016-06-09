@@ -1,0 +1,23 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/home_bg"
+    android:orientation="vertical"
+    android:weightSum="1"
+    tools:context="com.sujian.finalandroid.activity.AboutUsActivity">
+
+    <include layout="@layout/top_title" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="低糖、低脂、清淡和营养平衡的蛋糕，将更为人们所重视。 对于高糖、高脂的饮食，被现代人视为烘水猛兽，科学健康的膳食已在全世界成为人们追求的目标。这就要求蛋糕改变高糖、高脂肪、高热量的现状、向清淡、营养平衡的方向发展，如低糖、无糖、或用非糖甜味剂部分替代蔗糖。这样的蛋糕可给糖尿病、肥胖症、高血压等疾病患者带来福音。添加食物纤维素的蛋糕，可利用大豆蛋白粉、麸皮、燕麦碎粒等制成高蛋白、富含纤维素、矿物质营养蛋糕。这将是二十一世纪最具诱惑力的产品之一。"
+        android:id="@+id/textView2"
+        android:layout_gravity="center_horizontal" />
+
+
+</LinearLayout>

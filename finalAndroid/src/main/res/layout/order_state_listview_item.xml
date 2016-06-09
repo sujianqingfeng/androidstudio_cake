@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent">
+
+    <com.alorma.timeline.RoundTimelineView
+        android:id="@+id/rtv_timeline"
+        android:layout_width="?android:listPreferredItemHeight"
+        android:layout_height="95dp"
+        app:timeline_indicatorSize="15dp"
+        app:timeline_lineStyle="linear"
+        android:layout_alignParentTop="true"
+        app:timeline_type="middle" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/rtv_timeline"
+        android:id="@+id/tv_order_state_item_title"
+        android:layout_margin="10dp"
+        android:textSize="15sp"
+        android:text="下单成功" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:id="@+id/tv_order_state_item_time"
+        android:layout_margin="10dp"
+        android:textSize="15sp"
+        android:text="2016-5-20 5:20" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_order_state_item_time"
+        android:id="@+id/tv_order_state_item_content"
+        android:layout_margin="10dp"
+        android:textSize="15sp"
+        android:layout_toRightOf="@+id/rtv_timeline"
+        android:text="下单成功 单号：12487956589877845" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginTop="15dp"
+        android:id="@+id/v_order_state_line"
+        android:layout_below="@+id/tv_order_state_item_content"
+        android:background="@color/small_drake_line" />
+
+</RelativeLayout>

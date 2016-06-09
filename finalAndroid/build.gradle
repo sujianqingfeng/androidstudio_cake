@@ -1,0 +1,53 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+
+    defaultConfig {
+        applicationId "com.sujian.finalandroid.activity"
+        minSdkVersion 15
+        targetSdkVersion 21
+        multiDexEnabled true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+repositories {
+    flatDir {
+        dirs 'libs' //就是你放aar的目录地址
+    }
+}
+
+dependencies {
+    compile project(':viewpager_library')
+    compile project(':slidingmenu_llbrary')
+    compile project(':pullToRefresh_library')
+    compile project(':zing_lib')
+    compile project(':wheel_library')
+    compile files('libs/xutils-3.3.32.jar')
+    compile files('libs/BaiduLBS_Android.jar')
+    compile name: 'SMSSDK-2.0.2', ext: 'aar'
+    compile name: 'SMSSDKGUI-2.0.2', ext: 'aar'
+    compile project(':one_share_library')
+    compile files('libs/universal-image-loader-1.9.5.jar')
+    compile project(':checkbox_library')
+    compile 'com.fyales.android:library:1.0.2'
+    compile 'com.android.support:support-v4:23.4.0'
+    compile 'com.github.alorma:timelineview:2.3.0'
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'cn.bingoogolapple:bga-badgeview:1.1.1@aar'
+    compile 'com.android.support:design:23.4.0'
+    compile 'com.wx.wheelview:wheelview:1.3.3'
+    compile 'com.zhy:okhttputils:2.6.1'
+    compile 'com.google.code.gson:gson:2.4'
+    compile 'com.mobsandgeeks:android-saripaar:1.0.2'
+    compile 'com.jcodecraeer:xrecyclerview:1.2.7'
+
+}

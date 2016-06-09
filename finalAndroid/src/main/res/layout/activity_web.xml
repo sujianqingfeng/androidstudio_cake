@@ -1,0 +1,38 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#00FFFF"
+    android:orientation="vertical"
+    tools:context="com.sujian.finalandroid.activity.WebActivity">
+
+    <include layout="@layout/top_title" />
+
+    <WebView
+        android:id="@+id/wv_web"
+        android:layout_below="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+    <com.sujian.finalandroid.ui.BadgeFloatingActionButton
+        android:id="@+id/bfab_web_shopcar"
+        android:layout_height="50dp"
+        android:layout_width="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/app_icon"
+        app:badge_dragable="true"
+        app:badge_horizontalMargin="0dp"
+        app:badge_padding="6dp"
+        app:badge_textSize="12sp"
+        app:badge_verticalMargin="0dp"
+        app:borderWidth="1dp"
+        app:fabSize="normal" />
+
+</RelativeLayout>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">西点坊</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_guide_acrivity">GuideAcrivity</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="stratExperience">开 始 体 验</string>
+    <string name="title_activity_register">RegisterActivity</string>
+    <string name="title_activity_my_order">MyOrderActivity</string>
+    <string name="title_activity_my_news">MyNewsActivity</string>
+    <string name="title_activity_my_collection">MyCollectionActivity</string>
+    <string name="title_activity_my_settings">MySettingsActivity</string>
+    <string name="title_activity_search">SearchActivity</string>
+    <string name="title_activity_goods_list">GoodsListActivity</string>
+    <string name="title_activity_web">WebActivity</string>
+    <string name="title_activity_feedback">FeedbackActivity</string>
+    <string name="title_activity_about_us">AboutUsActivity</string>
+    <string name="title_activity_updata">UpdataActivity</string>
+    <string name="load_error">加载失败,点击重试</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

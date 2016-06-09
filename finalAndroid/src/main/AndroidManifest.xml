@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.sujian.finalandroid.activity"
+    android:versionCode="1"
+    android:versionName="1.0.0.0">
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="21" />
+
+    <!-- 网络权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- SDCard中创建与删除文件权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- 向SDCard写入数据权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 摇动权限 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- 相机权限 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:name="com.sujian.finalandroid.base.BaseApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/app_icon"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.Design.Light.NoActionBar"
+        tools:replace="android:icon">
+
+        <!-- 百度地图的key -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="RelbjCLOZk6sZqZ7tDtuGbwvbnCux6vo" />
+        <!-- 百度地图定位开启的服务 -->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+        <!-- mob -->
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <data android:scheme="tencent1105409468" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- 微信分享回调 -->
+        <activity
+            android:name=".WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".SplashActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/title_activity_login" />
+        <activity
+            android:name=".GuideAcrivity"
+            android:label="@string/title_activity_guide_acrivity"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" />
+        <activity
+            android:name=".HomeActivity"
+            android:label="@string/title_activity_home"
+            android:theme="@style/StyledIndicators" />
+        <activity
+            android:name=".RegisterActivity"
+            android:label="@string/title_activity_register" />
+        <activity
+            android:name=".MyOrderActivity"
+            android:label="@string/title_activity_my_order"
+            android:theme="@style/StyledIndicators" />
+        <activity
+            android:name=".MyNewsActivity"
+            android:label="@string/title_activity_my_news"
+            android:theme="@style/StyledIndicators" />
+        <activity
+            android:name=".MySettingsActivity"
+            android:label="@string/title_activity_my_settings" />
+        <activity
+            android:name=".SearchActivity"
+            android:label="@string/title_activity_search" />
+        <activity
+            android:name=".GoodsListActivity"
+            android:label="@string/title_activity_goods_list" />
+        <activity
+            android:name=".WebActivity"
+            android:label="@string/title_activity_web" />
+        <activity android:name="com.xys.libzxing.zxing.activity.CaptureActivity" />
+        <activity
+            android:name=".FeedbackActivity"
+            android:label="@string/title_activity_feedback" />
+        <activity
+            android:name=".AboutUsActivity"
+            android:label="@string/title_activity_about_us" />
+        <activity
+            android:name=".UpdataActivity"
+            android:label="@string/title_activity_updata" />
+        <activity android:name=".ShoppingActivity" />
+        <activity android:name=".LocationActivity" />
+        <activity android:name=".OrderDetailActivity" />
+        <activity android:name=".HelpCenterActivity" />
+        <activity android:name=".EditAdressActivity" />
+        <activity android:name=".ChangeAdressActivity" />
+    </application>
+
+</manifest>

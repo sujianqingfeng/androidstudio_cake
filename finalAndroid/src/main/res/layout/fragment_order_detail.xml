@@ -1,0 +1,133 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/home_bg"
+    tools:context="com.sujian.finalandroid.fragment.OrderStateFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#10000000"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_order_detail_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="订单号： 1548454158484584585" />
+
+
+            <TextView
+                android:id="@+id/tv_order_detail_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="下单时间：2016-6-6 5：20" />
+
+            <TextView
+                android:id="@+id/tv_order_detail_order_serives"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="快递商： 顺丰快递" />
+
+
+            <TextView
+                android:id="@+id/tv_order_detail_order_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="运单号： 1548454158484584585" />
+
+
+            <TextView
+                android:id="@+id/tv_order_detail_remarks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="备注： 素笺QQ 121116111" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#10000000"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_order_detail_person"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="收货人： 贺聂双" />
+
+
+            <TextView
+                android:id="@+id/tv_order_detail_person_adress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="收货地址： 成都职业技术学院" />
+
+            <TextView
+                android:id="@+id/tv_order_detail_order_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="电话： 15198173915" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#10000000"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_order_detail_goods_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="商品名 ：哈哈哈哈哈哈" />
+
+
+            <TextView
+                android:id="@+id/tv_order_detail_person_idstribution"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="配送费用：  0元" />
+
+            <TextView
+                android:id="@+id/tv_order_detail_order_service_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="服务费用： 5元" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_gravity="right"
+            android:id="@+id/tv_order_detail_order_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="实付：0元" />
+
+    </LinearLayout>
+</ScrollView>
