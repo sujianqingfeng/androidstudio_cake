@@ -30,7 +30,7 @@ import com.sujian.finalandroid.ui.TitleBuilder;
 import com.viewpagerindicator.CirclePageIndicator;
 
 /**
- * 购买页面
+ * 购买页面 by sujian
  */
 @ContentView(R.layout.shopping_activity)
 public class ShoppingActivity extends BaseActivity {
