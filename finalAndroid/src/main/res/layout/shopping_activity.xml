@@ -136,11 +136,11 @@
             android:layout_margin="8dp"
             android:text="添加商品:" />
 
-        <Button
+        <ImageButton
             android:id="@+id/bt_shoping_reduce"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="-" />
+            android:background="@drawable/shop_car_item_bt_reduce_selector" />
 
         <TextView
             android:id="@+id/tv_shoping_num"
@@ -149,11 +149,11 @@
             android:layout_margin="8dp"
             android:text="0" />
 
-        <Button
+        <ImageButton
             android:id="@+id/bt_shoping_add"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="+" />
+            android:background="@drawable/shop_car_item_bt_add_selector" />
     </LinearLayout>
 
 

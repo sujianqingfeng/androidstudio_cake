@@ -18,6 +18,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -32,6 +33,7 @@ import com.sujian.finalandroid.entity.CommodityDetailCallBackEntity;
 import com.sujian.finalandroid.net.CommodityDetailCallBack;
 import com.sujian.finalandroid.ui.BadgeFloatingActionButton;
 import com.sujian.finalandroid.ui.TitleBuilder;
+import com.sujian.finalandroid.uitls.ToastUitls;
 import com.viewpagerindicator.CirclePageIndicator;
 import com.zhy.http.okhttp.OkHttpUtils;
 
@@ -63,7 +65,7 @@ public class ShoppingActivity extends BaseActivity {
     @ViewInject(R.id.tv_shoping_commodity_price)
     private TextView tv_shoping_commodity_price;
     //商品的类型
-    @ViewInject(R.id.tv_shoping_commodity_price)
+    @ViewInject(R.id.tv_shoping_commodity_kind)
     private TextView tv_shoping_commodity_kind;
     //商品的尺寸
     @ViewInject(R.id.tv_shoping_commodity_size)
@@ -73,6 +75,15 @@ public class ShoppingActivity extends BaseActivity {
     private TextView tv_order_detail_desi;
 
     private Commodity commodity;
+    //增加按钮
+    @ViewInject(R.id.bt_shoping_add)
+    private ImageButton bt_shoping_add;
+    //减少按钮
+    @ViewInject(R.id.bt_shoping_reduce)
+    private ImageButton bt_shoping_reduce;
+    //商品的数量
+    @ViewInject(R.id.tv_shoping_num)
+    private TextView tv_shoping_num;
 
 
     @Override
@@ -90,7 +101,7 @@ public class ShoppingActivity extends BaseActivity {
         String url = Constants.SERVICEADDRESS + "commodity/commodity_returnCommodity.cake";
         OkHttpUtils.get()
                 .url(url)
-                .addParams("commodity_id", "10")
+                .addParams("commodity_id", id)
                 .build()
                 .execute(new CommodityDetailCallBack() {
                     @Override
@@ -113,9 +124,9 @@ public class ShoppingActivity extends BaseActivity {
     protected void initData() {
         initTitle();
         bfab_shoping_shopcar.showTextBadge("2");
-
         initShopCarButtonClickEvent();
     }
+
 
     /**
      * 购物车按钮点击事件
@@ -136,13 +147,15 @@ public class ShoppingActivity extends BaseActivity {
     private void initPic() {
         ImageOptions options = new ImageOptions.Builder().setLoadingDrawableId(R.drawable.ic_launcher)
                 .setFailureDrawableId(R.drawable.ic_launcher).setUseMemCache(true).build();
-        x.image().bind(iv_shoping_commodity_icon, commodity.getDescription_pcture(), options);
+        x.image().bind(iv_shoping_commodity_icon, Constants.SERVICEADDRESS + commodity.getDescription_pcture(), options);
         ImageView img = new ImageView(this);
-        x.image().bind(img, commodity.getDescription_pcture(), options);
+        x.image().bind(img, Constants.SERVICEADDRESS + commodity.getDescription_pcture(), options);
         ll_shoping_detail_pics.addView(img);
+        tv_shoping_commodity_price.setText(commodity.getCommodity_price() + "元");
+        tv_shoping_commodity_size.setText(commodity.getCommodity_size() + "/个");
+        tv_shoping_commodity_kind.setText(commodity.getCommodity_type_id() + "种类");
         tv_shoping_commodity_name.setText(commodity.getCommodity_name());
-        tv_shoping_commodity_price.setText(commodity.getCommodity_price() + "");
-        tv_shoping_commodity_kind.setText(commodity.getCommodity_type_id() + "");
+        tv_order_detail_desi.setText(commodity.getCommodity_description());
     }
 
     /**
@@ -150,8 +163,8 @@ public class ShoppingActivity extends BaseActivity {
      */
     private void initTitle() {
         new TitleBuilder(this).setLeftImageRes(R.drawable.head_top_title_left_icon).setMiddleTitleText("购  买")
-                .setRightImageRes(R.drawable.ic_launcher).setLeftTextOrImageListener(titleListener)
-                .setRightTextOrImageListener(titleListener).initTitle(this);
+                .setLeftTextOrImageListener(titleListener)
+                .initTitle(this);
     }
 
     /**
@@ -163,7 +176,7 @@ public class ShoppingActivity extends BaseActivity {
         public void onClick(View v) {
             switch (v.getId()) {
                 case R.id.title_left_imageview:
-                    Toast.makeText(getApplicationContext(), "返回被点击", Toast.LENGTH_SHORT).show();
+                    finish();
                     break;
 
                 case R.id.title_right_imageview:
@@ -173,6 +186,49 @@ public class ShoppingActivity extends BaseActivity {
 
         }
     };
+
+    @Event(value = R.id.bt_shoping_add)
+    private void clickAdd(View v) {
+        addCommodity();
+    }
+
+    @Event(value = R.id.bt_shoping_reduce)
+    private void clickReduce(View v) {
+        reduseCommodity();
+    }
+
+
+    /**
+     * 得到商品订单的数量
+     *
+     * @return
+     */
+    private int getCommodityOrderNum() {
+        return 1;
+    }
+
+    /**
+     * 商品加一
+     */
+    private void addCommodity() {
+        int num = Integer.parseInt(tv_shoping_num.getText().toString());
+        num++;
+        tv_shoping_num.setText(num + "");
+    }
+
+    /**
+     * 商品减一
+     */
+    private void reduseCommodity() {
+        int num = Integer.parseInt(tv_shoping_num.getText().toString());
+        if (num != 0) {
+            num--;
+            tv_shoping_num.setText(num + "");
+        } else {
+            ToastUitls.show("减不动了！骚年");
+        }
+    }
+
 
 
 }
