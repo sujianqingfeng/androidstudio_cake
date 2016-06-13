@@ -15,6 +15,7 @@ import com.sujian.finalandroid.base.BaseHolder;
 import com.sujian.finalandroid.ui.LoadingPage;
 import com.sujian.finalandroid.ui.PublishSelectTimePopupWindow;
 import com.sujian.finalandroid.ui.TitleBuilder;
+import com.sujian.finalandroid.uitls.ToastUitls;
 
 import android.content.Intent;
 import android.view.Gravity;
@@ -58,10 +59,29 @@ public class ShopCartFragment extends BaseFragment {
 
     @ViewInject(R.id.rl_time)
     private RelativeLayout rl_time;
+    //全选的checkbox
+    @ViewInject(R.id.scb_shopcar_choose)
+    private SmoothCheckBox scb_shopcar_choose;
 
     @Override
     public void initDatas(View view) {
         initListView();
+        initCheckBox();
+    }
+
+    /**
+     * 初始化checkbox
+     */
+    private void initCheckBox() {
+
+        scb_shopcar_choose.setOnCheckedChangeListener(new SmoothCheckBox.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(SmoothCheckBox checkBox, boolean isChecked) {
+                if (isChecked) {
+
+                }
+            }
+        });
     }
 
     /**
@@ -142,14 +162,18 @@ public class ShopCartFragment extends BaseFragment {
 
     private class ShopCarAdapter extends DefauListViewAdapter<Map<String, Object>> {
 
+
+
         public ShopCarAdapter(List<Map<String, Object>> data) {
             super(data);
         }
+
 
         @Override
         public BaseHolder getHolder() {
             return new ViewHolder();
         }
+
 
         class ViewHolder extends BaseHolder<Map<String, Object>> {
             @ViewInject(R.id.tv_shopcar_item_comodity_title)
@@ -182,6 +206,7 @@ public class ShopCartFragment extends BaseFragment {
                         scb_shopcar_item_choose.setChecked(!scb_shopcar_item_choose.isChecked(), true);
                     }
                 });
+
 
                 ibt_shopcar_item_comdity_reduce.setOnClickListener(new OnClickListener() {
                     @Override

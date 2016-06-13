@@ -195,6 +195,7 @@ public class PublishSelectTimePopupWindow extends PopupWindow implements View.On
                 }
 
                 selectTimeListener.onclik(v, year, month, day, h);
+                dismiss();
                 break;
 
             case R.id.tv_cancel:
