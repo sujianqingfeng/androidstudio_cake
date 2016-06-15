@@ -30,7 +30,9 @@ import com.sujian.finalandroid.base.BaseActivity;
 import com.sujian.finalandroid.constant.Constants;
 import com.sujian.finalandroid.entity.Commodity;
 import com.sujian.finalandroid.entity.CommodityDetailCallBackEntity;
+import com.sujian.finalandroid.entity.ShopCarOrderNumCallBackEntity;
 import com.sujian.finalandroid.net.CommodityDetailCallBack;
+import com.sujian.finalandroid.net.ShopCarOrderNumCallBack;
 import com.sujian.finalandroid.ui.BadgeFloatingActionButton;
 import com.sujian.finalandroid.ui.TitleBuilder;
 import com.sujian.finalandroid.uitls.ToastUitls;
@@ -85,11 +87,44 @@ public class ShoppingActivity extends BaseActivity {
     @ViewInject(R.id.tv_shoping_num)
     private TextView tv_shoping_num;
 
+    private int ShopCarNum = 0;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getDataFromServces();
+        getShopNumDataFromServces();
+    }
+
+    /**
+     * 从服务器得到购物车数量的数据
+     */
+    private void getShopNumDataFromServces() {
+        if (!"0".equals(id)) {
+            String url = Constants.SERVICEADDRESS + "shopcart/shopcart_shopCarNum.cake";
+            OkHttpUtils.get()
+                    .url(url)
+                    .addParams("user_id", 1 + "")
+                    .build()
+                    .execute(new ShopCarOrderNumCallBack() {
+                        @Override
+                        public void onError(Call call, Exception e, int id) {
+
+                        }
+
+                        @Override
+                        public void onResponse(ShopCarOrderNumCallBackEntity response, int id) {
+                            LogUtil.e(response.toString());
+                            if (response.isSuccess()) {
+                                if (!response.isZero()) {
+                                    ShopCarNum = response.getNum();
+                                    bfab_shoping_shopcar.showTextBadge(response.getNum() + "");
+                                }
+                            }
+                        }
+                    });
+        }
     }
 
     /**
@@ -123,7 +158,7 @@ public class ShoppingActivity extends BaseActivity {
     @Override
     protected void initData() {
         initTitle();
-        bfab_shoping_shopcar.showTextBadge("2");
+
         initShopCarButtonClickEvent();
     }
 
@@ -214,6 +249,8 @@ public class ShoppingActivity extends BaseActivity {
         int num = Integer.parseInt(tv_shoping_num.getText().toString());
         num++;
         tv_shoping_num.setText(num + "");
+        ShopCarNum++;
+        bfab_shoping_shopcar.showTextBadge(ShopCarNum + "");
     }
 
     /**
@@ -224,6 +261,9 @@ public class ShoppingActivity extends BaseActivity {
         if (num != 0) {
             num--;
             tv_shoping_num.setText(num + "");
+
+            ShopCarNum--;
+            bfab_shoping_shopcar.showTextBadge(ShopCarNum + "");
         } else {
             ToastUitls.show("减不动了！骚年");
         }
