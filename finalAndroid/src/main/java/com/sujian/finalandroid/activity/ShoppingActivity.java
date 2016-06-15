@@ -136,7 +136,7 @@ public class ShoppingActivity extends BaseActivity {
         String url = Constants.SERVICEADDRESS + "commodity/commodity_returnCommodity.cake";
         OkHttpUtils.get()
                 .url(url)
-                .addParams("commodity_id", id)
+                .addParams("commodity_id", 10 + "")
                 .build()
                 .execute(new CommodityDetailCallBack() {
                     @Override

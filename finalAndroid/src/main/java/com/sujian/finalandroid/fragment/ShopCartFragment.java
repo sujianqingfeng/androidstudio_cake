@@ -12,10 +12,16 @@ import com.sujian.finalandroid.activity.ShoppingActivity;
 import com.sujian.finalandroid.adapter.DefauListViewAdapter;
 import com.sujian.finalandroid.base.BaseFragment;
 import com.sujian.finalandroid.base.BaseHolder;
+import com.sujian.finalandroid.constant.Constants;
+import com.sujian.finalandroid.entity.ShopCarOrderInfo;
+import com.sujian.finalandroid.entity.ShopCarOrderInfoCallBackEntity;
+import com.sujian.finalandroid.net.ShopCarOrderCallBack;
 import com.sujian.finalandroid.ui.LoadingPage;
 import com.sujian.finalandroid.ui.PublishSelectTimePopupWindow;
 import com.sujian.finalandroid.ui.TitleBuilder;
+import com.sujian.finalandroid.uitls.MyUitls;
 import com.sujian.finalandroid.uitls.ToastUitls;
+import com.zhy.http.okhttp.OkHttpUtils;
 
 import android.content.Intent;
 import android.view.Gravity;
@@ -36,6 +42,7 @@ import java.util.List;
 import java.util.Map;
 
 import cn.refactor.library.SmoothCheckBox;
+import okhttp3.Call;
 
 /**
  * 购物车界面
@@ -51,8 +58,7 @@ public class ShopCartFragment extends BaseFragment {
     @ViewInject(R.id.lv_shopcar)
     private ListView lv_shopcar;
     // 装载数据集合
-    List<Map<String, Object>> dataLists;
-    Map<String, Object> map;
+    List<ShopCarOrderInfo> dataLists;
 
     @ViewInject(R.id.rl_update)
     private RelativeLayout rl_update;
@@ -88,18 +94,37 @@ public class ShopCartFragment extends BaseFragment {
      * 初始化listview
      */
     private void initListView() {
-        //加载数据
-        dataLists = new ArrayList<Map<String, Object>>();
-        for (int i = 0; i < 20; i++) {
-            map = new HashMap<String, Object>();
-            map.put("title", "名字" + i);
-            map.put("price", "1" + i);
-            map.put("num", "1" + i);
-            map.put("img_url", "");
-            dataLists.add(map);
-        }
-        lv_shopcar.setFocusable(false);
-        lv_shopcar.setAdapter(new ShopCarAdapter(dataLists));
+        LogUtil.e("开始--");
+        String url = Constants.SERVICEADDRESS + "shopcart/shopcart_shopCar.cake";
+        OkHttpUtils.get()
+                .url(url)
+                .addParams("user_id", 1 + "")
+                .build()
+                .execute(new ShopCarOrderCallBack() {
+                    @Override
+                    public void onError(Call call, Exception e, int id) {
+                        LogUtil.e("错误解析--");
+                    }
+
+                    @Override
+                    public void onResponse(ShopCarOrderInfoCallBackEntity response, int id) {
+                        LogUtil.e("--------" + response.toString());
+                        //加载数据
+                        if (response.isSuccess()) {
+
+                            dataLists = new ArrayList<>();
+                            dataLists.addAll(response.getShopCarOrderInfo());
+                            lv_shopcar.setFocusable(false);
+                            lv_shopcar.setAdapter(new ShopCarAdapter(dataLists));
+                        }
+
+                    }
+                });
+
+
+
+
+
 
         lv_shopcar.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -160,11 +185,10 @@ public class ShopCartFragment extends BaseFragment {
         }
     }
 
-    private class ShopCarAdapter extends DefauListViewAdapter<Map<String, Object>> {
+    private class ShopCarAdapter extends DefauListViewAdapter<ShopCarOrderInfo> {
 
 
-
-        public ShopCarAdapter(List<Map<String, Object>> data) {
+        public ShopCarAdapter(List<ShopCarOrderInfo> data) {
             super(data);
         }
 
@@ -175,7 +199,7 @@ public class ShopCartFragment extends BaseFragment {
         }
 
 
-        class ViewHolder extends BaseHolder<Map<String, Object>> {
+        class ViewHolder extends BaseHolder<ShopCarOrderInfo> {
             @ViewInject(R.id.tv_shopcar_item_comodity_title)
             private TextView tv_shopcar_item_comodity_title;
 
@@ -196,9 +220,9 @@ public class ShopCartFragment extends BaseFragment {
 
             @Override
             protected void refreshView() {
-                tv_shopcar_item_comodity_title.setText((String) data.get("title"));
-                tv_shopcar_item_comodity_price.setText((String) data.get("price"));
-                tv_shopcar_item_comodity_num.setText((String) data.get("num"));
+                tv_shopcar_item_comodity_title.setText(data.getCommodity_name() + "");
+                tv_shopcar_item_comodity_price.setText(data.getCommodity_price() + "元");
+                tv_shopcar_item_comodity_num.setText(data.getCommodity_quantity() + "");
 
                 scb_shopcar_item_choose.setOnClickListener(new OnClickListener() {
                     @Override
