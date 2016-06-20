@@ -35,6 +35,7 @@ import com.sujian.finalandroid.net.CommodityDetailCallBack;
 import com.sujian.finalandroid.net.ShopCarOrderNumCallBack;
 import com.sujian.finalandroid.ui.BadgeFloatingActionButton;
 import com.sujian.finalandroid.ui.TitleBuilder;
+import com.sujian.finalandroid.uitls.MyUitls;
 import com.sujian.finalandroid.uitls.ToastUitls;
 import com.viewpagerindicator.CirclePageIndicator;
 import com.zhy.http.okhttp.OkHttpUtils;
@@ -101,11 +102,11 @@ public class ShoppingActivity extends BaseActivity {
      * 从服务器得到购物车数量的数据
      */
     private void getShopNumDataFromServces() {
-        if (!"0".equals(id)) {
+        if (!"0".equals(MyUitls.getUid() + "")) {
             String url = Constants.SERVICEADDRESS + "shopcart/shopcart_shopCarNum.cake";
             OkHttpUtils.get()
                     .url(url)
-                    .addParams("user_id", 1 + "")
+                    .addParams("user_id", MyUitls.getUid() + "")
                     .build()
                     .execute(new ShopCarOrderNumCallBack() {
                         @Override
@@ -136,7 +137,7 @@ public class ShoppingActivity extends BaseActivity {
         String url = Constants.SERVICEADDRESS + "commodity/commodity_returnCommodity.cake";
         OkHttpUtils.get()
                 .url(url)
-                .addParams("commodity_id", 10 + "")
+                .addParams("commodity_id", id)
                 .build()
                 .execute(new CommodityDetailCallBack() {
                     @Override

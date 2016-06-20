@@ -16,6 +16,7 @@ import com.handmark.pulltorefresh.library.PullToRefreshBase.OnLastItemVisibleLis
 import com.handmark.pulltorefresh.library.PullToRefreshBase.OnRefreshListener2;
 import com.handmark.pulltorefresh.library.PullToRefreshListView;
 import com.sujian.finalandroid.activity.R;
+import com.sujian.finalandroid.activity.ShoppingActivity;
 import com.sujian.finalandroid.base.BaseFragment;
 import com.sujian.finalandroid.constant.Constants;
 import com.sujian.finalandroid.entity.Commodity;
@@ -27,11 +28,13 @@ import com.sujian.finalandroid.uitls.MyUitls;
 import com.sujian.finalandroid.uitls.ToastUitls;
 import com.zhy.http.okhttp.OkHttpUtils;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.text.format.DateUtils;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -125,6 +128,17 @@ public class AngelCakeFragment extends BaseFragment {
 
         goodsListViewAdapter = new GoodsListViewAdapter();
         lv_goodslistview.setAdapter(goodsListViewAdapter);
+
+        //listview 条目点击事件
+        lv_goodslistview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                long commodity_id = dataLists.get(position).getCommodity_id();
+                Intent intent = new Intent(getActivity(), ShoppingActivity.class);
+                intent.putExtra("id", "" + commodity_id);
+                startActivity(intent);
+            }
+        });
     }
 
 

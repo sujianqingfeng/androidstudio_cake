@@ -1,11 +1,13 @@
 package com.sujian.finalandroid.fragment;
 
+import android.content.Intent;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.View;
 
 import com.jcodecraeer.xrecyclerview.ProgressStyle;
 import com.jcodecraeer.xrecyclerview.XRecyclerView;
 import com.sujian.finalandroid.activity.R;
+import com.sujian.finalandroid.activity.ShoppingActivity;
 import com.sujian.finalandroid.adapter.CheeseCakeAdapter;
 import com.sujian.finalandroid.base.BaseFragment;
 import com.sujian.finalandroid.constant.Constants;
@@ -105,8 +107,19 @@ public class CheeseCakeFragment extends BaseFragment {
             }
         });
 
+        //上拉与下拉的样式
         rv_cheese.setRefreshProgressStyle(ProgressStyle.BallBeat);
         rv_cheese.setLoadingMoreProgressStyle(ProgressStyle.Pacman);
+
+        adapter.setOnItemClickListener(new CheeseCakeAdapter.OnRecyclerViewItemClickListener() {
+            @Override
+            public void onItemClick(View view, int position) {
+                long commodity_id = dataLists.get(position).getCommodity_id();
+                Intent intent = new Intent(getActivity(), ShoppingActivity.class);
+                intent.putExtra("id", "" + commodity_id);
+                startActivity(intent);
+            }
+        });
     }
 
 
