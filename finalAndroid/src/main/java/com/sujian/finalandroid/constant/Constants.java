@@ -33,4 +33,11 @@ public class Constants {
      * 服务器地址
      */
     public static final String SERVICEADDRESS = "http://192.168.191.1:8080/CakeWeb/";
+
+
+    /**
+     * 商品详情页面跳转购物车页面code
+     */
+
+    public static final int GOSHOPCAR = 11;
 }

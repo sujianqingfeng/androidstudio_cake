@@ -28,6 +28,8 @@ import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.sujian.finalandroid.base.BaseActivity;
 import com.sujian.finalandroid.constant.Constants;
+import com.sujian.finalandroid.entity.BooleabEntity;
+import com.sujian.finalandroid.entity.BooleanCallBackEntity;
 import com.sujian.finalandroid.entity.Commodity;
 import com.sujian.finalandroid.entity.CommodityDetailCallBackEntity;
 import com.sujian.finalandroid.entity.ShopCarOrderNumCallBackEntity;
@@ -171,7 +173,28 @@ public class ShoppingActivity extends BaseActivity {
         bfab_shoping_shopcar.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                setResult(11, getIntent());
+                //先写入数据库
+                String url = Constants.SERVICEADDRESS + "shopcart/shopcart_addShopCar.cake";
+                OkHttpUtils.get()
+                        .url(url)
+                        .addParams("user_id", MyUitls.getUid() + "")
+                        .addParams("commodity_id", id)
+                        .addParams("checked", 1 + "")
+                        .addParams("commodity_quantity", tv_shoping_num.getText().toString().trim())
+                        .build()
+                        .execute(new BooleanCallBackEntity() {
+                            @Override
+                            public void onError(Call call, Exception e, int id) {
+
+                            }
+
+                            @Override
+                            public void onResponse(BooleabEntity response, int id) {
+                                LogUtil.e("-------" + response.toString());
+                            }
+                        });
+
+                setResult(Constants.GOSHOPCAR, getIntent());
                 finish();
             }
         });
@@ -225,12 +248,21 @@ public class ShoppingActivity extends BaseActivity {
 
     @Event(value = R.id.bt_shoping_add)
     private void clickAdd(View v) {
-        addCommodity();
+        if (MyUitls.isUserExistence()) {
+            addCommodity();
+        } else {
+            ToastUitls.show("请先登录");
+        }
+
     }
 
     @Event(value = R.id.bt_shoping_reduce)
     private void clickReduce(View v) {
-        reduseCommodity();
+        if (MyUitls.isUserExistence()) {
+            reduseCommodity();
+        } else {
+            ToastUitls.show("请先登录");
+        }
     }
 
 

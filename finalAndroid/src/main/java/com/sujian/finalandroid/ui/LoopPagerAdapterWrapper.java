@@ -42,13 +42,15 @@ public class LoopPagerAdapterWrapper extends PagerAdapter {
         mBoundaryCaching = flag;
     }
 
-    LoopPagerAdapterWrapper(PagerAdapter adapter) {
+    public LoopPagerAdapterWrapper(PagerAdapter adapter) {
         this.mAdapter = adapter;
     }
 
     @Override
     public void notifyDataSetChanged() {
         mToDestroy = new SparseArray<ToDestroy>();
+
+        mAdapter.notifyDataSetChanged();
         super.notifyDataSetChanged();
     }
 

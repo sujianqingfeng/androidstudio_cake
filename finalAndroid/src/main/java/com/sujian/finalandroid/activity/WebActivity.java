@@ -40,7 +40,6 @@ public class WebActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         url = getIntent().getStringExtra("url");
-        Toast.makeText(this, url, 0).show();
         initWeb();
     }
 

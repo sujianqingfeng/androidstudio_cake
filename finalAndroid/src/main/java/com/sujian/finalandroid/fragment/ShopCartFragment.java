@@ -79,6 +79,13 @@ public class ShopCartFragment extends BaseFragment {
         initCheckBox();
     }
 
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        LogUtil.e("------------------------------------------");
+    }
+
     /**
      * 初始化checkbox
      */
@@ -114,7 +121,7 @@ public class ShopCartFragment extends BaseFragment {
         String url = Constants.SERVICEADDRESS + "shopcart/shopcart_shopCar.cake";
         OkHttpUtils.get()
                 .url(url)
-                .addParams("user_id", 1 + "")
+                .addParams("user_id", MyUitls.getUid() + "")
                 .build()
                 .execute(new ShopCarOrderCallBack() {
                     @Override

@@ -62,7 +62,7 @@ public class CheeseCakeFragment extends BaseFragment {
 
     @Override
     protected LoadingPage.LoadResult load() {
-        LogUtil.e("-datalist的个数为" + dataLists.size());
+        LogUtil.e("奶酪蛋糕 ----datalist的个数为" + dataLists.size());
         if (dataLists.size() > 0) {
             return LoadingPage.LoadResult.success;
         } else if (dataLists.size() == 0) {
@@ -111,13 +111,14 @@ public class CheeseCakeFragment extends BaseFragment {
         rv_cheese.setRefreshProgressStyle(ProgressStyle.BallBeat);
         rv_cheese.setLoadingMoreProgressStyle(ProgressStyle.Pacman);
 
+        //条目点击事件
         adapter.setOnItemClickListener(new CheeseCakeAdapter.OnRecyclerViewItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
                 long commodity_id = dataLists.get(position).getCommodity_id();
                 Intent intent = new Intent(getActivity(), ShoppingActivity.class);
                 intent.putExtra("id", "" + commodity_id);
-                startActivity(intent);
+                startActivityForResult(intent, Constants.GOSHOPCAR);
             }
         });
     }
@@ -126,7 +127,7 @@ public class CheeseCakeFragment extends BaseFragment {
     private void getDateFromService() {
         page = 1;
         String url = Constants.SERVICEADDRESS + "commodity/commodity_commodityselect.action";
-        LogUtil.e(page + "");
+        LogUtil.e("页数" + page);
         OkHttpUtils
                 .get()
                 .addParams("commodity_type_id", String.valueOf(1))
@@ -143,8 +144,7 @@ public class CheeseCakeFragment extends BaseFragment {
                     @Override
                     public void onResponse(CommodityCallBackEntity response, int id) {
                         if (response.getList().size() > 0) {
-                            LogUtil.e(response.getList().toString());
-                            LogUtil.e(String.valueOf(id));
+                            LogUtil.e("奶酪蛋糕的json解析数据" + response.getList().toString());
                             if (response.isSuccess()) {
                                 dataLists.addAll(response.getList());
                                 adapter.notifyDataSetChanged();
@@ -163,7 +163,7 @@ public class CheeseCakeFragment extends BaseFragment {
     private void getDate() {
         page++;
         String url = Constants.SERVICEADDRESS + "commodity/commodity_commodityselect.action";
-        LogUtil.e(page + "");
+        LogUtil.e("刷新的页数" + page);
         OkHttpUtils
                 .get()
                 .addParams("commodity_type_id", String.valueOf(1))

@@ -16,7 +16,7 @@ public abstract class CommodityKindCalBack extends Callback<CommodityKindCalBack
     @Override
     public CommodityKindCalBackEntity parseNetworkResponse(Response response, int id) throws Exception {
         String s = response.body().string();
-        LogUtil.e(s);
+        LogUtil.e("首页解析的字符串" + s);
         CommodityKindCalBackEntity commoditykindCallBackEntity = new Gson().fromJson(s, CommodityKindCalBackEntity.class);
         return commoditykindCallBackEntity;
     }

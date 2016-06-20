@@ -9,14 +9,14 @@ import java.util.List;
 public class HomeObject {
     List<Commodity> headList;
     List<Commodity> gridList;
-    List<CommodityKind> KindList;
+    List<CommodityKind> kindList;
 
     @Override
     public String toString() {
         return "HomeObject{" +
                 "headList=" + headList +
                 ", gridList=" + gridList +
-                ", KindList=" + KindList +
+                ", KindList=" + kindList +
                 '}';
     }
 
@@ -37,11 +37,11 @@ public class HomeObject {
     }
 
     public List<CommodityKind> getKindList() {
-        return KindList;
+        return kindList;
     }
 
     public void setKindList(List<CommodityKind> kindList) {
-        KindList = kindList;
+        this.kindList = kindList;
     }
 
 }

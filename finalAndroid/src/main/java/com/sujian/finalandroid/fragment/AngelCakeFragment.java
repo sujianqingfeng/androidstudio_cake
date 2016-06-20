@@ -136,7 +136,7 @@ public class AngelCakeFragment extends BaseFragment {
                 long commodity_id = dataLists.get(position).getCommodity_id();
                 Intent intent = new Intent(getActivity(), ShoppingActivity.class);
                 intent.putExtra("id", "" + commodity_id);
-                startActivity(intent);
+                startActivityForResult(intent, Constants.GOSHOPCAR);
             }
         });
     }

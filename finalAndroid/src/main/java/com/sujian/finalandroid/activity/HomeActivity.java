@@ -6,6 +6,7 @@ import org.xutils.view.annotation.ViewInject;
 
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 import com.sujian.finalandroid.base.BaseActivity;
+import com.sujian.finalandroid.constant.Constants;
 import com.sujian.finalandroid.fragment.HomeFragmentFactory;
 import com.sujian.finalandroid.fragment.MenuFragment;
 import com.sujian.finalandroid.ui.TitleBuilder;
@@ -251,7 +252,7 @@ public class HomeActivity extends BaseActivity {
                 startActivity(intent);
                 break;
 
-            case 11://购物界面返回
+            case Constants.GOSHOPCAR://购物界面返回
                 rg_group.check(R.id.rb_shopcar);
                 break;
         }
@@ -271,7 +272,7 @@ public class HomeActivity extends BaseActivity {
                 HomeFragmentFactory.createFragment(position).show();
             }
         });
-        vp_tab.setOffscreenPageLimit(3);
+        // vp_tab.setOffscreenPageLimit(3);
     }
 
     // viewPager 的适配器

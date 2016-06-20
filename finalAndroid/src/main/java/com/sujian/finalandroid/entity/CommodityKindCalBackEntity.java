@@ -9,24 +9,7 @@ import java.util.List;
 public class CommodityKindCalBackEntity {
     private boolean success;
     private HomeObject homelist;
-    private CommodityKind kindlist;
 
-    @Override
-    public String toString() {
-        return "CommodityKindCalBackEntity{" +
-                "success=" + success +
-                ", homelist=" + homelist +
-                ", kindlist=" + kindlist +
-                '}';
-    }
-
-    public CommodityKind getKindlist() {
-        return kindlist;
-    }
-
-    public void setKindlist(CommodityKind kindlist) {
-        this.kindlist = kindlist;
-    }
 
     public HomeObject getHomelist() {
         return homelist;
@@ -45,5 +28,11 @@ public class CommodityKindCalBackEntity {
         this.success = success;
     }
 
-
+    @Override
+    public String toString() {
+        return "CommodityKindCalBackEntity{" +
+                "homelist=" + homelist +
+                ", success=" + success +
+                '}';
+    }
 }
