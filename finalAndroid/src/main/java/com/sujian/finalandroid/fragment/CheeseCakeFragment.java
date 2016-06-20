@@ -129,16 +129,17 @@ public class CheeseCakeFragment extends BaseFragment {
 
                     @Override
                     public void onResponse(CommodityCallBackEntity response, int id) {
-                        LogUtil.e(response.getList().toString());
-                        LogUtil.e(String.valueOf(id));
-                        if (response.isSuccess()) {
-                            dataLists.addAll(response.getList());
-                            adapter.notifyDataSetChanged();
-                            show();
-                        } else {
-                            ToastUitls.show("获取数据失败！");
+                        if (response.getList().size() > 0) {
+                            LogUtil.e(response.getList().toString());
+                            LogUtil.e(String.valueOf(id));
+                            if (response.isSuccess()) {
+                                dataLists.addAll(response.getList());
+                                adapter.notifyDataSetChanged();
+                                show();
+                            } else {
+                                ToastUitls.show("获取数据失败！");
+                            }
                         }
-
                     }
 
                 });

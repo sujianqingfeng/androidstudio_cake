@@ -16,8 +16,8 @@
 
     <ImageView
         android:id="@+id/iv_shopcar_item_commodity_icon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
         android:layout_toRightOf="@+id/scb_shopcar_item_choose"
         android:src="@drawable/ic_launcher" />
 
@@ -27,6 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:textColor="#818181"
+        android:layout_margin="8dp"
         android:layout_toEndOf="@+id/iv_shopcar_item_commodity_icon"
         android:layout_toRightOf="@+id/iv_shopcar_item_commodity_icon"
         android:text="xxxxxx蛋糕" />
@@ -39,6 +40,7 @@
         android:layout_toEndOf="@+id/iv_shopcar_item_commodity_icon"
         android:layout_toRightOf="@+id/iv_shopcar_item_commodity_icon"
         android:text="￥5元"
+        android:layout_margin="8dp"
         android:textColor="@color/red" />
 
 

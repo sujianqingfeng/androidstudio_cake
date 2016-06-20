@@ -1,6 +1,7 @@
 package com.sujian.finalandroid.fragment;
 
 import org.xutils.common.util.LogUtil;
+import org.xutils.image.ImageOptions;
 import org.xutils.view.annotation.Event;
 import org.xutils.view.annotation.ViewInject;
 import org.xutils.x;
@@ -31,6 +32,7 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -69,6 +71,8 @@ public class ShopCartFragment extends BaseFragment {
     @ViewInject(R.id.scb_shopcar_choose)
     private SmoothCheckBox scb_shopcar_choose;
 
+    private ShopCarAdapter shopCarAdapter;
+
     @Override
     public void initDatas(View view) {
         initListView();
@@ -84,7 +88,19 @@ public class ShopCartFragment extends BaseFragment {
             @Override
             public void onCheckedChanged(SmoothCheckBox checkBox, boolean isChecked) {
                 if (isChecked) {
-
+                    for (ShopCarOrderInfo s : dataLists) {
+                        if (!s.isChecked()) {
+                            s.setChecked(true);
+                        }
+                    }
+                    shopCarAdapter.notifyDataSetChanged();
+                } else {
+                    for (ShopCarOrderInfo sc : dataLists) {
+                        if (sc.isChecked()) {
+                            sc.setChecked(false);
+                        }
+                    }
+                    shopCarAdapter.notifyDataSetChanged();
                 }
             }
         });
@@ -115,7 +131,8 @@ public class ShopCartFragment extends BaseFragment {
                             dataLists = new ArrayList<>();
                             dataLists.addAll(response.getShopCarOrderInfo());
                             lv_shopcar.setFocusable(false);
-                            lv_shopcar.setAdapter(new ShopCarAdapter(dataLists));
+                            shopCarAdapter = new ShopCarAdapter(dataLists);
+                            lv_shopcar.setAdapter(shopCarAdapter);
                         }
 
                     }
@@ -200,6 +217,16 @@ public class ShopCartFragment extends BaseFragment {
 
 
         class ViewHolder extends BaseHolder<ShopCarOrderInfo> {
+            private ImageOptions options;
+
+            public ViewHolder() {
+                options = new ImageOptions.Builder().setLoadingDrawableId(R.drawable.ic_launcher)
+                        .setFailureDrawableId(R.drawable.ic_launcher).setUseMemCache(true).build();
+            }
+
+            @ViewInject(R.id.iv_shopcar_item_commodity_icon)
+            private ImageView iv_shopcar_item_commodity_icon;
+
             @ViewInject(R.id.tv_shopcar_item_comodity_title)
             private TextView tv_shopcar_item_comodity_title;
 
@@ -223,7 +250,8 @@ public class ShopCartFragment extends BaseFragment {
                 tv_shopcar_item_comodity_title.setText(data.getCommodity_name() + "");
                 tv_shopcar_item_comodity_price.setText(data.getCommodity_price() + "元");
                 tv_shopcar_item_comodity_num.setText(data.getCommodity_quantity() + "");
-
+                x.image().bind(iv_shopcar_item_commodity_icon, Constants.SERVICEADDRESS + data.getDescription_pcture(), options);
+                scb_shopcar_item_choose.setChecked(data.isChecked(), true);
                 scb_shopcar_item_choose.setOnClickListener(new OnClickListener() {
                     @Override
                     public void onClick(View v) {
