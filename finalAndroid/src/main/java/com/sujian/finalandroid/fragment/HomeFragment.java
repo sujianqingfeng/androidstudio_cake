@@ -91,10 +91,10 @@ public class HomeFragment extends BaseFragment {
     private HomeAdapter homeAdapter;
     private GridViewAdapter gridViewAdapter;
     private List<Commodity> data;
-
+    //adapter 的包装类
     private LoopPagerAdapterWrapper loopPagerAdapterWrapper;
-
-    private boolean isFrist = true;
+    //viewpager 的数据集合
+    List<Commodity> headlist;
 
     @Override
     public void initDatas(View view) {
@@ -103,6 +103,7 @@ public class HomeFragment extends BaseFragment {
         initListView();
         getDate();
     }
+
 
 
     /**
@@ -154,7 +155,7 @@ public class HomeFragment extends BaseFragment {
                             homeObject = response.getHomelist();
                             if (homeObject != null) {
                                 //viewpager
-                                List<Commodity> headlist = homeObject.getHeadList();
+                                headlist = homeObject.getHeadList();
 
                                 LogUtil.e("viewpager的数据大小" + headlist.size());
                                 for (Commodity c : headlist) {
@@ -294,7 +295,6 @@ public class HomeFragment extends BaseFragment {
                     }
                 });
 
-
                 tv_left_title.setText(leftCom.getCommodity_name());
                 tv_left_size.setText(leftCom.getCommodity_size() + "");
                 tv_left_price.setText(leftCom.getCommodity_price() + "");
@@ -306,10 +306,7 @@ public class HomeFragment extends BaseFragment {
                 tv_right_price.setText(rightCom.getCommodity_price() + "");
 
 
-
             }
-
-
 
             @Override
             public View initView() {
@@ -360,33 +357,9 @@ public class HomeFragment extends BaseFragment {
 
                 @Override
                 public void onClick(View v) {
-                    Toast.makeText(getActivity(), "第" + position + "页被点击", Toast.LENGTH_SHORT).show();
-                    switch (position) {
-                        case 0:
-                            Intent intent = new Intent(getActivity(), ShoppingActivity.class);
-                            intent.putExtra("id", "1");
-                            startActivity(intent);
-                            break;
-                        case 1:
-                            Intent intent1 = new Intent(getActivity(), ShoppingActivity.class);
-                            intent1.putExtra("id", "1");
-                            startActivity(intent1);
-                            break;
-                        case 2:
-                            Intent intent2 = new Intent(getActivity(), ShoppingActivity.class);
-                            intent2.putExtra("id", "1");
-                            startActivity(intent2);
-                            break;
-                        case 3:
-                            Intent intent3 = new Intent(getActivity(), ShoppingActivity.class);
-                            intent3.putExtra("id", "1");
-                            startActivity(intent3);
-                            break;
-
-                        default:
-                            break;
-                    }
-
+                    Intent intent = new Intent(getActivity(), ShoppingActivity.class);
+                    intent.putExtra("id", headlist.get(position).getCommodity_id() + "");
+                    startActivityForResult(intent, Constants.GOSHOPCAR);
                 }
             });
             container.addView(imageView);
