@@ -173,26 +173,29 @@ public class ShoppingActivity extends BaseActivity {
         bfab_shoping_shopcar.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                //先写入数据库
-                String url = Constants.SERVICEADDRESS + "shopcart/shopcart_addShopCar.cake";
-                OkHttpUtils.get()
-                        .url(url)
-                        .addParams("user_id", MyUitls.getUid() + "")
-                        .addParams("commodity_id", id)
-                        .addParams("checked", 1 + "")
-                        .addParams("commodity_quantity", tv_shoping_num.getText().toString().trim())
-                        .build()
-                        .execute(new BooleanCallBackEntity() {
-                            @Override
-                            public void onError(Call call, Exception e, int id) {
 
-                            }
+                if (!tv_shoping_num.getText().toString().equals("") && Integer.parseInt(tv_shoping_num.getText().toString()) != 0) {
+                    //先写入数据库
+                    String url = Constants.SERVICEADDRESS + "shopcart/shopcart_addShopCar.cake";
+                    OkHttpUtils.get()
+                            .url(url)
+                            .addParams("user_id", MyUitls.getUid() + "")
+                            .addParams("commodity_id", id)
+                            .addParams("checked", 0 + "")
+                            .addParams("commodity_quantity", tv_shoping_num.getText().toString().trim())
+                            .build()
+                            .execute(new BooleanCallBackEntity() {
+                                @Override
+                                public void onError(Call call, Exception e, int id) {
 
-                            @Override
-                            public void onResponse(BooleabEntity response, int id) {
-                                LogUtil.e("-------" + response.toString());
-                            }
-                        });
+                                }
+
+                                @Override
+                                public void onResponse(BooleabEntity response, int id) {
+                                    LogUtil.e("-------" + response.toString());
+                                }
+                            });
+                }
 
                 setResult(Constants.GOSHOPCAR, getIntent());
                 finish();
