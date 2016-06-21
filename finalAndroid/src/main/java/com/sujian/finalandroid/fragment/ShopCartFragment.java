@@ -52,7 +52,7 @@ import okhttp3.Call;
 public class ShopCartFragment extends BaseFragment {
 
     @ViewInject(R.id.sp_purchase)
-    private Button sp_purchaseButton;
+    private Button sp_purchase;
 
     @ViewInject(R.id.et_need)
     private EditText textView;
@@ -79,12 +79,6 @@ public class ShopCartFragment extends BaseFragment {
         initCheckBox();
     }
 
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        LogUtil.e("------------------------------------------");
-    }
 
     /**
      * 初始化checkbox
@@ -117,7 +111,6 @@ public class ShopCartFragment extends BaseFragment {
      * 初始化listview
      */
     private void initListView() {
-        LogUtil.e("开始--");
         String url = Constants.SERVICEADDRESS + "shopcart/shopcart_shopCar.cake";
         OkHttpUtils.get()
                 .url(url)
@@ -126,15 +119,14 @@ public class ShopCartFragment extends BaseFragment {
                 .execute(new ShopCarOrderCallBack() {
                     @Override
                     public void onError(Call call, Exception e, int id) {
-                        LogUtil.e("错误解析--");
+                        LogUtil.e("错误解析------购物车");
                     }
 
                     @Override
                     public void onResponse(ShopCarOrderInfoCallBackEntity response, int id) {
-                        LogUtil.e("--------" + response.toString());
+                        LogUtil.e("购物车返回的数据--------" + response.toString());
                         //加载数据
                         if (response.isSuccess()) {
-
                             dataLists = new ArrayList<>();
                             dataLists.addAll(response.getShopCarOrderInfo());
                             lv_shopcar.setFocusable(false);
@@ -146,15 +138,13 @@ public class ShopCartFragment extends BaseFragment {
                 });
 
 
-
-
-
-
         lv_shopcar.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                LogUtil.e(position + "");
-                startActivityForResult(new Intent(getActivity(), ShoppingActivity.class), 11);
+                LogUtil.e("点击的位置----" + position);
+                Intent intent = new Intent(getActivity(), ShoppingActivity.class);
+                intent.putExtra("id", dataLists.get(position).getCommodity_id() + "");
+                startActivityForResult(intent, Constants.GOSHOPCAR);
             }
         });
 
@@ -202,13 +192,13 @@ public class ShopCartFragment extends BaseFragment {
      * 送货时间的监听器
      */
     private class SelectTimeLinstener implements PublishSelectTimePopupWindow.SelectTimeListener {
-
         @Override
         public void onclik(View view, int year, int month, int day, int hour) {
             Toast.makeText(x.app(), year + "年" + month + "月" + day + "日" + hour + "小时", Toast.LENGTH_LONG).show();
         }
     }
 
+    //订单的适配器
     private class ShopCarAdapter extends DefauListViewAdapter<ShopCarOrderInfo> {
 
 
@@ -262,6 +252,7 @@ public class ShopCartFragment extends BaseFragment {
                 scb_shopcar_item_choose.setOnClickListener(new OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        data.setChecked(!scb_shopcar_item_choose.isChecked());
                         scb_shopcar_item_choose.setChecked(!scb_shopcar_item_choose.isChecked(), true);
                     }
                 });

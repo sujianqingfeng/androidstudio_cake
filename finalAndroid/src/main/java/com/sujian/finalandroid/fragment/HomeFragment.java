@@ -108,8 +108,6 @@ public class HomeFragment extends BaseFragment {
         show();
         initViewPager();
         initListView();
-        initGridView();
-
     }
 
     /**
@@ -125,30 +123,10 @@ public class HomeFragment extends BaseFragment {
 
 
 
-
-    /**
-     * 初始化gridview
-     */
-    private void initGridView() {
-//       gridDatas = new ArrayList<>();
-//        Map<String, Object> map;
-//        for (int i = 0; i < 6; i++) {
-//            map = new HashMap<>();
-//            map.put("title", "蛋糕" + i);
-//            gridDatas.add(map);
-//        }
-
-//        SimpleAdapter sim = new SimpleAdapter(x.app(), gridDatas, R.layout.home_gridview_item, new String[]{"title"}, new int[]{R.id.tv_home_gridview_item_title});
-//        gv_home.setAdapter(sim);
-
-
-    }
-
     /**
      * 初始化listview
      */
     private void initListView() {
-
 
         //移动到第一个  移动到最顶部
         myScrollView.smoothScrollTo(0, 0);

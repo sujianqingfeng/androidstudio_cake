@@ -4,20 +4,71 @@
     android:layout_height="match_parent"
     android:background="@color/home_bg"
     android:orientation="vertical"
-    android:weightSum="1"
+    android:gravity="center_horizontal"
     tools:context="com.sujian.finalandroid.activity.AboutUsActivity">
 
     <include layout="@layout/top_title" />
 
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_margin="8dp"
+        android:src="@drawable/app_icon" />
+
 
     <TextView
         android:layout_width="wrap_content"
-        android:layout_marginTop="80dp"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="真的好了"
-        android:id="@+id/textView2"
-        android:layout_gravity="center_horizontal" />
+        android:text="西点坊" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="版本： 1.0  Bulid： 32" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="  15198173915"
+        android:layout_marginTop="35dp"
+        android:drawableLeft="@drawable/icon_about_weixin" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:background="#15000000"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:paddingTop="15dp"
+            android:text="成都菜鸟开发信息技术有限公司" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="Copyrigt(c)  2016-2017" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="85dp"
+            android:text="京ICP证162354号" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="食品流通许可证编号：SP1105489651988" />
+
+    </LinearLayout>
 
 
 </LinearLayout>

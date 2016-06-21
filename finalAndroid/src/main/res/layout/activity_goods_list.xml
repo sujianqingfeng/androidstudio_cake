@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#00FFFF"
+    android:background="@color/home_bg"
     android:orientation="vertical"
     tools:context="com.sujian.finalandroid.activity.GoodsListActivity">
 
