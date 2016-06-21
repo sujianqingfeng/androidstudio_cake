@@ -89,6 +89,15 @@ public class LoopViewPager extends ViewPager {
         startImageTimerTask();
     }
 
+
+    public void setAdapter(LoopPagerAdapterWrapper adapter) {
+        mAdapter = adapter;
+        mAdapter.setBoundaryCaching(mBoundaryCaching);
+        super.setAdapter(mAdapter);
+        setCurrentItem(0, false);
+        startImageTimerTask();
+    }
+
     @Override
     public PagerAdapter getAdapter() {
         return mAdapter != null ? mAdapter.getRealAdapter() : mAdapter;

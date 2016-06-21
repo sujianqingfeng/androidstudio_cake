@@ -97,9 +97,11 @@ public class HomeFragment extends BaseFragment {
     private List<Map<String, Object>> gridDatas;
     // 图片集合
     private List<String> imageList;
-    // 放置分类数据的集合
+
+    // viewpager
     private HomeAdapter homeAdapter;
 
+    private LoopPagerAdapterWrapper loopPagerAdapterWrapper;
 
     private boolean isFrist = true;
 
@@ -108,26 +110,25 @@ public class HomeFragment extends BaseFragment {
         show();
         initViewPager();
         initListView();
-    }
-
-    /**
-     * 这个地方调试三个小时  以后注意生命周期的变化
-     *
-     * @param savedInstanceState
-     */
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
         getDate();
     }
 
 
+    /**
+     * 初始化viewpager
+     */
+    private void initViewPager() {
+        urlList = new ArrayList<String>();
+        homeAdapter = new HomeAdapter();
+        loopPagerAdapterWrapper = new LoopPagerAdapterWrapper(homeAdapter);
+        vp_home.setAdapter(loopPagerAdapterWrapper);
+        vp_home_indicator.setViewPager(vp_home);
+    }
 
     /**
      * 初始化listview
      */
     private void initListView() {
-
         //移动到第一个  移动到最顶部
         myScrollView.smoothScrollTo(0, 0);
         lv_home.setFocusable(false);
@@ -160,16 +161,13 @@ public class HomeFragment extends BaseFragment {
                             if (homeObject != null) {
                                 //viewpager
                                 List<Commodity> headlist = homeObject.getHeadList();
-                                urlList.clear();
+
                                 LogUtil.e("viewpager的数据大小" + headlist.size());
                                 for (Commodity c : headlist) {
                                     urlList.add(Constants.SERVICEADDRESS + c.getDescription_pcture());
                                 }
-                                homeAdapter = new HomeAdapter();
-                                vp_home.setAdapter(homeAdapter);
-                                homeAdapter.notifyDataSetChanged();
-                                vp_home.getAdapter().notifyDataSetChanged();
-                                vp_home_indicator.setViewPager(vp_home);
+                                LogUtil.e("开始刷新----viewpager");
+                                loopPagerAdapterWrapper.notifyDataSetChanged();
 
                                 //gridlist
                                 List<Commodity> gridlist = homeObject.getGridList();
@@ -186,13 +184,6 @@ public class HomeFragment extends BaseFragment {
                         }
                     }
                 });
-    }
-
-    /**
-     * 初始化viewpager
-     */
-    private void initViewPager() {
-        urlList = new ArrayList<String>();
     }
 
 

@@ -35,6 +35,24 @@ public class MyUitls {
     }
 
     /**
+     * 通过数字判断boolean   0代表ture 1代表flase
+     * @param code
+     * @return
+     */
+    public static boolean getBoolean(int code) {
+        return code == 0 ? true : false;
+    }
+
+    /**
+     * 通过boolean得到int数值
+     *
+     * @return
+     */
+    public static int getInt(boolean b) {
+        return b ? 0 : 1;
+    }
+
+    /**
      * 判断用户的登陆状态
      */
     public static boolean isUserExistence() {

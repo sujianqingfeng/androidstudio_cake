@@ -90,15 +90,15 @@ public class ShopCartFragment extends BaseFragment {
             public void onCheckedChanged(SmoothCheckBox checkBox, boolean isChecked) {
                 if (isChecked) {
                     for (ShopCarOrderInfo s : dataLists) {
-                        if (!s.isChecked()) {
-                            s.setChecked(true);
+                        if (s.isChecked() == 1) {
+                            s.setChecked(0);
                         }
                     }
                     shopCarAdapter.notifyDataSetChanged();
                 } else {
                     for (ShopCarOrderInfo sc : dataLists) {
-                        if (sc.isChecked()) {
-                            sc.setChecked(false);
+                        if (sc.isChecked() == 0) {
+                            sc.setChecked(1);
                         }
                     }
                     shopCarAdapter.notifyDataSetChanged();
@@ -248,11 +248,11 @@ public class ShopCartFragment extends BaseFragment {
                 tv_shopcar_item_comodity_price.setText(data.getCommodity_price() + "元");
                 tv_shopcar_item_comodity_num.setText(data.getCommodity_quantity() + "");
                 x.image().bind(iv_shopcar_item_commodity_icon, Constants.SERVICEADDRESS + data.getDescription_pcture(), options);
-                scb_shopcar_item_choose.setChecked(data.isChecked(), true);
+                scb_shopcar_item_choose.setChecked(MyUitls.getBoolean(data.isChecked()), true);
                 scb_shopcar_item_choose.setOnClickListener(new OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        data.setChecked(!scb_shopcar_item_choose.isChecked());
+                        data.setChecked(MyUitls.getInt(!scb_shopcar_item_choose.isChecked()));
                         scb_shopcar_item_choose.setChecked(!scb_shopcar_item_choose.isChecked(), true);
                     }
                 });
