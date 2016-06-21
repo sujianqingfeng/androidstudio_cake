@@ -6,8 +6,8 @@ import org.xutils.view.annotation.Event;
 import org.xutils.view.annotation.ViewInject;
 import org.xutils.x;
 
+import com.google.gson.Gson;
 import com.sujian.finalandroid.activity.ChangeAdressActivity;
-import com.sujian.finalandroid.activity.HomeActivity;
 import com.sujian.finalandroid.activity.R;
 import com.sujian.finalandroid.activity.ShoppingActivity;
 import com.sujian.finalandroid.adapter.DefauListViewAdapter;
@@ -16,13 +16,13 @@ import com.sujian.finalandroid.base.BaseHolder;
 import com.sujian.finalandroid.constant.Constants;
 import com.sujian.finalandroid.entity.ShopCarOrderInfo;
 import com.sujian.finalandroid.entity.ShopCarOrderInfoCallBackEntity;
-import com.sujian.finalandroid.net.ShopCarOrderCallBack;
+import com.sujian.finalandroid.entity.ShopCart;
+import com.sujian.finalandroid.net.ShopCarOrderInfoCallBack;
 import com.sujian.finalandroid.ui.LoadingPage;
 import com.sujian.finalandroid.ui.PublishSelectTimePopupWindow;
-import com.sujian.finalandroid.ui.TitleBuilder;
 import com.sujian.finalandroid.uitls.MyUitls;
-import com.sujian.finalandroid.uitls.ToastUitls;
 import com.zhy.http.okhttp.OkHttpUtils;
+import com.zhy.http.okhttp.callback.StringCallback;
 
 import android.content.Intent;
 import android.view.Gravity;
@@ -39,9 +39,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import cn.refactor.library.SmoothCheckBox;
 import okhttp3.Call;
@@ -75,10 +73,17 @@ public class ShopCartFragment extends BaseFragment {
 
     @Override
     public void initDatas(View view) {
-        initListView();
+
         initCheckBox();
     }
 
+    @Override
+    public void show() {
+        super.show();
+        initListView();
+        if (shopCarAdapter != null)
+            shopCarAdapter.notifyDataSetChanged();
+    }
 
     /**
      * 初始化checkbox
@@ -90,14 +95,14 @@ public class ShopCartFragment extends BaseFragment {
             public void onCheckedChanged(SmoothCheckBox checkBox, boolean isChecked) {
                 if (isChecked) {
                     for (ShopCarOrderInfo s : dataLists) {
-                        if (s.isChecked() == 1) {
+                        if (s.getChecked() == 1) {
                             s.setChecked(0);
                         }
                     }
                     shopCarAdapter.notifyDataSetChanged();
                 } else {
                     for (ShopCarOrderInfo sc : dataLists) {
-                        if (sc.isChecked() == 0) {
+                        if (sc.getChecked() == 0) {
                             sc.setChecked(1);
                         }
                     }
@@ -116,10 +121,11 @@ public class ShopCartFragment extends BaseFragment {
                 .url(url)
                 .addParams("user_id", MyUitls.getUid() + "")
                 .build()
-                .execute(new ShopCarOrderCallBack() {
+                .execute(new ShopCarOrderInfoCallBack() {
                     @Override
                     public void onError(Call call, Exception e, int id) {
                         LogUtil.e("错误解析------购物车");
+                        e.printStackTrace();
                     }
 
                     @Override
@@ -182,6 +188,11 @@ public class ShopCartFragment extends BaseFragment {
     }
 
 
+    /**
+     * 购买的监听器
+     *
+     * @param view
+     */
     @Event(value = R.id.sp_purchase)
     private void clickpurchaseButton(View view) {
         Toast.makeText(getActivity(), "购买被点击", Toast.LENGTH_SHORT).show();
@@ -248,12 +259,39 @@ public class ShopCartFragment extends BaseFragment {
                 tv_shopcar_item_comodity_price.setText(data.getCommodity_price() + "元");
                 tv_shopcar_item_comodity_num.setText(data.getCommodity_quantity() + "");
                 x.image().bind(iv_shopcar_item_commodity_icon, Constants.SERVICEADDRESS + data.getDescription_pcture(), options);
-                scb_shopcar_item_choose.setChecked(MyUitls.getBoolean(data.isChecked()), true);
+
+                LogUtil.e("查看状态--" + MyUitls.getBoolean(data.getChecked()) + "数字为--" + data.getChecked() + "商品id--" + data.getCommodity_id());
+                scb_shopcar_item_choose.setChecked(MyUitls.getBoolean(data.getChecked()));
+
+
                 scb_shopcar_item_choose.setOnClickListener(new OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         data.setChecked(MyUitls.getInt(!scb_shopcar_item_choose.isChecked()));
+                        LogUtil.e("改变之后的check" + MyUitls.getInt(!scb_shopcar_item_choose.isChecked()));
                         scb_shopcar_item_choose.setChecked(!scb_shopcar_item_choose.isChecked(), true);
+                        //提交数据
+                        String url = Constants.SERVICEADDRESS + "shopcart/shopcart_updateShopCar.cake";
+                        OkHttpUtils.get()
+                                .url(url)
+                                .addParams("shopping_cart_id", data.getShopping_cart_id() + "")
+                                .addParams("checked", data.getChecked() + "")
+                                .addParams("user_id", data.getUser_id() + "")
+                                .addParams("commodity_id", data.getCommodity_id() + "")
+                                .addParams("commodity_quantity", data.getCommodity_quantity() + "")
+                                .build()
+                                .execute(new StringCallback() {
+                                    @Override
+                                    public void onError(Call call, Exception e, int id) {
+
+                                    }
+
+                                    @Override
+                                    public void onResponse(String response, int id) {
+                                        LogUtil.e(response);
+                                    }
+                                });
+
                     }
                 });
 

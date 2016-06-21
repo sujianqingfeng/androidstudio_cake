@@ -273,6 +273,8 @@ public class HomeActivity extends BaseActivity {
             }
         });
         // vp_tab.setOffscreenPageLimit(3);
+
+
     }
 
     // viewPager 的适配器

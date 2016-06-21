@@ -7,6 +7,7 @@ import java.util.List;
  * Mail:121116111@qq.com
  */
 public class ShopCarOrderInfoCallBackEntity {
+
     private boolean success;
     private List<ShopCarOrderInfo> shopCarOrderInfo;
 

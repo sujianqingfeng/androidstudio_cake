@@ -3,6 +3,8 @@ package com.sujian.finalandroid.entity;
 import com.google.gson.Gson;
 import com.zhy.http.okhttp.callback.Callback;
 
+import org.xutils.common.util.LogUtil;
+
 import okhttp3.Response;
 
 /**
