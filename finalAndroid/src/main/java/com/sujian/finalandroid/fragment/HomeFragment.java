@@ -1,7 +1,6 @@
 package com.sujian.finalandroid.fragment;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -10,10 +9,7 @@ import org.xutils.x;
 import org.xutils.image.ImageOptions;
 import org.xutils.view.annotation.ViewInject;
 
-import com.sujian.finalandroid.activity.HomeActivity;
-import com.sujian.finalandroid.activity.MyOrderActivity;
 import com.sujian.finalandroid.activity.R;
-import com.sujian.finalandroid.activity.SearchActivity;
 import com.sujian.finalandroid.activity.ShoppingActivity;
 import com.sujian.finalandroid.activity.WebActivity;
 import com.sujian.finalandroid.adapter.DefauListViewAdapter;
@@ -21,37 +17,27 @@ import com.sujian.finalandroid.base.BaseFragment;
 import com.sujian.finalandroid.base.BaseHolder;
 import com.sujian.finalandroid.constant.Constants;
 import com.sujian.finalandroid.entity.Commodity;
-import com.sujian.finalandroid.entity.CommodityCallBackEntity;
 import com.sujian.finalandroid.entity.CommodityKind;
 import com.sujian.finalandroid.entity.CommodityKindCalBackEntity;
 import com.sujian.finalandroid.entity.HomeObject;
 import com.sujian.finalandroid.net.CommodityKindCalBack;
 import com.sujian.finalandroid.ui.LoadingPage;
-import com.sujian.finalandroid.ui.LoopPagerAdapterWrapper;
 import com.sujian.finalandroid.ui.LoopViewPager;
-import com.sujian.finalandroid.ui.TitleBuilder;
 import com.sujian.finalandroid.uitls.ToastUitls;
 import com.viewpagerindicator.CirclePageIndicator;
 import com.zhy.http.okhttp.OkHttpUtils;
 
-import android.accounts.NetworkErrorException;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
 import android.support.v4.view.PagerAdapter;
-import android.support.v4.view.ViewPager;
-import android.support.v4.view.ViewPager.OnPageChangeListener;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
+import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.ScrollView;
-import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -99,7 +85,8 @@ public class HomeFragment extends BaseFragment {
     private List<String> imageList;
     // 放置分类数据的集合
     private HomeAdapter homeAdapter;
-
+    private GridViewAdapter gridViewAdapter;
+    private List<Commodity> data;
 
     private boolean isFrist = true;
 
@@ -140,7 +127,15 @@ public class HomeFragment extends BaseFragment {
 
 //        SimpleAdapter sim = new SimpleAdapter(x.app(), gridDatas, R.layout.home_gridview_item, new String[]{"title"}, new int[]{R.id.tv_home_gridview_item_title});
 //        gv_home.setAdapter(sim);
-
+//        gv_home.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//                long commodity_id = data.get(position).getCommodity_id();
+//                Intent intent = new Intent(getActivity(), ShoppingActivity.class);
+//                intent.putExtra("id", "" + commodity_id);
+//                startActivityForResult(intent, Constants.GOSHOPCAR);
+//            }
+//        });
 
     }
 
@@ -149,10 +144,10 @@ public class HomeFragment extends BaseFragment {
      */
     private void initListView() {
 
-
         //移动到第一个  移动到最顶部
         myScrollView.smoothScrollTo(0, 0);
         lv_home.setFocusable(false);
+
     }
 
     /**
@@ -196,6 +191,7 @@ public class HomeFragment extends BaseFragment {
                                 //gridlist
                                 List<Commodity> gridlist = homeObject.getGridList();
                                 gv_home.setAdapter(new GridViewAdapter(gridlist));
+
 
                                 //listview
                                 LogUtil.e("listview解析的数据-----" + homeObject.getKindList().toString());
@@ -281,6 +277,8 @@ public class HomeFragment extends BaseFragment {
             @ViewInject(R.id.tv_right_price)
             private TextView tv_right_price;
 
+
+
             @Override
             protected void refreshView() {
 
@@ -301,6 +299,34 @@ public class HomeFragment extends BaseFragment {
                 x.image().bind(img_center, Constants.SERVICEADDRESS + centerCom.getDescription_pcture(), options);
                 x.image().bind(img_right, Constants.SERVICEADDRESS + rightCom.getDescription_pcture(), options);
 
+                img_left.setOnClickListener(new OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(getActivity(), ShoppingActivity.class);
+                        intent.putExtra("id", "" + data.getCommodityList().get(0).getCommodity_id());
+                        startActivityForResult(intent, Constants.GOSHOPCAR);
+                    }
+                });
+
+                img_center.setOnClickListener(new OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(getActivity(), ShoppingActivity.class);
+                        intent.putExtra("id", "" + data.getCommodityList().get(1).getCommodity_id());
+                        startActivityForResult(intent, Constants.GOSHOPCAR);
+                    }
+                });
+
+                img_right.setOnClickListener(new OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(getActivity(), ShoppingActivity.class);
+                        intent.putExtra("id", "" + data.getCommodityList().get(2).getCommodity_id());
+                        startActivityForResult(intent, Constants.GOSHOPCAR);
+                    }
+                });
+
+
                 tv_left_title.setText(leftCom.getCommodity_name());
                 tv_left_size.setText(leftCom.getCommodity_size() + "");
                 tv_left_price.setText(leftCom.getCommodity_price() + "");
@@ -312,7 +338,10 @@ public class HomeFragment extends BaseFragment {
                 tv_right_price.setText(rightCom.getCommodity_price() + "");
 
 
+
             }
+
+
 
             @Override
             public View initView() {
@@ -426,13 +455,25 @@ public class HomeFragment extends BaseFragment {
             @ViewInject(R.id.tv_home_gridview_item_title)
             private TextView title;
 
+
             @Override
             protected void refreshView() {
                 ImageOptions options = new ImageOptions.Builder().setLoadingDrawableId(R.drawable.ic_launcher)
                         .setFailureDrawableId(R.drawable.ic_launcher).setUseMemCache(true).build();
                 title.setText(data.getCommodity_name());
                 x.image().bind(pic, Constants.SERVICEADDRESS + data.getDescription_pcture(), options);
+
+                pic.setOnClickListener(new OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(getActivity(), ShoppingActivity.class);
+                        intent.putExtra("id", "" + data.getCommodity_id());
+                        startActivityForResult(intent, Constants.GOSHOPCAR);
+                    }
+                });
+
             }
+
 
             @Override
             public View initView() {
