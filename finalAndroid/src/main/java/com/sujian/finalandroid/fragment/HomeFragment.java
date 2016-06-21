@@ -23,6 +23,7 @@ import com.sujian.finalandroid.entity.CommodityKindCalBackEntity;
 import com.sujian.finalandroid.entity.HomeObject;
 import com.sujian.finalandroid.net.CommodityKindCalBack;
 import com.sujian.finalandroid.ui.LoadingPage;
+import com.sujian.finalandroid.ui.LoopPagerAdapterWrapper;
 import com.sujian.finalandroid.ui.LoopViewPager;
 import com.sujian.finalandroid.uitls.ToastUitls;
 import com.viewpagerindicator.CirclePageIndicator;
@@ -107,26 +108,6 @@ public class HomeFragment extends BaseFragment {
     /**
      * 初始化viewpager
      */
-    private void initGridView() {
-//       gridDatas = new ArrayList<>();
-//        Map<String, Object> map;
-//        for (int i = 0; i < 6; i++) {
-//            map = new HashMap<>();
-//            map.put("title", "蛋糕" + i);
-//            gridDatas.add(map);
-//        }
-
-//        SimpleAdapter sim = new SimpleAdapter(x.app(), gridDatas, R.layout.home_gridview_item, new String[]{"title"}, new int[]{R.id.tv_home_gridview_item_title});
-//        gv_home.setAdapter(sim);
-//        gv_home.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//                long commodity_id = data.get(position).getCommodity_id();
-//                Intent intent = new Intent(getActivity(), ShoppingActivity.class);
-//                intent.putExtra("id", "" + commodity_id);
-//                startActivityForResult(intent, Constants.GOSHOPCAR);
-//            }
-//        });
 
     private void initViewPager() {
         urlList = new ArrayList<String>();
