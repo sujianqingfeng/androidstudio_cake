@@ -1,6 +1,7 @@
 package com.sujian.finalandroid.fragment;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -38,6 +39,7 @@ import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.ScrollView;
+import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -83,10 +85,13 @@ public class HomeFragment extends BaseFragment {
     private List<Map<String, Object>> gridDatas;
     // 图片集合
     private List<String> imageList;
-    // 放置分类数据的集合
+
+    // viewpager
     private HomeAdapter homeAdapter;
     private GridViewAdapter gridViewAdapter;
     private List<Commodity> data;
+
+    private LoopPagerAdapterWrapper loopPagerAdapterWrapper;
 
     private boolean isFrist = true;
 
@@ -95,26 +100,12 @@ public class HomeFragment extends BaseFragment {
         show();
         initViewPager();
         initListView();
-        initGridView();
-
-    }
-
-    /**
-     * 这个地方调试三个小时  以后注意生命周期的变化
-     *
-     * @param savedInstanceState
-     */
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
         getDate();
     }
 
 
-
-
     /**
-     * 初始化gridview
+     * 初始化viewpager
      */
     private void initGridView() {
 //       gridDatas = new ArrayList<>();
@@ -137,6 +128,12 @@ public class HomeFragment extends BaseFragment {
 //            }
 //        });
 
+    private void initViewPager() {
+        urlList = new ArrayList<String>();
+        homeAdapter = new HomeAdapter();
+        loopPagerAdapterWrapper = new LoopPagerAdapterWrapper(homeAdapter);
+        vp_home.setAdapter(loopPagerAdapterWrapper);
+        vp_home_indicator.setViewPager(vp_home);
     }
 
     /**
@@ -177,16 +174,13 @@ public class HomeFragment extends BaseFragment {
                             if (homeObject != null) {
                                 //viewpager
                                 List<Commodity> headlist = homeObject.getHeadList();
-                                urlList.clear();
+
                                 LogUtil.e("viewpager的数据大小" + headlist.size());
                                 for (Commodity c : headlist) {
                                     urlList.add(Constants.SERVICEADDRESS + c.getDescription_pcture());
                                 }
-                                homeAdapter = new HomeAdapter();
-                                vp_home.setAdapter(homeAdapter);
-                                homeAdapter.notifyDataSetChanged();
-                                vp_home.getAdapter().notifyDataSetChanged();
-                                vp_home_indicator.setViewPager(vp_home);
+                                LogUtil.e("开始刷新----viewpager");
+                                loopPagerAdapterWrapper.notifyDataSetChanged();
 
                                 //gridlist
                                 List<Commodity> gridlist = homeObject.getGridList();
@@ -204,13 +198,6 @@ public class HomeFragment extends BaseFragment {
                         }
                     }
                 });
-    }
-
-    /**
-     * 初始化viewpager
-     */
-    private void initViewPager() {
-        urlList = new ArrayList<String>();
     }
 
 

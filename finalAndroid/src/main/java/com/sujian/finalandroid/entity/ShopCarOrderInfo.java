@@ -8,7 +8,7 @@ package com.sujian.finalandroid.entity;
 public class ShopCarOrderInfo {
 
     private long shopping_cart_id;
-    private boolean checked;
+    private int checked;
     private int commodity_quantity;
 
     private long commodity_id;
@@ -25,11 +25,11 @@ public class ShopCarOrderInfo {
         this.shopping_cart_id = shopping_cart_id;
     }
 
-    public boolean isChecked() {
+    public int isChecked() {
         return checked;
     }
 
-    public void setChecked(boolean checked) {
+    public void setChecked(int checked) {
         this.checked = checked;
     }
 
