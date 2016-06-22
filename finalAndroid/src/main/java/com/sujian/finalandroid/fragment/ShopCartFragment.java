@@ -21,6 +21,7 @@ import com.sujian.finalandroid.net.ShopCarOrderInfoCallBack;
 import com.sujian.finalandroid.ui.LoadingPage;
 import com.sujian.finalandroid.ui.PublishSelectTimePopupWindow;
 import com.sujian.finalandroid.uitls.MyUitls;
+import com.sujian.finalandroid.uitls.ToastUitls;
 import com.zhy.http.okhttp.OkHttpUtils;
 import com.zhy.http.okhttp.callback.StringCallback;
 
@@ -195,8 +196,27 @@ public class ShopCartFragment extends BaseFragment {
      */
     @Event(value = R.id.sp_purchase)
     private void clickpurchaseButton(View view) {
-        Toast.makeText(getActivity(), "购买被点击", Toast.LENGTH_SHORT).show();
 
+//        if (MyUitls.isUserExistence()){
+//            String url=Constants.SERVICEADDRESS+"order/order_addOrder.cake";
+//            OkHttpUtils.get()
+//                    .url(url)
+//                    .addParams()
+//                    .build()
+//                    .execute(new StringCallback() {
+//                        @Override
+//                        public void onError(Call call, Exception e, int id) {
+//
+//                        }
+//
+//                        @Override
+//                        public void onResponse(String response, int id) {
+//
+//                        }
+//                    });
+//        }else {
+//            ToastUitls.show("请先登录账号！");
+//        }
     }
 
     /**
