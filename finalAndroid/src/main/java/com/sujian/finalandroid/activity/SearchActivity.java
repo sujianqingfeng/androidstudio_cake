@@ -84,7 +84,7 @@ public class SearchActivity extends BaseActivity {
     private void initEditTextTitle() {
         new EditTextTitleBuilder(this).initTitle(this)
                 .setLeftImageRes(R.drawable.head_top_title_left_icon)
-                .setRightImageRes(R.drawable.ic_launcher)
+                .setRightImageRes(R.drawable.main_head_search_btn)
                 .setMiddleTitleHintTextAndHintColor("请输入关键字")
                 .setLeftTextOrImageListener(editTextTitleListener)
                 .setRightTextOrImageListener(editTextTitleListener);
@@ -135,14 +135,13 @@ public class SearchActivity extends BaseActivity {
     private void initHotSearch() {
 
         mList = new ArrayList<>();
-        mList.add("中华人名共和国");
-        mList.add("大韩民国");
-        mList.add("日本");
-        mList.add("朝鲜");
-        mList.add("台湾");
-        mList.add("香港特别行政区");
-        mList.add("澳门特别行政区");
-        mList.add("越南");
+        mList.add("奶酪蛋糕");
+        mList.add("天使");
+        mList.add("春暖花开");
+        mList.add("红色樱桃");
+        mList.add("更上一层楼");
+        mList.add("车厘子巧克力蛋糕");
+        mList.add("幸福时光");
 
         mAdapter = new TagBaseAdapter(this, mList);
 

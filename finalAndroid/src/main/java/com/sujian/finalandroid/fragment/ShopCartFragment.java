@@ -14,9 +14,11 @@ import com.sujian.finalandroid.adapter.DefauListViewAdapter;
 import com.sujian.finalandroid.base.BaseFragment;
 import com.sujian.finalandroid.base.BaseHolder;
 import com.sujian.finalandroid.constant.Constants;
+import com.sujian.finalandroid.entity.BooleabEntity;
 import com.sujian.finalandroid.entity.ShopCarOrderInfo;
 import com.sujian.finalandroid.entity.ShopCarOrderInfoCallBackEntity;
 import com.sujian.finalandroid.entity.ShopCart;
+import com.sujian.finalandroid.net.BooleanCallback;
 import com.sujian.finalandroid.net.ShopCarOrderInfoCallBack;
 import com.sujian.finalandroid.ui.LoadingPage;
 import com.sujian.finalandroid.ui.PublishSelectTimePopupWindow;
@@ -49,10 +51,10 @@ import okhttp3.Call;
  * 购物车界面
  */
 public class ShopCartFragment extends BaseFragment {
-
+    //购买按钮
     @ViewInject(R.id.sp_purchase)
     private Button sp_purchase;
-
+    //备注
     @ViewInject(R.id.et_need)
     private EditText textView;
     //展现商品的列表
@@ -60,21 +62,28 @@ public class ShopCartFragment extends BaseFragment {
     private ListView lv_shopcar;
     // 装载数据集合
     List<ShopCarOrderInfo> dataLists;
-
+    //地址
     @ViewInject(R.id.rl_update)
     private RelativeLayout rl_update;
-
+    //送货时间
     @ViewInject(R.id.rl_time)
     private RelativeLayout rl_time;
     //全选的checkbox
     @ViewInject(R.id.scb_shopcar_choose)
     private SmoothCheckBox scb_shopcar_choose;
-
+    //listview的适配器
     private ShopCarAdapter shopCarAdapter;
+    //全部金额
+    @ViewInject(R.id.tv_total)
+    private TextView tv_total;
+    //装载选中的信息
+    private List<ShopCarOrderInfo> checkOrder;
+
+
+
 
     @Override
     public void initDatas(View view) {
-
         initCheckBox();
     }
 
@@ -91,26 +100,34 @@ public class ShopCartFragment extends BaseFragment {
      */
     private void initCheckBox() {
 
-        scb_shopcar_choose.setOnCheckedChangeListener(new SmoothCheckBox.OnCheckedChangeListener() {
+
+        scb_shopcar_choose.setOnClickListener(new OnClickListener() {
             @Override
-            public void onCheckedChanged(SmoothCheckBox checkBox, boolean isChecked) {
-                if (isChecked) {
-                    for (ShopCarOrderInfo s : dataLists) {
-                        if (s.getChecked() == 1) {
-                            s.setChecked(0);
+            public void onClick(View v) {
+                if (scb_shopcar_choose.isChecked()) {
+                    scb_shopcar_choose.setChecked(false, true);
+                    for (ShopCarOrderInfo sc : dataLists) {
+                        if (sc.getChecked() == 0) {
+                            sc.setChecked(1);
+
+                            changeCheckState(sc.getShopping_cart_id() + "", sc.getChecked() + "");
                         }
                     }
                     shopCarAdapter.notifyDataSetChanged();
                 } else {
-                    for (ShopCarOrderInfo sc : dataLists) {
-                        if (sc.getChecked() == 0) {
-                            sc.setChecked(1);
+                    scb_shopcar_choose.setChecked(true, true);
+                    for (ShopCarOrderInfo s : dataLists) {
+                        if (s.getChecked() == 1) {
+                            s.setChecked(0);
+                            changeCheckState(s.getShopping_cart_id() + "", s.getChecked() + "");
                         }
                     }
                     shopCarAdapter.notifyDataSetChanged();
                 }
             }
         });
+
+
     }
 
     /**
@@ -139,6 +156,7 @@ public class ShopCartFragment extends BaseFragment {
                             lv_shopcar.setFocusable(false);
                             shopCarAdapter = new ShopCarAdapter(dataLists);
                             lv_shopcar.setAdapter(shopCarAdapter);
+                            setMOney();
                         }
 
                     }
@@ -156,6 +174,18 @@ public class ShopCartFragment extends BaseFragment {
         });
 
 
+    }
+
+
+    /**
+     * 设置金额
+     */
+    private void setMOney() {
+        float money = 0;
+        for (int i = 0; i < dataLists.size(); i++) {
+            money = money + (dataLists.get(i).getCommodity_price() * dataLists.get(i).getCommodity_quantity());
+        }
+        tv_total.setText("共" + money + "元");
     }
 
 
@@ -190,34 +220,92 @@ public class ShopCartFragment extends BaseFragment {
 
 
     /**
-     * 购买的监听器
+     * 购买按钮的监听器
      *
      * @param view
      */
     @Event(value = R.id.sp_purchase)
     private void clickpurchaseButton(View view) {
+        if (MyUitls.isUserExistence()) {
+            if (checkOrder == null) {
+                checkOrder = new ArrayList<>();
+            }
+            checkOrder.clear();
+            LogUtil.e("订单的大小size--" + dataLists.size() + "选中的角标的大小--" + checkOrder.size());
+            //逻辑为先遍历所有的订单  并且是选中的状态才能添加
+            for (int i = 0; i < dataLists.size(); i++) {
+                if (MyUitls.getBoolean(dataLists.get(i).getChecked())) {
+                    addOrder(dataLists.get(i).getShopping_cart_id(), 1);
+                    checkOrder.add(dataLists.get(i));
+                }
+            }
 
-//        if (MyUitls.isUserExistence()){
-//            String url=Constants.SERVICEADDRESS+"order/order_addOrder.cake";
-//            OkHttpUtils.get()
-//                    .url(url)
-//                    .addParams()
-//                    .build()
-//                    .execute(new StringCallback() {
-//                        @Override
-//                        public void onError(Call call, Exception e, int id) {
-//
-//                        }
-//
-//                        @Override
-//                        public void onResponse(String response, int id) {
-//
-//                        }
-//                    });
-//        }else {
-//            ToastUitls.show("请先登录账号！");
-//        }
+        } else {
+            ToastUitls.show("请先登录账号！");
+        }
     }
+
+
+    /**
+     * 添加订单
+     * @param shop_id
+     * @param states
+     */
+    private void addOrder(long shop_id, int states) {
+        String url = Constants.SERVICEADDRESS + "order/order_addOrder.cake";
+        OkHttpUtils.get()
+                .url(url)
+                .addParams("shopcar_id", shop_id + "")
+                .addParams("order_status", states + "")
+                .build()
+                .execute(new BooleanCallback() {
+                    @Override
+                    public void onError(Call call, Exception e, int id) {
+                        ToastUitls.show("网络异常，请稍后再试");
+                    }
+
+                    @Override
+                    public void onResponse(BooleabEntity response, int id) {
+                        //成功则清除数据
+                        if (response.isSuccess()) {
+                            //如果不单独拿一个集合临时装载 直接移除会造成数组越界异常（切记）
+                            dataLists.removeAll(checkOrder);
+                            shopCarAdapter.notifyDataSetChanged();
+                        } else {
+                            ToastUitls.show("添加订单失败");
+                        }
+                    }
+                });
+    }
+
+
+    /**
+     * 改变选中状态
+     *
+     * @param id
+     * @param check
+     */
+    private void changeCheckState(String id, String check) {
+
+        String url = Constants.SERVICEADDRESS + "shopcart/shopcart_updateShopCarCheck.cake";
+        OkHttpUtils.get()
+                .url(url)
+                .addParams("shopping_cart_id", id)
+                .addParams("checked", check)
+                .build()
+                .execute(new StringCallback() {
+                    @Override
+                    public void onError(Call call, Exception e, int id) {
+
+                    }
+
+                    @Override
+                    public void onResponse(String response, int id) {
+                        LogUtil.e(response);
+                    }
+                });
+    }
+
 
     /**
      * 送货时间的监听器
@@ -229,9 +317,10 @@ public class ShopCartFragment extends BaseFragment {
         }
     }
 
-    //订单的适配器
+    /**
+     *  订单的适配器
+     */
     private class ShopCarAdapter extends DefauListViewAdapter<ShopCarOrderInfo> {
-
 
         public ShopCarAdapter(List<ShopCarOrderInfo> data) {
             super(data);
@@ -245,6 +334,7 @@ public class ShopCartFragment extends BaseFragment {
 
 
         class ViewHolder extends BaseHolder<ShopCarOrderInfo> {
+            //图片加载参数
             private ImageOptions options;
 
             public ViewHolder() {
@@ -291,26 +381,7 @@ public class ShopCartFragment extends BaseFragment {
                         LogUtil.e("改变之后的check" + MyUitls.getInt(!scb_shopcar_item_choose.isChecked()));
                         scb_shopcar_item_choose.setChecked(!scb_shopcar_item_choose.isChecked(), true);
                         //提交数据
-                        String url = Constants.SERVICEADDRESS + "shopcart/shopcart_updateShopCar.cake";
-                        OkHttpUtils.get()
-                                .url(url)
-                                .addParams("shopping_cart_id", data.getShopping_cart_id() + "")
-                                .addParams("checked", data.getChecked() + "")
-                                .addParams("user_id", data.getUser_id() + "")
-                                .addParams("commodity_id", data.getCommodity_id() + "")
-                                .addParams("commodity_quantity", data.getCommodity_quantity() + "")
-                                .build()
-                                .execute(new StringCallback() {
-                                    @Override
-                                    public void onError(Call call, Exception e, int id) {
-
-                                    }
-
-                                    @Override
-                                    public void onResponse(String response, int id) {
-                                        LogUtil.e(response);
-                                    }
-                                });
+                        changeCheckState(data.getShopping_cart_id() + "", data.getChecked() + "");
 
                     }
                 });

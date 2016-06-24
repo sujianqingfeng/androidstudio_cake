@@ -44,7 +44,7 @@
         android:textSize="15sp" />
 
     <View
-        android:layout_width="240dp"
+        android:layout_width="250dp"
         android:layout_height="1dp"
         android:layout_marginTop="2dp"
         android:layout_centerInParent="true"
@@ -70,6 +70,7 @@
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
         android:layout_gravity="center"
+        android:paddingRight="10dp"
         android:src="@drawable/ic_launcher"
         android:visibility="gone" />
 

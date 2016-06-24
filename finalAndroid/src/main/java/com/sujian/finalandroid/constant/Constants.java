@@ -32,7 +32,7 @@ public class Constants {
     /**
      * 服务器地址
      */
-    public static final String SERVICEADDRESS = "http://10.0.2.2:8080/CakeWeb/";
+    public static final String SERVICEADDRESS = "http://192.168.191.1:8080/CakeWeb/";
 
 
     /**
