@@ -6,7 +6,7 @@
     android:background="@color/radiobutton_text_press"
     android:clipToPadding="true"
     android:fitsSystemWindows="true"
-    android:gravity="center"
+    android:gravity="left|center"
     android:paddingBottom="3dp">
 
     <ImageView

@@ -10,6 +10,8 @@
         android:layout_height="95dp"
         app:timeline_indicatorSize="15dp"
         app:timeline_lineStyle="linear"
+        app:timeline_indicatorColor="@color/radiobutton_text_press"
+        app:timeline_lineColor="@color/radiobutton_text_press"
         android:layout_alignParentTop="true"
         app:timeline_type="middle" />
 

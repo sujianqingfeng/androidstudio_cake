@@ -77,4 +77,20 @@ public class MyUitls {
     public static long getUid() {
         return ((BaseApplication) x.app()).getUid();
     }
+
+    /**
+     * 1 代表已付款  2 代表未付款  3 代表待评价
+     *
+     * @param i
+     * @return
+     */
+    public static String getState(int i) {
+        if (i == 1) {
+            return "已付款";
+        } else if (i == 2) {
+            return "未付款";
+        } else {
+            return "待评价";
+        }
+    }
 }

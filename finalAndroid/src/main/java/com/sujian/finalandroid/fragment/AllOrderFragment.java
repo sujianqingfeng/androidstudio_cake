@@ -1,31 +1,40 @@
 package com.sujian.finalandroid.fragment;
 
 import android.content.Intent;
+import android.os.SystemClock;
 import android.text.format.DateUtils;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
+import com.google.gson.Gson;
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshListView;
 import com.sujian.finalandroid.activity.OrderDetailActivity;
 import com.sujian.finalandroid.activity.R;
+import com.sujian.finalandroid.adapter.DefauListViewAdapter;
 import com.sujian.finalandroid.base.BaseFragment;
+import com.sujian.finalandroid.base.BaseHolder;
+import com.sujian.finalandroid.constant.Constants;
+import com.sujian.finalandroid.entity.OrderInfoCallbackEntity;
+import com.sujian.finalandroid.entity.OrderInfo;
 import com.sujian.finalandroid.ui.LoadingPage;
+import com.sujian.finalandroid.uitls.MyUitls;
+import com.sujian.finalandroid.uitls.ToastUitls;
+import com.zhy.http.okhttp.OkHttpUtils;
+import com.zhy.http.okhttp.callback.StringCallback;
 
+import org.xutils.common.util.LogUtil;
 import org.xutils.image.ImageOptions;
 import org.xutils.view.annotation.ViewInject;
 import org.xutils.x;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
+
+import okhttp3.Call;
 
 /**
  * 全部订单
@@ -39,13 +48,13 @@ public class AllOrderFragment extends BaseFragment {
     private PullToRefreshListView mPullRefreshListView;
     //判断是下拉，还是上拉的标记
     private boolean isPullDownRefresh = true;
-
+    //listview
     private ListView lv_allorder;
-
-    private AllOrderListViewAdapter allOrderListViewAdapter;
+    //listview 适配器
+    private OrderAllAdapter orderAllAdapter;
     // 装载数据集合
-    List<Map<String, Object>> dataLists;
-    Map<String, Object> map;
+    List<OrderInfo> dataLists;
+
 
     /**
      * 创建了成功的页面
@@ -68,9 +77,41 @@ public class AllOrderFragment extends BaseFragment {
         super.initDatas(view);
         //第一个界面 需要手动请求数据展示
         show();
+        getDataFromService();
         initPullToRefresh();
 
     }
+
+    /**
+     * 从服务器得到数据
+     */
+
+    private void getDataFromService() {
+        String url = Constants.SERVICEADDRESS + "order/order_returnAllOrder.cake";
+        OkHttpUtils.get()
+                .url(url)
+                .addParams("user_id", MyUitls.getUid() + "")
+                .build()
+                .execute(new StringCallback() {
+                    @Override
+                    public void onError(Call call, Exception e, int id) {
+
+                    }
+
+                    @Override
+                    public void onResponse(String response, int id) {
+                        LogUtil.e(response);
+                        OrderInfoCallbackEntity o = new Gson().fromJson(response, OrderInfoCallbackEntity.class);
+                        LogUtil.e(o.toString());
+                        if (o.isSuccess()) {
+                            dataLists.addAll(o.getList());
+                            orderAllAdapter.notifyDataSetChanged();
+                        }
+                    }
+                });
+    }
+
+
 
     /**
      * 初始化 刷新控件
@@ -96,30 +137,15 @@ public class AllOrderFragment extends BaseFragment {
             }
         });
 
-        //滑动到底部的监听
-        mPullRefreshListView.setOnLastItemVisibleListener(new PullToRefreshBase.OnLastItemVisibleListener() {
 
-            @Override
-            public void onLastItemVisible() {
-                Toast.makeText(getActivity(), "End of List!", Toast.LENGTH_SHORT).show();
-            }
-        });
 
         //得到listview视图
         lv_allorder = mPullRefreshListView.getRefreshableView();
 
-        dataLists = new ArrayList<Map<String, Object>>();
-        for (int i = 0; i < 10; i++) {
-            map = new HashMap<String, Object>();
-            map.put("picurl", "http://img0.imgtn.bdimg.com/it/u=2918690550,3711054886&fm=21&gp=0.jpg");
-            map.put("title", "标题" + i);
-            map.put("price", "价格" + i);
-            map.put("num", i);
-            map.put("state", "状态" + i);
-            dataLists.add(map);
-        }
-        allOrderListViewAdapter = new AllOrderListViewAdapter();
-        lv_allorder.setAdapter(allOrderListViewAdapter);
+        dataLists = new ArrayList<>();
+
+        orderAllAdapter = new OrderAllAdapter(dataLists);
+        lv_allorder.setAdapter(orderAllAdapter);
 
         lv_allorder.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -143,61 +169,74 @@ public class AllOrderFragment extends BaseFragment {
         refreshView.getLoadingLayoutProxy().setLastUpdatedLabel(label);
 
         //获取数据
-        // new GetDataTask().execute();
+        // 这里就偷懒了 模拟刷新
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                //睡眠两秒
+                SystemClock.sleep(2000);
+                getActivity().runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        // 通知刷新已完成
+                        mPullRefreshListView.onRefreshComplete();
+                        ToastUitls.show("没有更多的数据了");
+                    }
+                });
+
+            }
+        }).start();
     }
+
 
     /**
      * 全部订单的适配器
-     *
-     * @author 12111
      */
-    class AllOrderListViewAdapter extends BaseAdapter {
+    class OrderAllAdapter extends DefauListViewAdapter<OrderInfo> {
 
-        @Override
-        public int getCount() {
-            return dataLists.size();
-        }
+        private ImageOptions options;
 
-        @Override
-        public Object getItem(int position) {
-            return dataLists.get(position);
-        }
-
-        @Override
-        public long getItemId(int position) {
-            return position;
-        }
-
-        @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
-            ViewHolder viewHolder;
-            if (convertView == null) {
-                viewHolder = new ViewHolder();
-                convertView = View.inflate(getActivity(), R.layout.order_list_item, null);
-                x.view().inject(viewHolder, convertView);
-                convertView.setTag(viewHolder);
-            } else {
-                viewHolder = (ViewHolder) convertView.getTag();
-            }
-            Map<String, Object> map2 = dataLists.get(position);
-            ImageOptions options = new ImageOptions.Builder().setLoadingDrawableId(R.drawable.ic_launcher)
+        public OrderAllAdapter(List<OrderInfo> data) {
+            super(data);
+            options = new ImageOptions.Builder().setLoadingDrawableId(R.drawable.ic_launcher)
                     .setFailureDrawableId(R.drawable.ic_launcher).setUseMemCache(true).build();
-            x.image().bind(viewHolder.imageView, (String) map2.get("picurl"), options);
-            viewHolder.title.setText((String) map2.get("title"));
-            viewHolder.Price.setText((Integer) map2.get("num") + "件" + (String) map2.get("price"));
-            viewHolder.state.setText((String) map2.get("state"));
-            return convertView;
         }
 
-        class ViewHolder {
+        @Override
+        public BaseHolder getHolder() {
+            return new OrderViewHolder();
+        }
+
+
+        class OrderViewHolder extends BaseHolder<OrderInfo> {
+
             @ViewInject(R.id.iv_order_item_icon)
             private ImageView imageView;
             @ViewInject(R.id.tv_order_item_title)
             private TextView title;
             @ViewInject(R.id.tv_order_item_price)
-            private TextView Price;
+            private TextView price;
             @ViewInject(R.id.tv_order_item_state)
             private TextView state;
+            @ViewInject(R.id.tv_order_item_time)
+            private TextView tv_order_item_time;
+
+            @Override
+            protected void refreshView() {
+                x.image().bind(imageView, Constants.SERVICEADDRESS + data.getPic_url(), options);
+                title.setText(data.getCommodity_name());
+                price.setText("共" + data.getCommodity_num() + "件商品  ￥" + data.getCommodity_price() * data.getCommodity_num() + "元");
+                state.setText(MyUitls.getState(data.getOrder_state()));
+                tv_order_item_time.setText(data.getOrder_time());
+            }
+
+            @Override
+            public View initView() {
+                View inflate = View.inflate(getActivity(), R.layout.order_list_item, null);
+                x.view().inject(this, inflate);
+                return inflate;
+            }
         }
+
     }
 }

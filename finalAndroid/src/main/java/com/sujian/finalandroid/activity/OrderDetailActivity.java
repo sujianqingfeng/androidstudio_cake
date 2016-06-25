@@ -53,11 +53,9 @@ public class OrderDetailActivity extends BaseActivity {
     private void initTabTitle() {
         new TabTitleBuilder(this).initTitle(this)
                 .setLeftImageRes(R.drawable.head_top_title_left_icon)
-                .setRightImageRes(R.drawable.ic_launcher)
                 .setLeftRadioButtonTextAndColorAndBackground("订单状态", R.drawable.rb_bg_01, true)
                 .setRightRadioButtonTextAndColorAndBackground("订单详情", R.drawable.rb_bg_02, false)
                 .setLeftTextOrImageListener(titleListener)
-                .setRightTextOrImageListener(titleListener)
                 .setTabSelectedListener(tabListener);
     }
 

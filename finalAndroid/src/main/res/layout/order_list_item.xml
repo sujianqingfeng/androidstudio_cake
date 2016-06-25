@@ -28,8 +28,8 @@
 
     <ImageView
         android:id="@+id/iv_order_item_icon"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
         android:layout_margin="10dp"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/v_top_line"
