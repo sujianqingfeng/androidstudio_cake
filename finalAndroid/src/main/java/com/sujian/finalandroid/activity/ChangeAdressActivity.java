@@ -79,7 +79,9 @@ public class ChangeAdressActivity extends BaseActivity {
      */
     @Event(R.id.bt_change_adress_add_adress)
     private void clickAddButton(View view) {
-        startActivity(new Intent(ChangeAdressActivity.this, EditAdressActivity.class));
+        Intent intent = new Intent(ChangeAdressActivity.this, EditAdressActivity.class);
+        intent.putExtra("flag", true); //true 代表添加的标识
+        startActivity(intent);
     }
 
 
@@ -147,7 +149,9 @@ public class ChangeAdressActivity extends BaseActivity {
                     @Override
                     public void onClick(View v) {
                         //这个时候应该传一个地址id过去  先模拟数据 等服务器再写
-                        startActivity(new Intent(ChangeAdressActivity.this, EditAdressActivity.class));
+                        Intent intent = new Intent(ChangeAdressActivity.this, EditAdressActivity.class);
+                        intent.putExtra("flag", false);//修改的标识
+                        startActivity(intent);
                     }
                 });
             }

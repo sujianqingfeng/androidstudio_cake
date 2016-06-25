@@ -64,12 +64,6 @@ public class LoginActivity extends BaseActivity {
     private Validator validator;
 
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-    }
-
     //登陆点击
     @Event(value = R.id.bt_login)
     private void goHome(View view) {

@@ -96,7 +96,6 @@ public class MySettingsActivity extends BaseActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 switch (position) {
-
                     case 0:
                         startActivity(new Intent(MySettingsActivity.this, ChangeAdressActivity.class));
                         break;

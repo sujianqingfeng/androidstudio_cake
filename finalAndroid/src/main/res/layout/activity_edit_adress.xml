@@ -53,6 +53,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="1dp"
             android:text="男士"
+            android:checked="true"
             android:textColor="@color/drak"
             android:textSize="15dp" />
 
@@ -149,13 +150,13 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/bt_delete_adree"
+        android:id="@+id/bt_address"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:background="@color/white"
         android:padding="8dp"
-        android:text=" 删除当前地址 "
+        android:text=" 添加当前地址 "
         android:textSize="16dp" />
 
 
