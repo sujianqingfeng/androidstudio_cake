@@ -1,13 +1,21 @@
 package com.sujian.finalandroid.activity;
 
+import org.xutils.common.util.LogUtil;
 import org.xutils.view.annotation.ContentView;
 import org.xutils.view.annotation.ViewInject;
 
 import com.sujian.finalandroid.base.BaseActivity;
+import com.sujian.finalandroid.constant.Constants;
+import com.sujian.finalandroid.entity.Commodity;
+import com.sujian.finalandroid.entity.Message;
+import com.sujian.finalandroid.entity.MessageCallBackEntity;
 import com.sujian.finalandroid.fragment.MyNewsFragmentFactory;
 import com.sujian.finalandroid.fragment.OrderFragmentFactory;
+import com.sujian.finalandroid.net.MessageCallback;
 import com.sujian.finalandroid.ui.TitleBuilder;
+import com.sujian.finalandroid.uitls.ToastUitls;
 import com.viewpagerindicator.TabPageIndicator;
+import com.zhy.http.okhttp.OkHttpUtils;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -20,6 +28,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Toast;
+
+import java.util.List;
+
+import okhttp3.Call;
 
 /**
  * @author Sujian  121116111@QQ.COM
@@ -38,6 +50,7 @@ public class MyNewsActivity extends BaseActivity {
     @ViewInject(R.id.indicator)
     private TabPageIndicator indicator;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,6 +61,7 @@ public class MyNewsActivity extends BaseActivity {
     protected void initData() {
         initTitle();
         initViewpager();
+
     }
 
     /**
@@ -80,6 +94,7 @@ public class MyNewsActivity extends BaseActivity {
                 .initTitle(this);
 
     }
+
 
     /**
      * 标题栏的监听

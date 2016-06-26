@@ -13,8 +13,15 @@ import com.sujian.finalandroid.activity.R;
 import com.sujian.finalandroid.adapter.DefauListViewAdapter;
 import com.sujian.finalandroid.base.BaseFragment;
 import com.sujian.finalandroid.base.BaseHolder;
+import com.sujian.finalandroid.constant.Constants;
+import com.sujian.finalandroid.entity.Message;
+import com.sujian.finalandroid.entity.MessageCallBackEntity;
+import com.sujian.finalandroid.net.MessageCallback;
 import com.sujian.finalandroid.ui.LoadingPage;
+import com.sujian.finalandroid.uitls.ToastUitls;
+import com.zhy.http.okhttp.OkHttpUtils;
 
+import org.xutils.common.util.LogUtil;
 import org.xutils.view.annotation.ViewInject;
 import org.xutils.x;
 
@@ -22,6 +29,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import okhttp3.Call;
 
 /**
  * 用户消息fragment
@@ -32,10 +41,10 @@ public class UserNewFragment extends BaseFragment {
     //listview 用户消息列表
     @ViewInject(R.id.lv_user_news)
     private ListView lv_user_news;
-
+    //listview 的适配器
+    private UserNewAdapter userAdapter;
     //放置数据的集合
-    List<Map<String, Object>> listDatas;
-
+    List<Message> dataLists;
     @Override
     protected View createSuccessView() {
         View view = View.inflate(x.app(), R.layout.fragment_user_new, null);
@@ -53,28 +62,50 @@ public class UserNewFragment extends BaseFragment {
         show();
         super.initDatas(view);
         initListView();
+        getDateMessage();
     }
 
     /**
      * 初始化listview
      */
     private void initListView() {
+        dataLists = new ArrayList<>();
+        userAdapter = new UserNewAdapter(dataLists);
+        lv_user_news.setAdapter(userAdapter);
+    }
 
-        listDatas = new ArrayList<Map<String, Object>>();
-        Map<String, Object> map;
-        for (int i = 0; i < 5; i++) {
-            map = new HashMap<String, Object>();
-            map.put("title", "标题标题标题标题标题" + i);
-            map.put("content", "内容内容内容内容内容内容" + i);
-            listDatas.add(map);
-        }
-        lv_user_news.setAdapter(new UserNewAdapter(listDatas));
+    private void getDateMessage() {
+        String url = Constants.SERVICEADDRESS + "message/message_messageselect.action";
+        OkHttpUtils
+                .get()
+                .url(url)
+                .build()
+                .execute(new MessageCallback() {
+                    @Override
+                    public void onError(Call call, Exception e, int id) {
+                        LogUtil.e("蒲琳是傻逼！！！！！！！！！！！！！");
+                    }
+
+                    @Override
+                    public void onResponse(MessageCallBackEntity response, int id) {
+                        LogUtil.e("******************************************");
+                        LogUtil.e(response.getMessage().toString());
+
+                        if (response.isSuccess()) {
+                            dataLists.addAll(response.getMessage());
+                            userAdapter.notifyDataSetChanged();
+                            show();
+                        } else {
+                            ToastUitls.show("获取数据失败！");
+                        }
+                    }
+                });
 
     }
 
 
-    private class UserNewAdapter extends DefauListViewAdapter<Map<String, Object>> {
-        public UserNewAdapter(List<Map<String, Object>> data) {
+    private class UserNewAdapter extends DefauListViewAdapter<Message> {
+        public UserNewAdapter(List<Message> data) {
             super(data);
         }
 
@@ -83,7 +114,7 @@ public class UserNewFragment extends BaseFragment {
             return new ViewHolder();
         }
 
-        private class ViewHolder extends BaseHolder<Map<String, Object>> {
+        private class ViewHolder extends BaseHolder<Message> {
 
             @ViewInject(R.id.tv_new_item_title)
             private TextView tv_new_item_title;
@@ -93,8 +124,8 @@ public class UserNewFragment extends BaseFragment {
 
             @Override
             protected void refreshView() {
-                tv_new_item_title.setText((String) data.get("title"));
-                tv_new_item_content.setText((String) data.get("content"));
+                tv_new_item_title.setText(data.getMessage_title());
+                tv_new_item_content.setText(data.getMessage_content());
             }
 
             @Override

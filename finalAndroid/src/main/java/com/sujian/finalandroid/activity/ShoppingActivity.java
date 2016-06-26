@@ -144,7 +144,7 @@ public class ShoppingActivity extends BaseActivity {
                 .execute(new CommodityDetailCallBack() {
                     @Override
                     public void onError(Call call, Exception e, int id) {
-                        LogUtil.e("huang li  jie shi sha  bi");
+                        LogUtil.e("失败了，孩子");
                     }
 
                     @Override
