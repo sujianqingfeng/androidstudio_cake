@@ -33,7 +33,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_margin="9dp"
-        android:src="@drawable/ic_launcher" />
+        android:paddingRight="20dp"
+        android:paddingLeft="10dp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/icon_editoraddress_nor" />
 
     <TextView
         android:layout_width="1dp"

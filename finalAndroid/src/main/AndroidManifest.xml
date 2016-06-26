@@ -44,7 +44,7 @@
         <!-- 百度地图的key -->
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
-            android:value="RelbjCLOZk6sZqZ7tDtuGbwvbnCux6vo" />
+            android:value="GPQGHCYREor1uYSW4P97G6nYDTVNdCFr" />
         <!-- 百度地图定位开启的服务 -->
         <service
             android:name="com.baidu.location.f"

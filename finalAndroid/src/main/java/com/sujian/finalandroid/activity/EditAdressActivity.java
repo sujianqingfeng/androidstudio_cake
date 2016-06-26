@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -15,7 +16,9 @@ import com.mobsandgeeks.saripaar.annotation.Required;
 import com.mobsandgeeks.saripaar.annotation.TextRule;
 import com.sujian.finalandroid.base.BaseActivity;
 import com.sujian.finalandroid.constant.Constants;
+import com.sujian.finalandroid.entity.AddressInfoEntity;
 import com.sujian.finalandroid.entity.BooleabEntity;
+import com.sujian.finalandroid.net.AddressInfoCallback;
 import com.sujian.finalandroid.net.BooleanCallback;
 import com.sujian.finalandroid.ui.ChangeAddressDialog;
 import com.sujian.finalandroid.ui.TitleBuilder;
@@ -67,6 +70,12 @@ public class EditAdressActivity extends BaseActivity {
     //选择容器
     @ViewInject(R.id.rg_edit_adress)
     private RadioGroup rg_edit_adress;
+    //男
+    @ViewInject(R.id.rb_edit_adress_male)
+    private RadioButton rb_edit_adress_male;
+    //女
+    @ViewInject(R.id.rb_edit_adress_female)
+    private RadioButton rb_edit_adress_female;
     //选择的性别  默认为男  0 代表男  1代表女
     private int sex;
     //默认地址选择
@@ -164,8 +173,33 @@ public class EditAdressActivity extends BaseActivity {
                                     }
                                 }
                             });
-                } else {
+                } else {//修改
+                    String url = Constants.SERVICEADDRESS + "address/address_updateAddress.cake";
+                    int address_id = getIntent().getExtras().getInt("address_id");
+                    OkHttpUtils.get()
+                            .url(url)
+                            .addParams("address_id", address_id + "")
+                            .addParams("user_id", MyUitls.getUid() + "")
+                            .addParams("address_sex", sex + "")
+                            .addParams("address_phone", ed_phoneText.getText().toString().trim())
+                            .addParams("address_name", name)
+                            .addParams("address_city", c)
+                            .addParams("address_content", content)
+                            .addParams("ischeck", check + "")
+                            .build()
+                            .execute(new BooleanCallback() {
+                                @Override
+                                public void onError(Call call, Exception e, int id) {
+                                    e.printStackTrace();
+                                }
 
+                                @Override
+                                public void onResponse(BooleabEntity response, int id) {
+                                    if (response.isSuccess()) {
+                                        ToastUitls.show("修改成功！");
+                                    }
+                                }
+                            });
                 }
             }
 
@@ -181,10 +215,39 @@ public class EditAdressActivity extends BaseActivity {
      * 初始化view
      */
     private void initView() {
-        if (isAdd) {
+        //修改
+        if (!isAdd) {
+            bt_address.setText("确定修改");
+            int address_id = getIntent().getExtras().getInt("address_id");
+            String url = Constants.SERVICEADDRESS + "address/address_returnAddressByAddressId.cake";
+            OkHttpUtils.get()
+                    .url(url)
+                    .addParams("address_id", address_id + "")
+                    .build()
+                    .execute(new AddressInfoCallback() {
+                        @Override
+                        public void onError(Call call, Exception e, int id) {
+                            e.printStackTrace();
+                        }
 
-
-        } else {
+                        @Override
+                        public void onResponse(AddressInfoEntity response, int id) {
+                            if (response.isSuccess()) {
+                                tv_edit_address_city.setText(response.getAddress().getAddress_city());
+                                tv_edit_address_detailed.setText(response.getAddress().getAddress_content());
+                                if (response.getAddress().getAddress_sex() == 0) {
+                                    rb_edit_adress_male.setChecked(true);
+                                } else {
+                                    rb_edit_adress_female.setChecked(true);
+                                }
+                                ed_personText.setText(response.getAddress().getAddress_name());
+                                ed_phoneText.setText(response.getAddress().getAddress_phone() + "");
+                                if (response.getAddress().getIscheck() == 1) {//选中
+                                    scb_address_choose.setChecked(true, true);
+                                }
+                            }
+                        }
+                    });
 
         }
     }
