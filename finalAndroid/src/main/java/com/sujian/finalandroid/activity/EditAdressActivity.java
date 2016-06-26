@@ -201,6 +201,8 @@ public class EditAdressActivity extends BaseActivity {
                                 }
                             });
                 }
+
+                finish();
             }
 
             @Override

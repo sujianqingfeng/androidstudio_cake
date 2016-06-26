@@ -14,10 +14,12 @@ import com.sujian.finalandroid.adapter.DefauListViewAdapter;
 import com.sujian.finalandroid.base.BaseFragment;
 import com.sujian.finalandroid.base.BaseHolder;
 import com.sujian.finalandroid.constant.Constants;
+import com.sujian.finalandroid.entity.AddressInfoEntity;
 import com.sujian.finalandroid.entity.BooleabEntity;
 import com.sujian.finalandroid.entity.ShopCarOrderInfo;
 import com.sujian.finalandroid.entity.ShopCarOrderInfoCallBackEntity;
 import com.sujian.finalandroid.entity.ShopCart;
+import com.sujian.finalandroid.net.AddressInfoCallback;
 import com.sujian.finalandroid.net.BooleanCallback;
 import com.sujian.finalandroid.net.ShopCarOrderInfoCallBack;
 import com.sujian.finalandroid.ui.LoadingPage;
@@ -28,6 +30,7 @@ import com.zhy.http.okhttp.OkHttpUtils;
 import com.zhy.http.okhttp.callback.StringCallback;
 
 import android.content.Intent;
+import android.preference.PreferenceManager;
 import android.view.Gravity;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -78,14 +81,28 @@ public class ShopCartFragment extends BaseFragment {
     private TextView tv_total;
     //装载选中的信息
     private List<ShopCarOrderInfo> checkOrder;
-
-
+    //收件人
+    @ViewInject(R.id.tv_person)
+    private TextView tv_person;
+    //电话
+    @ViewInject(R.id.tv_phone)
+    private TextView tv_phone;
+    //地址
+    @ViewInject(R.id.tv_address)
+    private TextView tv_address;
+    //返回码
+    private final int ADDRESS_CODE = 520;
+    //送货时间
+    @ViewInject(R.id.tv_time)
+    private TextView tv_time;
 
 
     @Override
     public void initDatas(View view) {
         initCheckBox();
+        getAddress();
     }
+
 
     @Override
     public void show() {
@@ -93,6 +110,33 @@ public class ShopCartFragment extends BaseFragment {
         initListView();
         if (shopCarAdapter != null)
             shopCarAdapter.notifyDataSetChanged();
+    }
+
+
+    /**
+     * 得到地址
+     */
+    private void getAddress() {
+        String url = Constants.SERVICEADDRESS + "address/address_getCheckAddress.cake";
+        OkHttpUtils.get()
+                .url(url)
+                .addParams("user_id", MyUitls.getUid() + "")
+                .build()
+                .execute(new AddressInfoCallback() {
+                    @Override
+                    public void onError(Call call, Exception e, int id) {
+
+                    }
+
+                    @Override
+                    public void onResponse(AddressInfoEntity response, int id) {
+                        if (response.isSuccess()) {
+                            tv_address.setText(response.getAddress().getAddress_content());
+                            tv_phone.setText(response.getAddress().getAddress_phone() + "");
+                            tv_person.setText(response.getAddress().getAddress_name());
+                        }
+                    }
+                });
     }
 
     /**
@@ -205,7 +249,15 @@ public class ShopCartFragment extends BaseFragment {
      */
     @Event(R.id.rl_update)
     private void clickUpdate(View view) {
-        startActivity(new Intent(getActivity(), ChangeAdressActivity.class));
+        startActivityForResult(new Intent(getActivity(), ChangeAdressActivity.class), ADDRESS_CODE);
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == ADDRESS_CODE) {
+            getAddress();
+        }
     }
 
     /**
@@ -313,7 +365,8 @@ public class ShopCartFragment extends BaseFragment {
     private class SelectTimeLinstener implements PublishSelectTimePopupWindow.SelectTimeListener {
         @Override
         public void onclik(View view, int year, int month, int day, int hour) {
-            Toast.makeText(x.app(), year + "年" + month + "月" + day + "日" + hour + "小时", Toast.LENGTH_LONG).show();
+            //Toast.makeText(x.app(), year + "年" + month + "月" + day + "日" + hour + "小时", Toast.LENGTH_LONG).show();
+            tv_time.setText(year + "-" + month + "-" + day + "-" + hour);
         }
     }
 

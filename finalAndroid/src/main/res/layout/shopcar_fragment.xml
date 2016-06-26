@@ -30,7 +30,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
-                android:text="收件人：姚靖" />
+                android:text="收件人：西点坊" />
 
             <TextView
                 android:id="@+id/tv_address"
@@ -46,7 +46,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/tv_person"
                 android:layout_margin="5dp"
-                android:text="电话：18382213886" />
+                android:text="电话：12345678910" />
 
             <TextView
                 android:id="@+id/tv_modify"
