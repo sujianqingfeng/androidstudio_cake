@@ -1,16 +1,22 @@
 package com.sujian.finalandroid.activity;
 
 import java.io.File;
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
+import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.xutils.common.Callback;
 import org.xutils.common.util.LogUtil;
+import org.xutils.image.ImageOptions;
 import org.xutils.view.annotation.ContentView;
 import org.xutils.view.annotation.Event;
 import org.xutils.view.annotation.ViewInject;
+import org.xutils.x;
 
 import com.sujian.finalandroid.base.BaseActivity;
 import com.sujian.finalandroid.constant.Constants;
@@ -28,12 +34,15 @@ import com.sujian.finalandroid.ui.PromptDialog;
 import com.sujian.finalandroid.ui.TitleBuilder;
 import com.sujian.finalandroid.uitls.ImagesUitls;
 import com.sujian.finalandroid.uitls.MyUitls;
+import com.sujian.finalandroid.uitls.ToastUitls;
 import com.zhy.http.okhttp.OkHttpUtils;
 import com.zhy.http.okhttp.callback.StringCallback;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.graphics.Path;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -75,12 +84,17 @@ public class UpdataActivity extends BaseActivity {
     // 资料展示的listview
     @ViewInject(R.id.lv_updata)
     private ListView lv_updata;
-
+    //适配器
     private SimpleAdapter simpleAdapter;
     private Map<String, Object> map;
-
-
+    //集合
     private List<Map<String, Object>> dataList;
+
+    private String sex;
+    private String birthday;
+    private String hometown;
+    private String seat;
+    private String occupation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -92,6 +106,44 @@ public class UpdataActivity extends BaseActivity {
         super.initData();
         initTitle();
         initListView();
+    }
+
+
+    /**
+     * 修改用户数据
+     */
+    private void updateUser() throws UnsupportedEncodingException {
+        LogUtil.e("修改信息---" + sex + "--" + birthday + "--" + hometown + "--" + seat + "--" + occupation);
+        String url = Constants.SERVICEADDRESS + "user/user_updateUser.cake";
+        sex = URLEncoder.encode(sex, "UTF-8");
+        birthday = URLEncoder.encode(birthday, "UTF-8");
+        hometown = URLEncoder.encode(hometown, "UTF-8");
+        seat = URLEncoder.encode(seat, "UTF-8");
+        occupation = URLEncoder.encode(occupation, "UTF-8");
+        LogUtil.e("修改信息  编码后---" + sex + "--" + birthday + "--" + hometown + "--" + seat + "--" + occupation);
+
+        OkHttpUtils.get()
+                .url(url)
+                .addParams("user_sex", sex)
+                .addParams("user_birthday", birthday)
+                .addParams("user_hometown", hometown)
+                .addParams("user_seat", seat)
+                .addParams("user_occupation", occupation)
+                .addParams("user_id", MyUitls.getUid() + "")
+                .build()
+                .execute(new StringCallback() {
+                    @Override
+                    public void onError(Call call, Exception e, int id) {
+                        e.printStackTrace();
+                    }
+
+                    @Override
+                    public void onResponse(String response, int id) {
+                        ToastUitls.show("修改成功！");
+                    }
+                });
+
+
     }
 
 
@@ -111,14 +163,43 @@ public class UpdataActivity extends BaseActivity {
                     @Override
                     public void onResponse(UpdateUserCallBackEntity response, int id) {
                         User u = response.getUser();
+
                         LogUtil.e(u.toString());
+                        //加载头像
+                        ImageOptions options = new ImageOptions.Builder().setLoadingDrawableId(R.drawable.ic_launcher)
+                                .setFailureDrawableId(R.drawable.ic_launcher).setUseMemCache(true).build();
+
+                        x.image().loadDrawable(Constants.SERVICEADDRESS + u.getUser_head(), options, new Callback.CommonCallback<Drawable>() {
+                            @Override
+                            public void onSuccess(Drawable drawable) {
+                                civ_pic.setImageDrawable(drawable);
+                            }
+
+                            @Override
+                            public void onError(Throwable throwable, boolean b) {
+
+                            }
+
+                            @Override
+                            public void onCancelled(CancelledException e) {
+
+                            }
+
+                            @Override
+                            public void onFinished() {
+
+                            }
+                        });
+
+
+
                         String content[] = new String[7];
                         content[0] = u.getUser_acount() + "";
-                        content[1] = u.getUser_sex();
-                        content[2] = u.getUser_birthday();
-                        content[3] = u.getUser_hometown();
-                        content[4] = u.getUser_seat();
-                        content[5] = u.getUser_occupation();
+                        sex = content[1] = u.getUser_sex();
+                        birthday = content[2] = u.getUser_birthday();
+                        hometown = content[3] = u.getUser_hometown();
+                        seat = content[4] = u.getUser_seat();
+                        occupation = content[5] = u.getUser_occupation();
 
                         String lables[] = {"账号:", "性别:", "生日:", "家乡:", "所在地:", "职业:", "设置收货地址"};
                         dataList.clear();
@@ -160,8 +241,12 @@ public class UpdataActivity extends BaseActivity {
                 switch (position) {
                     case 1:
 
-                        sexDialog = new PromptDialog.Builder(UpdataActivity.this).setMessage("男", new SexLinstener(parent, view, position))
-                                .setMessage2("女", new SexLinstener(parent, view, position)).setTitle("设置性别").setCanceledOnTouchOutside(true).show();
+                        sexDialog = new PromptDialog.Builder(UpdataActivity.this)
+                                .setMessage("男", new SexLinstener(parent, view, position))
+                                .setMessage2("女", new SexLinstener(parent, view, position))
+                                .setTitle("设置性别")
+                                .setCanceledOnTouchOutside(true)
+                                .show();
 
                         break;
 
@@ -180,6 +265,9 @@ public class UpdataActivity extends BaseActivity {
                                 TextView tv = (TextView) view2.findViewById(R.id.tv_content);
                                 tv.setText(year + "年" + month + "月" + day + "日");
 
+                                birthday = tv.getText().toString();
+
+
                             }
                         });
                         break;
@@ -195,6 +283,8 @@ public class UpdataActivity extends BaseActivity {
                                 View view2 = simpleAdapter.getView(position, view, parent);
                                 TextView tv = (TextView) view2.findViewById(R.id.tv_content);
                                 tv.setText(province + "--" + city);
+                                hometown = tv.getText().toString();
+
                             }
                         });
                         break;
@@ -210,6 +300,9 @@ public class UpdataActivity extends BaseActivity {
                                 View view2 = simpleAdapter.getView(position, view, parent);
                                 TextView tv = (TextView) view2.findViewById(R.id.tv_content);
                                 tv.setText(province + "--" + city);
+
+                                seat = tv.getText().toString();
+
                             }
                         });
                         break;
@@ -221,10 +314,11 @@ public class UpdataActivity extends BaseActivity {
                         professionDialog.setOnProfessionListener(new OnProfessionListener() {
 
                             @Override
-                            public void onClick(String profession) {
+                            public void onClick(String profession) throws UnsupportedEncodingException {
                                 View view2 = simpleAdapter.getView(position, view, parent);
                                 TextView tv = (TextView) view2.findViewById(R.id.tv_content);
                                 tv.setText(profession);
+                                occupation = tv.getText().toString();
                             }
                         });
                         break;
@@ -300,12 +394,16 @@ public class UpdataActivity extends BaseActivity {
                     View view2 = simpleAdapter.getView(position, view, parent);
                     TextView tv = (TextView) view2.findViewById(R.id.tv_content);
                     tv.setText("男");
+
+                    sex = tv.getText().toString();
+
                     break;
 
                 case 1:
                     View view3 = simpleAdapter.getView(position, view, parent);
                     TextView t = (TextView) view3.findViewById(R.id.tv_content);
                     t.setText("女");
+                    sex = t.getText().toString();
                     break;
             }
         }
@@ -380,6 +478,7 @@ public class UpdataActivity extends BaseActivity {
                     @Override
                     public void onResponse(String response, int id) {
                         LogUtil.e(response);
+                        ToastUitls.show("上传成功");
                     }
                 });
     }
@@ -410,7 +509,11 @@ public class UpdataActivity extends BaseActivity {
                     break;
 
                 case R.id.title_right_textview:
-
+                    try {
+                        updateUser();
+                    } catch (UnsupportedEncodingException e) {
+                        e.printStackTrace();
+                    }
                     break;
             }
 

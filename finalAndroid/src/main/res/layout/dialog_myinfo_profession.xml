@@ -17,49 +17,55 @@
         android:background="@drawable/bg_dialog_selector"
         android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/tv_share_title"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="14dip"
-            android:layout_marginLeft="18dip"
-            android:layout_marginTop="18dip"
-            android:gravity="center_vertical"
-            android:text="选择职业"
-            android:textColor="#000000"
-            android:textSize="18sp" />
+            android:background="@drawable/fynn_prompt_dialog_title_bar_bg_skyblue">
+
+            <TextView
+                android:id="@+id/tv_share_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dip"
+                android:layout_marginLeft="18dip"
+                android:layout_marginTop="18dip"
+                android:gravity="center_vertical"
+                android:text="选择职业"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="160dip"
-            android:orientation="horizontal"
             android:layout_marginLeft="20dip"
             android:layout_marginRight="20dip"
-            android:gravity="center_vertical">
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
 
             <com.sujian.widget.views.WheelView
                 android:id="@+id/wv_profession"
                 android:layout_width="0dip"
-                android:layout_weight="1"
                 android:layout_height="match_parent"
-                android:layout_gravity="center_vertical" />
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1" />
 
         </LinearLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="25dip"
-            android:layout_marginBottom="21dip">
+            android:layout_marginBottom="21dip"
+            android:layout_marginTop="25dip">
 
             <TextView
                 android:id="@+id/btn_myinfo_sure"
                 android:layout_width="77dip"
                 android:layout_height="33dip"
-                android:text="确认"
-                android:gravity="center"
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="15dip"
+                android:gravity="center"
+                android:text="确认"
                 android:textSize="16sp" />
 
 

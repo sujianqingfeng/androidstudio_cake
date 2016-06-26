@@ -1,5 +1,6 @@
 package com.sujian.finalandroid.ui;
 
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 
 import com.sujian.finalandroid.activity.R;
@@ -110,7 +111,11 @@ public class ProfessionDialog extends Dialog implements android.view.View.OnClic
     public void onClick(View v) {
         if (v == btnSure) {
             if (onProfessionListener != null) {
-                onProfessionListener.onClick(strProfession);
+                try {
+                    onProfessionListener.onClick(strProfession);
+                } catch (UnsupportedEncodingException e) {
+                    e.printStackTrace();
+                }
             }
         } else if (v == btnCancel) {
 
@@ -226,7 +231,7 @@ public class ProfessionDialog extends Dialog implements android.view.View.OnClic
      * @author 12111
      */
     public interface OnProfessionListener {
-        public void onClick(String profession);
+        public void onClick(String profession) throws UnsupportedEncodingException;
     }
 
 }

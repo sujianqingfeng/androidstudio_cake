@@ -15,6 +15,7 @@
         android:src="@drawable/app_icon"
         android:id="@+id/civ_pic"
         app:civ_border_width="2dp"
+        android:layout_margin="8dp"
         app:civ_border_color="#fff" />
 
     <ListView
