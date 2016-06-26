@@ -49,5 +49,6 @@ dependencies {
     compile 'com.google.code.gson:gson:2.4'
     compile 'com.mobsandgeeks:android-saripaar:1.0.2'
     compile 'com.jcodecraeer:xrecyclerview:1.2.7'
-
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'com.github.sd6352051.niftydialogeffects:niftydialogeffects:1.0.0@aar'
 }

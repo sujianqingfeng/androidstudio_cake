@@ -119,7 +119,7 @@ public class MyActivityManager {
      * @Title: finishAllActivity
      * @Description: TODO(销毁所有)
      */
-    public void finishAllActivity() {
+    public static void finishAllActivity() {
         for (int i = 0, size = activityStack.size(); i < size; i++) {
             if (null != activityStack.get(i)) {
                 activityStack.get(i).finish();
@@ -135,7 +135,7 @@ public class MyActivityManager {
      * @Title: AppExit
      * @Description: TODO(退出程序 杀死进程)
      */
-    public void AppExit(Context context) {
+    public static void AppExit(Context context) {
         try {
             finishAllActivity();
             ActivityManager activityMgr = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);

@@ -4,16 +4,20 @@ import org.xutils.common.util.LogUtil;
 import org.xutils.view.annotation.ContentView;
 import org.xutils.view.annotation.ViewInject;
 
+import com.gitonway.lee.niftymodaldialogeffects.lib.Effectstype;
+import com.gitonway.lee.niftymodaldialogeffects.lib.NiftyDialogBuilder;
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 import com.sujian.finalandroid.base.BaseActivity;
 import com.sujian.finalandroid.constant.Constants;
 import com.sujian.finalandroid.fragment.HomeFragmentFactory;
 import com.sujian.finalandroid.fragment.MenuFragment;
 import com.sujian.finalandroid.ui.TitleBuilder;
+import com.sujian.finalandroid.uitls.MyActivityManager;
 import com.sujian.finalandroid.uitls.SetIconSizeUiutils;
 import com.xys.libzxing.zxing.activity.CaptureActivity;
 
 import android.content.Intent;
+import android.content.res.Resources;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -335,7 +339,34 @@ public class HomeActivity extends BaseActivity {
         if (menu.isMenuShowing()) {
             menu.showContent();
         } else {
-            super.onBackPressed();
+            // super.onBackPressed();
+            final NiftyDialogBuilder dialogBuilder = NiftyDialogBuilder.getInstance(this);
+            dialogBuilder
+                    .withTitle("确定退出")                                  //.withTitle(null)  no title
+                    .withTitleColor("#000000")                                  //def
+                    .withDividerColor("#11000000")                              //def
+                    .withMessage("退出-不退出-退出-不退出-退出-不退出-退出-不退出")                     //.withMessage(null)  no Msg
+                    .withMessageColor("#000000")                              //def  | withMessageColor(int resid)
+                    .withDialogColor("#FFFFFF")                               //def  | withDialogColor(int resid)
+                    .withIcon(ContextCompat.getDrawable(HomeActivity.this, R.drawable.app_icon))
+                    .withDuration(700)                                          //def
+                    .withEffect(Effectstype.SlideBottom)                                         //def Effectstype.Slidetop
+                    .withButton1Text("确定")                                      //def gone
+                    .withButton2Text("取消")                                  //def gone
+                    .isCancelableOnTouchOutside(true)                           //def    | isCancelable(true)
+                    .setButton1Click(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            finish();
+                        }
+                    })
+                    .setButton2Click(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            dialogBuilder.dismiss();
+                        }
+                    })
+                    .show();
         }
     }
 
@@ -343,4 +374,10 @@ public class HomeActivity extends BaseActivity {
         return menu;
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        System.exit(0);
+        android.os.Process.killProcess(android.os.Process.myPid());
+    }
 }
