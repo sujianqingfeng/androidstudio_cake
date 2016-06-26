@@ -131,9 +131,9 @@ public class ShopCartFragment extends BaseFragment {
                     @Override
                     public void onResponse(AddressInfoEntity response, int id) {
                         if (response.isSuccess()) {
-                            tv_address.setText(response.getAddress().getAddress_content());
-                            tv_phone.setText(response.getAddress().getAddress_phone() + "");
-                            tv_person.setText(response.getAddress().getAddress_name());
+                            tv_address.setText("地址：" + response.getAddress().getAddress_content());
+                            tv_phone.setText("联系电话：" + response.getAddress().getAddress_phone() + "");
+                            tv_person.setText("联系人：" + response.getAddress().getAddress_name());
                         }
                     }
                 });
