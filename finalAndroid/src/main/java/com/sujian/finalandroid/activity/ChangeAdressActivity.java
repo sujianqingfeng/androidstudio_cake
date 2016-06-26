@@ -189,6 +189,10 @@ public class ChangeAdressActivity extends BaseActivity {
                     name.setTextColor(Color.parseColor("#FAD611"));
                     phone.setTextColor(Color.parseColor("#FAD611"));
                     address.setTextColor(Color.parseColor("#FAD611"));
+                } else {
+                    name.setTextColor(Color.parseColor("#7F7F7F"));
+                    phone.setTextColor(Color.parseColor("#7F7F7F"));
+                    address.setTextColor(Color.parseColor("#7F7F7F"));
                 }
             }
 

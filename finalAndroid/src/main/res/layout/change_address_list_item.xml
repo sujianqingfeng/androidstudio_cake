@@ -8,6 +8,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
+        android:textColor="@color/radiobutton_text_normal"
         android:text="贺聂双" />
 
     <TextView
@@ -15,6 +16,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
+        android:textColor="@color/radiobutton_text_normal"
         android:layout_toRightOf="@+id/tv_change_address_item_name"
         android:text="15198173915" />
 
@@ -22,6 +24,7 @@
         android:id="@+id/tv_change_address_item_address"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/radiobutton_text_normal"
         android:layout_below="@+id/tv_change_address_item_name"
         android:layout_margin="8dp"
         android:text="四川省成都市武侯区成都职业技术学院" />
