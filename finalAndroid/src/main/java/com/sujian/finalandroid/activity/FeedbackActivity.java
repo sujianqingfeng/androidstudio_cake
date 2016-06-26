@@ -1,5 +1,6 @@
 package com.sujian.finalandroid.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -7,10 +8,25 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.sujian.finalandroid.base.BaseActivity;
+import com.sujian.finalandroid.constant.Constants;
+import com.sujian.finalandroid.entity.Feedback;
+import com.sujian.finalandroid.entity.FeedbackCallBackEntity;
+import com.sujian.finalandroid.net.FeedbackCallBack;
 import com.sujian.finalandroid.ui.TitleBuilder;
+import com.sujian.finalandroid.uitls.MyUitls;
+import com.sujian.finalandroid.uitls.ToastUitls;
+import com.zhy.http.okhttp.OkHttpUtils;
 
+import org.xutils.common.util.LogUtil;
 import org.xutils.view.annotation.ContentView;
 import org.xutils.view.annotation.ViewInject;
+import org.xutils.x;
+
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
+import java.net.URLEncoder;
+
+import okhttp3.Call;
 
 /**
  * 反馈页面
@@ -20,8 +36,10 @@ import org.xutils.view.annotation.ViewInject;
 @ContentView(R.layout.activity_feedback)
 public class FeedbackActivity extends BaseActivity {
 
+    private Feedback feedback = new Feedback();
     @ViewInject(R.id.ed_feedback)
     private EditText ed_feedback;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,8 +77,46 @@ public class FeedbackActivity extends BaseActivity {
                     break;
 
                 case R.id.title_right_textview:
-                    submitEvent();
-                    break;
+                    try {
+                        String content = URLEncoder.encode(ed_feedback.getText().toString(), "UTF-8");
+
+                        String url = Constants.SERVICEADDRESS + "feedback/feedback_addFeedback.action";
+                        OkHttpUtils
+                                .get()
+                                .url(url)
+                                .addParams("feedback_content", content)
+                                .build()
+                                .execute(new FeedbackCallBack() {
+                                    @Override
+                                    public void onError(Call call, Exception e, int id) {
+                                        LogUtil.e("蒲琳傻逼    失败了，失败了");
+                                    }
+
+                                    @Override
+                                    public void onResponse(FeedbackCallBackEntity response, int id) {
+
+                                        LogUtil.e("成功成功成功成功成功成功成功成功成功成功成功成功成功成功" + response.toString());
+                                        LogUtil.e(ed_feedback.getText().toString());
+
+
+                                        if (response.isSuccess()) {
+                                            ToastUitls.show("反馈成功");
+
+                                        } else {
+                                            Toast.makeText(x.app(), "反馈失败", Toast.LENGTH_SHORT).show();
+                                        }
+                                    }
+                                });
+
+
+                        // submitEvent();
+                        break;
+
+                    } catch (UnsupportedEncodingException e) {
+                        e.printStackTrace();
+                    }
+
+
             }
 
         }
