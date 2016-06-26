@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/home_bg"
     android:orientation="vertical"
     android:weightSum="1">
@@ -146,6 +147,33 @@
             android:text="成都职业技术学院"
             android:textColor="@color/drak"
             android:textSize="15dp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:gravity="left|center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="默认地址"
+            android:textColor="@color/drak"
+            android:textSize="15dp" />
+
+
+        <cn.refactor.library.SmoothCheckBox
+            android:id="@+id/scb_address_choose"
+            android:layout_width="wrap_content"
+            android:layout_margin="15dp"
+            android:layout_height="wrap_content"
+            app:color_checked="@color/radiobutton_text_press" />
+
 
     </LinearLayout>
 

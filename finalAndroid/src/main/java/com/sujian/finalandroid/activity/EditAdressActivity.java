@@ -31,6 +31,7 @@ import org.xutils.view.annotation.ViewInject;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 
+import cn.refactor.library.SmoothCheckBox;
 import okhttp3.Call;
 
 /**
@@ -68,6 +69,11 @@ public class EditAdressActivity extends BaseActivity {
     private RadioGroup rg_edit_adress;
     //选择的性别  默认为男  0 代表男  1代表女
     private int sex;
+    //默认地址选择
+    @ViewInject(R.id.scb_address_choose)
+    private SmoothCheckBox scb_address_choose;
+    //是否默认  0不是  1是默认地址
+    private int check = 0;
 
 
     @Override
@@ -77,13 +83,13 @@ public class EditAdressActivity extends BaseActivity {
         initTitle();
         initValidator();
         initView();
-        initRadioGroup();
+        initCheck();
     }
 
     /**
-     * 得到选中的性别
+     * 得到选中的性别 和 选择的默认地址
      */
-    private void initRadioGroup() {
+    private void initCheck() {
         rg_edit_adress.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
@@ -98,6 +104,18 @@ public class EditAdressActivity extends BaseActivity {
             }
         });
 
+        //是否默认地址
+        scb_address_choose.setOnCheckedChangeListener(new SmoothCheckBox.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(SmoothCheckBox checkBox, boolean isChecked) {
+                if (isChecked) {
+                    check = 1;
+                } else {
+                    check = 0;
+                }
+            }
+        });
+
     }
 
     /**
@@ -108,6 +126,8 @@ public class EditAdressActivity extends BaseActivity {
         validator.setValidationListener(new Validator.ValidationListener() {
             @Override
             public void onValidationSucceeded() {
+
+                //utf-8 编码 解决乱码
                 String c = null;
                 String content = null;
                 String name = null;
@@ -118,6 +138,7 @@ public class EditAdressActivity extends BaseActivity {
                 } catch (UnsupportedEncodingException e) {
                     e.printStackTrace();
                 }
+                //判断是否是添加
                 if (isAdd) {
                     String url = Constants.SERVICEADDRESS + "address/address_addAddress.cake";
                     OkHttpUtils.get()
@@ -128,6 +149,7 @@ public class EditAdressActivity extends BaseActivity {
                             .addParams("address_name", name)
                             .addParams("address_city", c)
                             .addParams("address_content", content)
+                            .addParams("ischeck", check + "")
                             .build()
                             .execute(new BooleanCallback() {
                                 @Override
