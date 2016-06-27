@@ -70,9 +70,11 @@ public class HelpCenterActivity extends BaseActivity {
      * 初始化标题
      */
     private void initTitle() {
-        new TitleBuilder(this).initTitle(this).setLeftImageRes(R.drawable.head_top_title_left_icon).setMiddleTitleText("常见问题")
-                .setRightImageRes(R.drawable.ic_launcher).setLeftTextOrImageListener(titleListener)
-                .setRightTextOrImageListener(titleListener);
+        new TitleBuilder(this)
+                .initTitle(this)
+                .setLeftImageRes(R.drawable.head_top_title_left_icon)
+                .setMiddleTitleText("常见问题")
+                .setLeftTextOrImageListener(titleListener);
 
     }
 
@@ -88,9 +90,7 @@ public class HelpCenterActivity extends BaseActivity {
                     finish();
                     break;
 
-                case R.id.title_right_imageview:
-                    Toast.makeText(getApplicationContext(), "右边被点击", Toast.LENGTH_SHORT).show();
-                    break;
+
             }
 
         }

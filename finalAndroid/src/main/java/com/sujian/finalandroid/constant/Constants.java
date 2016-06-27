@@ -29,6 +29,10 @@ public class Constants {
      */
     public static final String USER_ACOUNT = "user_acount";
 
+    public static final String BOOLEANPASSWORD = "remenberpassword";
+
+    public static final String USER_PASSWORD = "user_password";
+
     /**
      * 服务器地址
      */

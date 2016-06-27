@@ -61,7 +61,6 @@ public class HomeFragment extends BaseFragment {
     private CirclePageIndicator vp_home_indicator;
 
     HomeObject homeObject;
-    CommodityKind commoditykind;
 
 
     // listview
@@ -75,9 +74,6 @@ public class HomeFragment extends BaseFragment {
     @ViewInject(R.id.gv_home)
     private GridView gv_home;
 
-    // 装载数据集合
-    List<Map<String, Object>> dataLists;
-    Map<String, Object> map;
 
     // 图片url集合
     private List<String> urlList;
@@ -122,7 +118,6 @@ public class HomeFragment extends BaseFragment {
      * 初始化listview
      */
     private void initListView() {
-
         //移动到第一个  移动到最顶部
         myScrollView.smoothScrollTo(0, 0);
         lv_home.setFocusable(false);
@@ -144,13 +139,11 @@ public class HomeFragment extends BaseFragment {
                     @Override
                     public void onError(Call call, Exception e, int id) {
                         e.printStackTrace();
-
                     }
 
                     @Override
                     public void onResponse(CommodityKindCalBackEntity response, int id) {
                         LogUtil.e("解析成功 返回的数据为————————" + response.getHomelist().toString());
-                        show();
                         if (response.isSuccess()) {
                             homeObject = response.getHomelist();
                             if (homeObject != null) {
@@ -161,6 +154,7 @@ public class HomeFragment extends BaseFragment {
                                 for (Commodity c : headlist) {
                                     urlList.add(Constants.SERVICEADDRESS + c.getDescription_pcture());
                                 }
+                                show();
                                 LogUtil.e("开始刷新----viewpager");
                                 loopPagerAdapterWrapper.notifyDataSetChanged();
 
@@ -191,7 +185,11 @@ public class HomeFragment extends BaseFragment {
 
     @Override
     protected LoadingPage.LoadResult load() {
-        return LoadingPage.LoadResult.success;
+        if (urlList.size() == 0) {
+            return LoadingPage.LoadResult.loading;
+        } else {
+            return LoadingPage.LoadResult.success;
+        }
     }
 
 

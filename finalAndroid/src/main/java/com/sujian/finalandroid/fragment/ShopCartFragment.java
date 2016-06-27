@@ -241,7 +241,12 @@ public class ShopCartFragment extends BaseFragment {
 
     @Override
     protected LoadingPage.LoadResult load() {
-        return LoadingPage.LoadResult.success;
+        if (MyUitls.isUserExistence()) {
+            return LoadingPage.LoadResult.success;
+        } else {
+            return LoadingPage.LoadResult.empty;
+        }
+
     }
 
     /**

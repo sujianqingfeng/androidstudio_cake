@@ -22,7 +22,7 @@ public class PrestigeCakeFragment extends BaseFragment {
 
     @Override
     protected LoadingPage.LoadResult load() {
-        return LoadingPage.LoadResult.success;
+        return LoadingPage.LoadResult.empty;
     }
 
 }
