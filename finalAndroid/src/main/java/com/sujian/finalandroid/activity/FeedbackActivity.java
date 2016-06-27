@@ -11,9 +11,11 @@ import com.sujian.finalandroid.base.BaseActivity;
 import com.sujian.finalandroid.constant.Constants;
 import com.sujian.finalandroid.entity.Feedback;
 import com.sujian.finalandroid.entity.FeedbackCallBackEntity;
+import com.sujian.finalandroid.entity.User;
 import com.sujian.finalandroid.net.FeedbackCallBack;
 import com.sujian.finalandroid.ui.TitleBuilder;
 import com.sujian.finalandroid.uitls.MyUitls;
+import com.sujian.finalandroid.uitls.SharedPreferencesUitls;
 import com.sujian.finalandroid.uitls.ToastUitls;
 import com.zhy.http.okhttp.OkHttpUtils;
 
@@ -78,6 +80,9 @@ public class FeedbackActivity extends BaseActivity {
 
                 case R.id.title_right_textview:
                     try {
+
+                        User user = new User();
+
                         String content = URLEncoder.encode(ed_feedback.getText().toString(), "UTF-8");
 
                         String url = Constants.SERVICEADDRESS + "feedback/feedback_addFeedback.action";
@@ -85,6 +90,7 @@ public class FeedbackActivity extends BaseActivity {
                                 .get()
                                 .url(url)
                                 .addParams("feedback_content", content)
+                                .addParams("user_id", SharedPreferencesUitls.getStringValue(Constants.USER_ACOUNT, "无"))
                                 .build()
                                 .execute(new FeedbackCallBack() {
                                     @Override

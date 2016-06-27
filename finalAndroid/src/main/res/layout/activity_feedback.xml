@@ -33,7 +33,7 @@
             android:gravity="center"
             android:background="@drawable/feedback_rb_bg"
             android:textColor="@drawable/feedback_rb_text"
-            android:text="商品种类" />
+            android:text="奶酪蛋糕" />
 
         <RadioButton
             android:layout_width="0dp"
@@ -45,7 +45,7 @@
             android:background="@drawable/feedback_rb_bg"
             android:textColor="@drawable/feedback_rb_text"
             android:gravity="center"
-            android:text="商品种类" />
+            android:text="重油蛋糕" />
 
         <RadioButton
             android:layout_width="0dp"
@@ -57,7 +57,7 @@
             android:textColor="@drawable/feedback_rb_text"
             android:button="@null"
             android:gravity="center"
-            android:text="商品种类" />
+            android:text="天使蛋糕" />
 
     </LinearLayout>
 
@@ -77,7 +77,7 @@
             android:textColor="@drawable/feedback_rb_text"
             android:button="@null"
             android:gravity="center"
-            android:text="商品种类" />
+            android:text="戚风蛋糕" />
 
         <RadioButton
             android:layout_width="0dp"
@@ -89,7 +89,7 @@
             android:background="@drawable/feedback_rb_bg"
             android:textColor="@drawable/feedback_rb_text"
             android:gravity="center"
-            android:text="商品种类" />
+            android:text="海绵蛋糕" />
 
         <RadioButton
             android:layout_width="0dp"
@@ -101,7 +101,7 @@
             android:background="@drawable/feedback_rb_bg"
             android:textColor="@drawable/feedback_rb_text"
             android:gravity="center"
-            android:text="商品种类" />
+            android:text="慕斯蛋糕" />
 
     </LinearLayout>
 
