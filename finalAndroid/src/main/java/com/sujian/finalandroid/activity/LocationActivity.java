@@ -163,9 +163,11 @@ public class LocationActivity extends BaseActivity {
         /**
          * 1.设置左边的图片按钮显示，以及事件 2.设置中间TextView显示的文字 3.设置右边的图片按钮显示，并设置事件
          */
-        new TitleBuilder(this).initTitle(this).setLeftImageRes(R.drawable.head_top_title_left_icon).setMiddleTitleText("定  位")
-                .setRightImageRes(R.drawable.ic_launcher).setLeftTextOrImageListener(titleListener)
-                .setRightTextOrImageListener(titleListener);
+        new TitleBuilder(this)
+                .initTitle(this)
+                .setLeftImageRes(R.drawable.head_top_title_left_icon)
+                .setMiddleTitleText("定  位")
+                .setLeftTextOrImageListener(titleListener);
 
     }
 

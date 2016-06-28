@@ -35,9 +35,9 @@ import okhttp3.Call;
 
 /**
  * @author Sujian  121116111@QQ.COM
- *         MyNewsActivity
- *         TODO(我的消息页面)
- *         2016年4月17日 下午5:59:05
+ *MyNewsActivity
+ * TODO(我的消息页面)
+ *  2016年4月17日 下午5:59:05
  */
 @ContentView(R.layout.activity_mynews)
 public class MyNewsActivity extends BaseActivity {
@@ -50,11 +50,6 @@ public class MyNewsActivity extends BaseActivity {
     @ViewInject(R.id.indicator)
     private TabPageIndicator indicator;
 
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-    }
 
 
     @Override
@@ -123,6 +118,7 @@ public class MyNewsActivity extends BaseActivity {
      * @author 12111
      */
     class NewsAdapter extends FragmentPagerAdapter {
+
         public NewsAdapter(FragmentManager fm) {
             super(fm);
         }

@@ -36,19 +36,13 @@ import okhttp3.Call;
 @ContentView(R.layout.activity_feedback)
 public class FeedbackActivity extends BaseActivity {
 
-    private Feedback feedback = new Feedback();
     @ViewInject(R.id.ed_feedback)
     private EditText ed_feedback;
 
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-    }
 
     @Override
     protected void initData() {
-        super.initData();
         initTitle();
     }
 
@@ -84,12 +78,13 @@ public class FeedbackActivity extends BaseActivity {
                         OkHttpUtils
                                 .get()
                                 .url(url)
+                                .addParams("user_id", MyUitls.getUid() + "")
                                 .addParams("feedback_content", content)
                                 .build()
                                 .execute(new FeedbackCallBack() {
                                     @Override
                                     public void onError(Call call, Exception e, int id) {
-                                        LogUtil.e("蒲琳傻逼    失败了，失败了");
+                                        LogUtil.e(" 失败了，失败了");
                                     }
 
                                     @Override
@@ -98,18 +93,16 @@ public class FeedbackActivity extends BaseActivity {
                                         LogUtil.e("成功成功成功成功成功成功成功成功成功成功成功成功成功成功" + response.toString());
                                         LogUtil.e(ed_feedback.getText().toString());
 
-
                                         if (response.isSuccess()) {
                                             ToastUitls.show("反馈成功");
 
                                         } else {
-                                            Toast.makeText(x.app(), "反馈失败", Toast.LENGTH_SHORT).show();
+                                            ToastUitls.show("反馈失败");
                                         }
                                     }
                                 });
 
 
-                        // submitEvent();
                         break;
 
                     } catch (UnsupportedEncodingException e) {
@@ -122,12 +115,5 @@ public class FeedbackActivity extends BaseActivity {
         }
     };
 
-    /**
-     * 文字提交事件处理
-     */
-    private void submitEvent() {
-        String content = ed_feedback.getText().toString().trim();
-        Toast.makeText(getApplicationContext(), content, Toast.LENGTH_SHORT).show();
-    }
 
 }

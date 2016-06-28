@@ -7,6 +7,7 @@ import com.zhy.http.okhttp.callback.Callback;
 
 import org.xutils.common.util.LogUtil;
 
+import okhttp3.Call;
 import okhttp3.Response;
 
 /**
