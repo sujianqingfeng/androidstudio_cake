@@ -100,11 +100,20 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
-            android:gravity="center_horizontal">
+            android:gravity="center_vertical">
 
-            <CheckBox
+
+            <cn.refactor.library.SmoothCheckBox
+                android:id="@+id/scb_login_choose"
+                android:layout_width="wrap_content"
+                android:layout_margin="5dp"
+                app:color_unchecked="@android:color/white"
+                app:color_unchecked_stroke="@color/white"
+                android:layout_height="wrap_content"
+                app:color_checked="@color/radiobutton_text_press" />
+
+            <TextView
                 android:id="@+id/repassword"
-                style="@style/CustomBox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="记住密码"

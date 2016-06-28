@@ -105,7 +105,7 @@ public class HomeActivity extends BaseActivity {
          * 1.设置左边的图片按钮显示，以及事件 2.设置中间TextView显示的文字 3.设置右边的图片按钮显示，并设置事件
          */
         titleBuilder = new TitleBuilder(this).setLeftImageRes(R.drawable.home_title_left).setMiddleTitleText("首  页")
-                .setRightImageRes(R.drawable.search).setLeftTextOrImageListener(titleListener)
+                .setRightImageRes(R.drawable.main_head_search_btn).setLeftTextOrImageListener(titleListener)
                 .setRightTextOrImageListener(titleListener).initTitle(this);
         //默认选择主页
         rb_home.setSelected(true);
@@ -125,7 +125,7 @@ public class HomeActivity extends BaseActivity {
                     LogUtil.e("zhuye");
                     clearStyle();
                     vp_tab.setCurrentItem(0);
-                    titleBuilder.setRightImageRes(R.drawable.search).setMiddleTitleText("主页");
+                    titleBuilder.setRightImageRes(R.drawable.main_head_search_btn).setMiddleTitleText("主页");
                     rb_home.setSelected(true);
                     break;
 

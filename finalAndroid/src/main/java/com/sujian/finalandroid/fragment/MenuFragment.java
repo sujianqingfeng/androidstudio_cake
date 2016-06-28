@@ -5,8 +5,12 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.xutils.common.Callback;
+import org.xutils.common.util.LogUtil;
+import org.xutils.image.ImageOptions;
 import org.xutils.view.annotation.Event;
 import org.xutils.view.annotation.ViewInject;
+import org.xutils.x;
 
 import com.sujian.finalandroid.activity.HomeActivity;
 import com.sujian.finalandroid.activity.LoginActivity;
@@ -18,13 +22,18 @@ import com.sujian.finalandroid.activity.RegisterActivity;
 import com.sujian.finalandroid.activity.UpdataActivity;
 import com.sujian.finalandroid.base.BaseFragment;
 import com.sujian.finalandroid.constant.Constants;
+import com.sujian.finalandroid.entity.UpdateUserCallBackEntity;
+import com.sujian.finalandroid.entity.User;
+import com.sujian.finalandroid.net.UpdateUserCallBack;
 import com.sujian.finalandroid.ui.CircleImageView;
 import com.sujian.finalandroid.ui.LoadingPage;
 import com.sujian.finalandroid.uitls.MyUitls;
 import com.sujian.finalandroid.uitls.SharedPreferencesUitls;
 import com.sujian.finalandroid.uitls.ToastUitls;
+import com.zhy.http.okhttp.OkHttpUtils;
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
@@ -32,6 +41,8 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
+
+import okhttp3.Call;
 
 
 public class MenuFragment extends BaseFragment {
@@ -71,6 +82,8 @@ public class MenuFragment extends BaseFragment {
     public void initDatas(View view) {
         show();
         initList();
+
+
     }
 
     //初始化listview
@@ -160,14 +173,69 @@ public class MenuFragment extends BaseFragment {
     public void onResume() {
         super.onResume();
         if (MyUitls.isUserExistence()) {
+            LogUtil.e("这里为什么会执行！");
+            getDateFromService();
             bt_login.setVisibility(View.GONE);
             bt_reg.setVisibility(View.GONE);
             user_account.setVisibility(View.VISIBLE);
-            user_account.setText("账户" + SharedPreferencesUitls.getStringValue(Constants.USER_ACOUNT, "无"));
+            user_account.setText("账户  " + SharedPreferencesUitls.getStringValue(Constants.USER_ACOUNT, "无"));
         } else {
+            civ_pic.setImageDrawable(getResources().getDrawable(R.drawable.app_icon));
             user_account.setVisibility(View.GONE);
             bt_login.setVisibility(View.VISIBLE);
             bt_reg.setVisibility(View.VISIBLE);
         }
+    }
+
+
+    private void getDateFromService() {
+        String url = Constants.SERVICEADDRESS + "user/user_select.cake";
+        OkHttpUtils
+                .get()
+                .url(url)
+                .addParams("user_id", String.valueOf(MyUitls.getUid()))
+                .build()
+                .execute(new UpdateUserCallBack() {
+                    @Override
+                    public void onError(Call call, Exception e, int id) {
+
+                    }
+
+                    @Override
+                    public void onResponse(UpdateUserCallBackEntity response, int id) {
+
+                        if (response != null) {
+                            User u = response.getUser();
+                            if (u != null) {
+                                //加载头像
+                                ImageOptions options = new ImageOptions.Builder().setLoadingDrawableId(R.drawable.ic_launcher)
+                                        .setFailureDrawableId(R.drawable.ic_launcher).setUseMemCache(true).build();
+
+                                x.image().loadDrawable(Constants.SERVICEADDRESS + u.getUser_head(), options, new Callback.CommonCallback<Drawable>() {
+                                    @Override
+                                    public void onSuccess(Drawable drawable) {
+                                        civ_pic.setImageDrawable(drawable);
+                                    }
+
+                                    @Override
+                                    public void onError(Throwable throwable, boolean b) {
+
+                                    }
+
+                                    @Override
+                                    public void onCancelled(CancelledException e) {
+
+                                    }
+
+                                    @Override
+                                    public void onFinished() {
+
+                                    }
+                                });
+                            }
+
+                        }
+                    }
+                });
     }
 }

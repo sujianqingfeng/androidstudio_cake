@@ -26,7 +26,7 @@ public class BaseApplication extends Application {
     private static int mainTid;
     private static Handler handler;
     //用户的id
-    private static long uid = 1;
+    private static long uid = 0;
 
     @Override
     public void onCreate() {

@@ -27,6 +27,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import cn.refactor.library.SmoothCheckBox;
 import okhttp3.Call;
 
 /**
@@ -63,6 +64,13 @@ public class LoginActivity extends BaseActivity {
     //验证
     private Validator validator;
 
+    //记住密码
+    @ViewInject(R.id.scb_login_choose)
+    private SmoothCheckBox scb_login_choose;
+
+    //记住密码的标识
+    private boolean flag;
+
 
     //登陆点击
     @Event(value = R.id.bt_login)
@@ -97,6 +105,45 @@ public class LoginActivity extends BaseActivity {
     protected void initData() {
         validator = new Validator(this);
         validator.setValidationListener(new LoninValidationListener());
+        initCheckBox();
+    }
+
+    /**
+     * 初始化checkbox
+     */
+    private void initCheckBox() {
+
+        String user = SharedPreferencesUitls.getStringValue(Constants.USER_ACOUNT, "");
+        ed_user.setText(user);
+
+
+        boolean b = SharedPreferencesUitls.getBooleanValue(Constants.BOOLEANPASSWORD, false);
+        if (b) {
+            String password = SharedPreferencesUitls.getStringValue(Constants.USER_PASSWORD, "");
+            ed_password.setText(password);
+            scb_login_choose.setChecked(true, true);
+        }
+
+        scb_login_choose.setOnCheckedChangeListener(new SmoothCheckBox.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(SmoothCheckBox checkBox, boolean isChecked) {
+                flag = isChecked;
+            }
+        });
+    }
+
+
+    /**
+     * 记住密码
+     */
+    private void remenberPassword() {
+
+        SharedPreferencesUitls.setBooleanValue(Constants.BOOLEANPASSWORD, flag);
+        SharedPreferencesUitls.setStringValue(Constants.USER_ACOUNT, ed_user.getText().toString().trim());
+
+        if (flag) {
+            SharedPreferencesUitls.setStringValue(Constants.USER_PASSWORD, ed_password.getText().toString().trim());
+        }
     }
 
     /**
@@ -105,6 +152,8 @@ public class LoginActivity extends BaseActivity {
     private class LoninValidationListener implements ValidationListener {
         @Override
         public void onValidationSucceeded() {
+
+            remenberPassword();
             String url = Constants.SERVICEADDRESS + "user/user_login.cake";
             OkHttpUtils
                     .get()
