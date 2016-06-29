@@ -161,7 +161,7 @@ public class HelpCenterActivity extends BaseActivity {
 
         @Override
         public View getChildView(int groupPosition, int childPosition, boolean isLastChild, View convertView, ViewGroup parent) {
-            ChildViewHolder childViewHolder;
+            ChildViewHolder childViewHolder;//复用
             if (convertView == null) {
                 childViewHolder = new ChildViewHolder();
                 convertView = View.inflate(mContext, R.layout.help_center_child_layout, null);

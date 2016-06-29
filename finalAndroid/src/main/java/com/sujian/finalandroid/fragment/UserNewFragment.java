@@ -53,6 +53,7 @@ public class UserNewFragment extends BaseFragment {
 
     @Override
     protected LoadingPage.LoadResult load() {
+
         return LoadingPage.LoadResult.success;
     }
 
@@ -74,6 +75,10 @@ public class UserNewFragment extends BaseFragment {
         lv_user_news.setAdapter(userAdapter);
     }
 
+
+    /**
+     * 从服务器得到数据
+     */
     private void getDateMessage() {
         String url = Constants.SERVICEADDRESS + "message/message_messageselect.action";
         OkHttpUtils
@@ -83,7 +88,7 @@ public class UserNewFragment extends BaseFragment {
                 .execute(new MessageCallback() {
                     @Override
                     public void onError(Call call, Exception e, int id) {
-                        LogUtil.e("蒲琳是傻逼！！！！！！！！！！！！！");
+                        LogUtil.e("解析失败");
                     }
 
                     @Override
@@ -105,6 +110,7 @@ public class UserNewFragment extends BaseFragment {
 
 
     private class UserNewAdapter extends DefauListViewAdapter<Message> {
+
         public UserNewAdapter(List<Message> data) {
             super(data);
         }

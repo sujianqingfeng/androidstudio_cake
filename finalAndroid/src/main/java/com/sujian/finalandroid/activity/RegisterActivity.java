@@ -59,14 +59,9 @@ public class RegisterActivity extends BaseActivity {
     private EditText ed_repassword;
 
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-    }
 
     @Override
     protected void initData() {
-        super.initData();
         validator = new Validator(this);
         validator.setValidationListener(new RegisterValidationListener());
     }

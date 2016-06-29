@@ -76,7 +76,7 @@ public class BaseActivity extends FragmentActivity {
 
 
     /**
-     * @param
+     * @param  初始化数据
      * @return void
      * @throws
      * @Title: initData

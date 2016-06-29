@@ -175,7 +175,6 @@ public class LoginActivity extends BaseActivity {
                             if (response.isSuccess()) {
                                 ToastUitls.show("登录成功");
                                 MyUitls.setUid(response.getId());
-                                SharedPreferencesUitls.setStringValue(Constants.USER_ACOUNT, ed_user.getText().toString());
                                 finish();
                             } else {
                                 switch (response.getResuleCode()) {

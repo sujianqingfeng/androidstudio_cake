@@ -10,7 +10,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:dividerHeight="8dp"
-
         android:divider="@color/transparent"
         android:layout_margin="8dp" />
 
