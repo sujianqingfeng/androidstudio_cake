@@ -294,14 +294,14 @@ public class HomeFragment extends BaseFragment {
                 });
 
                 tv_left_title.setText(leftCom.getCommodity_name());
-                tv_left_size.setText(leftCom.getCommodity_size() + "");
-                tv_left_price.setText(leftCom.getCommodity_price() + "");
+                tv_left_size.setText(leftCom.getCommodity_size() + "寸 ");
+                tv_left_price.setText(" $" + leftCom.getCommodity_price());
                 tv_center_title.setText(centerCom.getCommodity_name());
-                tv_center_size.setText(centerCom.getCommodity_size() + "");
-                tv_center_price.setText(centerCom.getCommodity_price() + "");
+                tv_center_size.setText(centerCom.getCommodity_size() + "寸 ");
+                tv_center_price.setText(" $" + centerCom.getCommodity_price());
                 tv_right_title.setText(rightCom.getCommodity_name());
-                tv_right_size.setText(rightCom.getCommodity_size() + "");
-                tv_right_price.setText(rightCom.getCommodity_price() + "");
+                tv_right_size.setText(rightCom.getCommodity_size() + "寸 ");
+                tv_right_price.setText(" $" + rightCom.getCommodity_price());
 
 
             }
