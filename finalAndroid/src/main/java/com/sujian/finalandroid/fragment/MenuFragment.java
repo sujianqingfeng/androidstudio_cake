@@ -108,20 +108,35 @@ public class MenuFragment extends BaseFragment {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 switch (position) {
                     case 0:
-                        getActivity().startActivity(new Intent(getActivity(), MyOrderActivity.class));
-                        ((HomeActivity) getActivity()).getMenu().toggle();
-                        break;
+                        if (MyUitls.isUserExistence()) {
+                            getActivity().startActivity(new Intent(getActivity(), MyOrderActivity.class));
+                            ((HomeActivity) getActivity()).getMenu().toggle();
+                            break;
+                        } else {
+                            ToastUitls.show("请先登录");
+                            break;
+                        }
+
 
                     case 1:
-                        getActivity().startActivity(new Intent(getActivity(), MyNewsActivity.class));
-                        ((HomeActivity) getActivity()).getMenu().toggle();
-                        break;
+                        if (MyUitls.isUserExistence()) {
+                            getActivity().startActivity(new Intent(getActivity(), MyNewsActivity.class));
+                            ((HomeActivity) getActivity()).getMenu().toggle();
+                            break;
+                        } else {
+                            ToastUitls.show("请先登录");
+                            break;
+                        }
 
                     case 2:
+                        if (MyUitls.isUserExistence()) {
                         getActivity().startActivity(new Intent(getActivity(), MySettingsActivity.class));
                         ((HomeActivity) getActivity()).getMenu().toggle();
                         break;
-
+                        } else {
+                            ToastUitls.show("请先登录");
+                            break;
+                        }
 
                 }
             }
@@ -142,6 +157,7 @@ public class MenuFragment extends BaseFragment {
         }
 
     }
+
 
     //点击登陆
     @Event(R.id.bt_login)

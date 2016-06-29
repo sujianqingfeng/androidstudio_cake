@@ -1,5 +1,6 @@
 package com.sujian.finalandroid.activity;
 
+import org.xutils.common.util.LogUtil;
 import org.xutils.view.annotation.ContentView;
 import org.xutils.view.annotation.Event;
 import org.xutils.view.annotation.ViewInject;
@@ -165,6 +166,7 @@ public class LoginActivity extends BaseActivity {
                         @Override
                         public void onError(Call call, Exception e, int id) {
                             e.printStackTrace();
+                            LogUtil.e("蒲琳是个大笨猪");
                         }
 
                         @Override
