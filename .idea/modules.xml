@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Badgeview_demo/Badgeview_demo.iml" filepath="$PROJECT_DIR$/Badgeview_demo/Badgeview_demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/androidstudio_cake.iml" filepath="$PROJECT_DIR$/androidstudio_cake.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/checkbox_library/checkbox_library.iml" filepath="$PROJECT_DIR$/checkbox_library/checkbox_library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/finalAndroid/finalAndroid.iml" filepath="$PROJECT_DIR$/finalAndroid/finalAndroid.iml" />
+      <module fileurl="file://$PROJECT_DIR$/one_share_library/one_share_library.iml" filepath="$PROJECT_DIR$/one_share_library/one_share_library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pullToRefresh_library/pullToRefresh_library.iml" filepath="$PROJECT_DIR$/pullToRefresh_library/pullToRefresh_library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sharesdk_library/sharesdk_library.iml" filepath="$PROJECT_DIR$/sharesdk_library/sharesdk_library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/slidingmenu_llbrary/slidingmenu_llbrary.iml" filepath="$PROJECT_DIR$/slidingmenu_llbrary/slidingmenu_llbrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tagcloud_library/tagcloud_library.iml" filepath="$PROJECT_DIR$/tagcloud_library/tagcloud_library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/timeline/timeline.iml" filepath="$PROJECT_DIR$/timeline/timeline.iml" />
+      <module fileurl="file://$PROJECT_DIR$/viewpager_library/viewpager_library.iml" filepath="$PROJECT_DIR$/viewpager_library/viewpager_library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wheel_library/wheel_library.iml" filepath="$PROJECT_DIR$/wheel_library/wheel_library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zing_lib/zing_lib.iml" filepath="$PROJECT_DIR$/zing_lib/zing_lib.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,370 @@
+[
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\fynn_prompt_dialog_btn_single_normal.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\drawable\\fynn_prompt_dialog_btn_single_normal.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\smssdk_btn_disenable.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\SMSSDKGUI-2.0.2\\res\\drawable\\smssdk_btn_disenable.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_track_material.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_seekbar_track_material.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\home_button_bg_selector.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\drawable\\home_button_bg_selector.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\left_menu_button_bg_selector.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\drawable\\left_menu_button_bg_selector.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\feedback_ed_bg.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\drawable\\feedback_ed_bg.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\shape_bt.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\drawable\\shape_bt.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\indicator_bg_top.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\androidstudio_cake\\pullToRefresh_library\\unspecified\\res\\drawable\\indicator_bg_top.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\guide_button_bg_selector.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\drawable\\guide_button_bg_selector.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\smssdk_country_group_scroll_up.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\SMSSDKGUI-2.0.2\\res\\drawable\\smssdk_country_group_scroll_up.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\shop_button_bg_selector.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\drawable\\shop_button_bg_selector.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_tab_indicator_material.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_tab_indicator_material.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_dark.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_list_selector_background_transition_holo_dark.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_textfield_search_material.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_textfield_search_material.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_top_material.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_cab_background_top_material.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\design_fab_background.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\drawable\\design_fab_background.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\rb_bg_01f.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\drawable\\rb_bg_01f.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_edit_text_material.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_edit_text_material.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_dark.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_list_selector_holo_dark.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\vpi__tab_indicator.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\androidstudio_cake\\viewpager_library\\unspecified\\res\\drawable\\vpi__tab_indicator.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\smssdk_corners_bg_pre.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\SMSSDKGUI-2.0.2\\res\\drawable\\smssdk_corners_bg_pre.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\wheel_val.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\drawable\\wheel_val.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\rb_bg_02f.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\drawable\\rb_bg_02f.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_indicator_material.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_ratingbar_indicator_material.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_bg.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\drawable\\btn_bg.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\bg_dialog_selector.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\drawable\\bg_dialog_selector.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\fynn_prompt_dialog_btn_center_normal.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\drawable\\fynn_prompt_dialog_btn_center_normal.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\progressloading.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.jcodecraeer\\xrecyclerview\\1.2.7\\res\\drawable\\progressloading.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\ssdk_oks_classic_progressbar.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\androidstudio_cake\\one_share_library\\unspecified\\res\\drawable\\ssdk_oks_classic_progressbar.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\fynn_prompt_dialog_title_bar_bg_skyblue.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\drawable\\fynn_prompt_dialog_title_bar_bg_skyblue.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_light.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_item_background_holo_light.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_dark.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_item_background_holo_dark.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\rb_bg_02.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\drawable\\rb_bg_02.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\singchoose_location_item_text_selector.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\drawable\\singchoose_location_item_text_selector.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\rb_bg_01t.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\drawable\\rb_bg_01t.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_switch_thumb_material.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_switch_thumb_material.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_spinner_textfield_background_material.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_spinner_textfield_background_material.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\smssdk_edittext_bg_selector.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\SMSSDKGUI-2.0.2\\res\\drawable\\smssdk_edittext_bg_selector.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\car_button_bg_selector.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\drawable\\car_button_bg_selector.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\fynn_prompt_dialog_btn_single_selector.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\drawable\\fynn_prompt_dialog_btn_single_selector.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_text_cursor_material.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_text_cursor_material.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\wheel_bg.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\drawable\\wheel_bg.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\custom_tab_indicator_style.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\drawable\\custom_tab_indicator_style.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\custom_box.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\drawable\\custom_box.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\fynn_prompt_dialog_btn_left_selector.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\drawable\\fynn_prompt_dialog_btn_left_selector.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\fynn_prompt_dialog_btn_left_pressed.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\drawable\\fynn_prompt_dialog_btn_left_pressed.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_internal_bg.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_cab_background_internal_bg.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_thumb_material.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_seekbar_thumb_material.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\smssdk_corners_bg_nor.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\SMSSDKGUI-2.0.2\\res\\drawable\\smssdk_corners_bg_nor.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\design_snackbar_background.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\drawable\\design_snackbar_background.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_small_material.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_ratingbar_small_material.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\fynn_prompt_dialog_bg_normal.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\drawable\\fynn_prompt_dialog_bg_normal.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\fynn_prompt_dialog_btn_left_normal.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\drawable\\fynn_prompt_dialog_btn_left_normal.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\fynn_prompt_dialog_btn_right_pressed.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\drawable\\fynn_prompt_dialog_btn_right_pressed.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\line.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\drawable\\line.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\fynn_prompt_dialog_btn_center_selector.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\drawable\\fynn_prompt_dialog_btn_center_selector.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\fynn_prompt_dialog_btn_center_pressed.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\drawable\\fynn_prompt_dialog_btn_center_pressed.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_check_material.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_btn_check_material.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\feedback_rb_text.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\drawable\\feedback_rb_text.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_light.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_list_selector_holo_light.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\rb_bg_02t.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\drawable\\rb_bg_02t.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\shop_car_item_bt_add_selector.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\drawable\\shop_car_item_bt_add_selector.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_full_material.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_ratingbar_full_material.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\smssdk_dialog_btn_back.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\SMSSDKGUI-2.0.2\\res\\drawable\\smssdk_dialog_btn_back.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\smssdk_btn_enable.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\SMSSDKGUI-2.0.2\\res\\drawable\\smssdk_btn_enable.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_press.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.github.sd6352051.niftydialogeffects\\niftydialogeffects\\1.0.0\\res\\drawable\\btn_press.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\fynn_prompt_dialog_btn_right_normal.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\drawable\\fynn_prompt_dialog_btn_right_normal.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_borderless_material.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_btn_borderless_material.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\change_adress_bt.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\drawable\\change_adress_bt.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\shop_car_item_bt_reduce_selector.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\drawable\\shop_car_item_bt_reduce_selector.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background_light.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_dialog_material_background_light.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_blue_selector.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\drawable\\btn_blue_selector.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\smssdk_country_bg_selector.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\SMSSDKGUI-2.0.2\\res\\drawable\\smssdk_country_bg_selector.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_colored_material.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\shadow.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\drawable\\shadow.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_selector.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.github.sd6352051.niftydialogeffects\\niftydialogeffects\\1.0.0\\res\\drawable\\btn_selector.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\custom_tab_indicator.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\drawable\\custom_tab_indicator.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\indicator_bg_bottom.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\androidstudio_cake\\pullToRefresh_library\\unspecified\\res\\drawable\\indicator_bg_bottom.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\fynn_prompt_dialog_btn_right_selector.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\drawable\\fynn_prompt_dialog_btn_right_selector.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\smssdk_corners_bg.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\SMSSDKGUI-2.0.2\\res\\drawable\\smssdk_corners_bg.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\smssdk_country_group_scroll_down.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\SMSSDKGUI-2.0.2\\res\\drawable\\smssdk_country_group_scroll_down.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\dialog_bg.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.github.sd6352051.niftydialogeffects\\niftydialogeffects\\1.0.0\\res\\drawable\\dialog_bg.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background_dark.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_dialog_material_background_dark.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_radio_material.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_btn_radio_material.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\tag_view.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.fyales.android\\library\\1.0.2\\res\\drawable\\tag_view.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\ssdk_oks_classic_platform_cell_back.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\androidstudio_cake\\one_share_library\\unspecified\\res\\drawable\\ssdk_oks_classic_platform_cell_back.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\rb_bg_01.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\drawable\\rb_bg_01.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_default_mtrl_shape.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_btn_default_mtrl_shape.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\feedback_rb_bg.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\drawable\\feedback_rb_bg.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_unpress.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.github.sd6352051.niftydialogeffects\\niftydialogeffects\\1.0.0\\res\\drawable\\btn_unpress.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_light.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\fynn_prompt_dialog_btn_single_pressed.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\drawable\\fynn_prompt_dialog_btn_single_pressed.xml"
+    }
+]

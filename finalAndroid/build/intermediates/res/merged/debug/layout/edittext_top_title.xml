@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/edittext_title_bar"
+    android:layout_width="match_parent"
+    android:layout_height="35dp"
+    android:background="@color/radiobutton_text_press"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:gravity="center"
+    android:paddingBottom="3dp">
+
+    <ImageView
+        android:id="@+id/title_left_imageview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:layout_marginLeft="5dp"
+        android:src="@drawable/ic_launcher"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/title_left_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:text="取消"
+        android:textColor="#ffffff"
+        android:textSize="17sp"
+        android:visibility="gone" />
+
+
+    <EditText
+        android:id="@+id/title_middle_edittext"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="left"
+        android:visibility="gone"
+        android:singleLine="true"
+        android:textColorHint="@color/small_drake_line"
+        android:textColor="@color/white"
+        android:background="@null"
+        android:textSize="15sp" />
+
+    <View
+        android:layout_width="250dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="2dp"
+        android:layout_centerInParent="true"
+        android:background="#ffffff"
+        android:layout_below="@+id/title_middle_edittext" />
+
+    <TextView
+        android:id="@+id/title_right_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:paddingRight="8dp"
+        android:text="完成"
+        android:textColor="#ffffff"
+        android:textSize="17sp"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/title_right_imageview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:paddingRight="10dp"
+        android:src="@drawable/ic_launcher"
+        android:visibility="gone" />
+
+</RelativeLayout>

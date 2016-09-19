@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/home_bg"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context="com.sujian.finalandroid.activity.HelpCenterActivity">
+
+    <include layout="@layout/top_title" />
+
+    <ExpandableListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/small_drake_line"
+        android:dividerHeight="1dp"
+        android:id="@+id/elv_help">
+
+    </ExpandableListView>
+
+</LinearLayout>

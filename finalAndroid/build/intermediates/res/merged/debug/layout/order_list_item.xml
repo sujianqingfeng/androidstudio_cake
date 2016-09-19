@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_order_item_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="5dp"
+        android:text="2015-12-12 15:23" />
+
+    <TextView
+        android:id="@+id/tv_order_item_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_margin="5dp"
+        android:text="已取消" />
+
+    <View
+        android:id="@+id/v_top_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/tv_order_item_state"
+        android:background="@color/small_drake_line" />
+
+    <ImageView
+        android:id="@+id/iv_order_item_icon"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_margin="10dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/v_top_line"
+        android:src="@drawable/ic_launcher" />
+
+    <TextView
+        android:id="@+id/tv_order_item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/v_top_line"
+        android:layout_toEndOf="@+id/iv_order_item_icon"
+        android:layout_toRightOf="@+id/iv_order_item_icon"
+        android:text="title" />
+
+
+    <ImageView
+        android:id="@+id/iv_order_item_right_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:paddingTop="15dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/v_top_line"
+        android:src="@drawable/go_right" />
+
+    <View
+        android:id="@+id/v_center_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/iv_order_item_icon"
+        android:background="@color/small_drake_line" />
+
+
+    <TextView
+        android:id="@+id/tv_order_item_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/v_center_line"
+        android:layout_margin="8dp"
+        android:text="共1件商品  ￥7元" />
+
+
+</RelativeLayout>

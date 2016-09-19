@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/Users/fyales/Project/Github/tagcloud/library/src/main/res/values/colors.xml -->
+    <eat-comment/>
+    <color name="accent">#03A9F4</color>
+    <color name="divider">#B6B6B6</color>
+    <color name="grey">#757575</color>
+    <color name="icons">#F8F8F8</color>
+    <color name="primary">#F44336</color>
+    <color name="primary_dark">#D32F2F</color>
+    <color name="primary_light">#FFCDD2</color>
+    <color name="primary_text">#2a2a2a</color>
+    <color name="secondary_text">#727272</color>
+    <color name="title">#242424</color>
+    <color name="white">#fff</color>
+    <declare-styleable name="TagCloudLayout"><attr format="dimension" name="lineSpacing"/><attr format="dimension" name="tagSpacing"/></declare-styleable>
+    <!-- From: file:/Users/fyales/Project/Github/tagcloud/library/src/main/res/values/dimens.xml -->
+    <eat-comment/>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <!-- From: file:/Users/fyales/Project/Github/tagcloud/library/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="action_settings">Settings</string>
+    <string name="app_name">library</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="tag_text">tag</string>
+</resources>

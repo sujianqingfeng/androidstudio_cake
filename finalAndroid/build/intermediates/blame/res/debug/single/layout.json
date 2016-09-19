@@ -1,0 +1,518 @@
+[
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_layout.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_action_menu_layout.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\pendingpayment_fragment.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\layout\\pendingpayment_fragment.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\select_time_item.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\layout\\select_time_item.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\item_update_listview.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\layout\\item_update_listview.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_up_container.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_action_bar_up_container.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_snackbar.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_layout_snackbar.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_time.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_template_part_time.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\news_list_item_layout.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\layout\\news_list_item_layout.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\select_share_layout.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\layout\\select_share_layout.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_view_list_nav_layout.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_action_bar_view_list_nav_layout.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\prestigecake_fragment.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\layout\\prestigecake_fragment.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\cakeshop_fragment.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\layout\\cakeshop_fragment.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\activity_register.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\layout\\activity_register.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\commodity_list_item.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\layout\\commodity_list_item.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\menu_item.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\layout\\menu_item.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\loadpage_loading.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\layout\\loadpage_loading.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_multichoice_material.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\select_dialog_multichoice_material.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\pull_to_refresh_head.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.jcodecraeer\\xrecyclerview\\1.2.7\\res\\layout\\pull_to_refresh_head.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\help_center_child_layout.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\layout\\help_center_child_layout.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\order_list_item.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\layout\\order_list_item.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media_narrow.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_template_big_media_narrow.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_title_item.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_action_bar_title_item.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_order_detail.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\layout\\fragment_order_detail.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\activity_help_center.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\layout\\activity_help_center.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\shopcar_fragment.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\layout\\shopcar_fragment.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\home_fragment.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\layout\\home_fragment.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\dialog_myinfo_profession.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\layout\\dialog_myinfo_profession.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\activity_updata.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\layout\\activity_updata.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_item_layout.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_action_menu_item_layout.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\loadpage_empty.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\layout\\loadpage_empty.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_header.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_navigation_item_header.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\listview_header.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.jcodecraeer\\xrecyclerview\\1.2.7\\res\\layout\\listview_header.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\activity_guide.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\layout\\activity_guide.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_view.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_search_view.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_navigation_item.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_close_item_material.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_action_mode_close_item_material.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\tagview.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.fyales.android\\library\\1.0.2\\res\\layout\\tagview.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\activity_capture.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\androidstudio_cake\\zing_lib\\unspecified\\res\\layout\\activity_capture.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_snackbar_include.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_layout_snackbar_include.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\poundcake_fragment.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\layout\\poundcake_fragment.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_chronometer.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_template_part_chronometer.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\design_menu_item_action_area.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_menu_item_action_area.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\activity_mysettings.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\layout\\activity_mysettings.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\gridview_item.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\layout\\gridview_item.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\activity_search.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\layout\\activity_search.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_toolbar.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_screen_toolbar.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\allorder_fragment.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\layout\\allorder_fragment.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\abc_dialog_title_material.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_dialog_title_material.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\activity_feedback.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\layout\\activity_feedback.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\activity_edit_adress.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\layout\\activity_edit_adress.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_dropdown_item_icons_2line.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\cheesecake_recycler_item.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\layout\\cheesecake_recycler_item.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_checkbox.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_list_menu_item_checkbox.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\menu_layout.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\layout\\menu_layout.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\activity_location.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\layout\\activity_location.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\loadpage_error.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\layout\\loadpage_error.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\activity_order_detail.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\layout\\activity_order_detail.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\pull_to_refresh_header_vertical.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\androidstudio_cake\\pullToRefresh_library\\unspecified\\res\\layout\\pull_to_refresh_header_vertical.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_lines.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_template_lines.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\activity_change_adress.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\layout\\activity_change_adress.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_order_state.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\layout\\fragment_order_state.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\moussecake_fragment.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\layout\\moussecake_fragment.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\support_simple_spinner_dropdown_item.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\support_simple_spinner_dropdown_item.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\fynn_prompt_dialog_titlebar_skyblue.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\layout\\fynn_prompt_dialog_titlebar_skyblue.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\popwindow_top_rigght.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\layout\\popwindow_top_rigght.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_menu.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_navigation_menu.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\activity_about_us.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\layout\\activity_about_us.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\dialog_myinfo_changeaddress.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\layout\\dialog_myinfo_changeaddress.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_screen_simple.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_template_big_media.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\help_center_parent_layout.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\layout\\help_center_parent_layout.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\shop_car_list_item.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\layout\\shop_car_list_item.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\dialog_myinfo_changebirth.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\layout\\dialog_myinfo_changebirth.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\angelcake_fragment.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\layout\\angelcake_fragment.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_tab_icon.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_layout_tab_icon.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\activity_login.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_icon.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_list_menu_item_icon.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\slidingmenumain.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\androidstudio_cake\\slidingmenu_llbrary\\unspecified\\res\\layout\\slidingmenumain.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_separator.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_navigation_item_separator.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\cheesecake_fragment.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\layout\\cheesecake_fragment.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\home_gridview_item.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\layout\\home_gridview_item.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_singlechoice_material.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\select_dialog_singlechoice_material.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_button_bar_material.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_alert_dialog_button_bar_material.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_content_include.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_screen_content_include.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\abc_select_dialog_material.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_select_dialog_material.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_subheader.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_navigation_item_subheader.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_bar.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_action_mode_bar.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\activity_myorder.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\layout\\activity_myorder.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\activity_home.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\layout\\activity_home.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view_list_item.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_activity_chooser_view_list_item.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\activity_mynews.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\layout\\activity_mynews.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_radio.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_list_menu_item_radio.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\setting_item.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\layout\\setting_item.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_tab_text.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_layout_tab_text.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\activity_web.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\layout\\activity_web.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\home_list_item.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\layout\\home_list_item.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\pull_to_refresh_header_horizontal.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\androidstudio_cake\\pullToRefresh_library\\unspecified\\res\\layout\\pull_to_refresh_header_horizontal.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\abc_expanded_menu_layout.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_expanded_menu_layout.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_material.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_alert_dialog_material.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_system_new.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\layout\\fragment_system_new.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\activity_splash.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\layout\\activity_splash.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\activity_goods_list.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\layout\\activity_goods_list.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\tab_top_title_layout.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\layout\\tab_top_title_layout.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_layout.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_list_menu_item_layout.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\design_bottom_sheet_dialog.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_bottom_sheet_dialog.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_action.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_media_action.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\item_birth_year.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\layout\\item_birth_year.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\spongecake_fragment.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\layout\\spongecake_fragment.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_activity_chooser_view.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_item_material.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\select_dialog_item_material.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\change_address_list_item.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\layout\\change_address_list_item.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\menu_frame.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\layout\\menu_frame.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple_overlay_action_mode.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\edittext_top_title.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\layout\\edittext_top_title.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\top_title.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\layout\\top_title.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_menu_item.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_navigation_menu_item.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\order_state_listview_item.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\layout\\order_state_listview_item.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\select_time_layout.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\layout\\select_time_layout.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_user_new.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\layout\\fragment_user_new.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_template_media.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_item_layout.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_popup_menu_item_layout.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\dialog_layout.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.github.sd6352051.niftydialogeffects\\niftydialogeffects\\1.0.0\\res\\layout\\dialog_layout.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\location_item.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\layout\\location_item.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\receiptgoods_fragment.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\layout\\receiptgoods_fragment.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\commented_fragment.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\layout\\commented_fragment.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\home_headerview.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\layout\\home_headerview.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\shopping_activity.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\layout\\shopping_activity.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_cancel_action.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_media_cancel_action.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\layout\\listview_footer.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.jcodecraeer\\xrecyclerview\\1.2.7\\res\\layout\\listview_footer.xml"
+    }
+]

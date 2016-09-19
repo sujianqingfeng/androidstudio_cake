@@ -1,0 +1,950 @@
+[
+    {
+        "outputFile": "E:\\android studio space\\androidstudio_cake\\viewpager_library\\build\\intermediates\\res\\merged\\androidTest\\debug\\values\\values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 44,
+                    "endOffset": 95
+                },
+                "from": {
+                    "file": "E:\\android studio space\\androidstudio_cake\\viewpager_library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 44,
+                        "endOffset": 95
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 100,
+                    "endColumn": 47,
+                    "endOffset": 143
+                },
+                "from": {
+                    "file": "E:\\android studio space\\androidstudio_cake\\viewpager_library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 100,
+                        "endColumn": 47,
+                        "endOffset": 143
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 148,
+                    "endColumn": 49,
+                    "endOffset": 193
+                },
+                "from": {
+                    "file": "E:\\android studio space\\androidstudio_cake\\viewpager_library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 148,
+                        "endColumn": 49,
+                        "endOffset": 193
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 198,
+                    "endColumn": 49,
+                    "endOffset": 243
+                },
+                "from": {
+                    "file": "E:\\android studio space\\androidstudio_cake\\viewpager_library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 198,
+                        "endColumn": 49,
+                        "endOffset": 243
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 248,
+                    "endColumn": 62,
+                    "endOffset": 306
+                },
+                "from": {
+                    "file": "E:\\android studio space\\androidstudio_cake\\viewpager_library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 248,
+                        "endColumn": 62,
+                        "endOffset": 306
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 311,
+                    "endColumn": 59,
+                    "endOffset": 366
+                },
+                "from": {
+                    "file": "E:\\android studio space\\androidstudio_cake\\viewpager_library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 311,
+                        "endColumn": 59,
+                        "endOffset": 366
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 371,
+                    "endColumn": 60,
+                    "endOffset": 427
+                },
+                "from": {
+                    "file": "E:\\android studio space\\androidstudio_cake\\viewpager_library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 371,
+                        "endColumn": 60,
+                        "endOffset": 427
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 9,
+                    "startColumn": 4,
+                    "startOffset": 432,
+                    "endColumn": 66,
+                    "endOffset": 494
+                },
+                "from": {
+                    "file": "E:\\android studio space\\androidstudio_cake\\viewpager_library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 432,
+                        "endColumn": 66,
+                        "endOffset": 494
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 10,
+                    "startColumn": 4,
+                    "startOffset": 499,
+                    "endColumn": 62,
+                    "endOffset": 557
+                },
+                "from": {
+                    "file": "E:\\android studio space\\androidstudio_cake\\viewpager_library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 499,
+                        "endColumn": 62,
+                        "endOffset": 557
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 11,
+                    "startColumn": 4,
+                    "startOffset": 562,
+                    "endColumn": 71,
+                    "endOffset": 629
+                },
+                "from": {
+                    "file": "E:\\android studio space\\androidstudio_cake\\viewpager_library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 562,
+                        "endColumn": 71,
+                        "endOffset": 629
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 12,
+                    "startColumn": 4,
+                    "startOffset": 634,
+                    "endColumn": 71,
+                    "endOffset": 701
+                },
+                "from": {
+                    "file": "E:\\android studio space\\androidstudio_cake\\viewpager_library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 634,
+                        "endColumn": 71,
+                        "endOffset": 701
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 13,
+                    "startColumn": 4,
+                    "startOffset": 706,
+                    "endColumn": 73,
+                    "endOffset": 775
+                },
+                "from": {
+                    "file": "E:\\android studio space\\androidstudio_cake\\viewpager_library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 706,
+                        "endColumn": 73,
+                        "endOffset": 775
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 14,
+                    "startColumn": 4,
+                    "startOffset": 780,
+                    "endColumn": 73,
+                    "endOffset": 849
+                },
+                "from": {
+                    "file": "E:\\android studio space\\androidstudio_cake\\viewpager_library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 780,
+                        "endColumn": 73,
+                        "endOffset": 849
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 15,
+                    "startColumn": 4,
+                    "startOffset": 854,
+                    "endColumn": 75,
+                    "endOffset": 925
+                },
+                "from": {
+                    "file": "E:\\android studio space\\androidstudio_cake\\viewpager_library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 854,
+                        "endColumn": 75,
+                        "endOffset": 925
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 16,
+                    "startColumn": 4,
+                    "startOffset": 930,
+                    "endColumn": 72,
+                    "endOffset": 998
+                },
+                "from": {
+                    "file": "E:\\android studio space\\androidstudio_cake\\viewpager_library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 930,
+                        "endColumn": 72,
+                        "endOffset": 998
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 17,
+                    "startColumn": 4,
+                    "startOffset": 1003,
+                    "endColumn": 74,
+                    "endOffset": 1073
+                },
+                "from": {
+                    "file": "E:\\android studio space\\androidstudio_cake\\viewpager_library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 1003,
+                        "endColumn": 74,
+                        "endOffset": 1073
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 18,
+                    "startColumn": 4,
+                    "startOffset": 1078,
+                    "endColumn": 70,
+                    "endOffset": 1144
+                },
+                "from": {
+                    "file": "E:\\android studio space\\androidstudio_cake\\viewpager_library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 4,
+                        "startOffset": 1078,
+                        "endColumn": 70,
+                        "endOffset": 1144
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 19,
+                    "startColumn": 4,
+                    "startOffset": 1149,
+                    "endColumn": 78,
+                    "endOffset": 1223
+                },
+                "from": {
+                    "file": "E:\\android studio space\\androidstudio_cake\\viewpager_library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 4,
+                        "startOffset": 1149,
+                        "endColumn": 78,
+                        "endOffset": 1223
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 20,
+                    "startColumn": 4,
+                    "startOffset": 1228,
+                    "endColumn": 61,
+                    "endOffset": 1285
+                },
+                "from": {
+                    "file": "E:\\android studio space\\androidstudio_cake\\viewpager_library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 20,
+                        "startColumn": 4,
+                        "startOffset": 1228,
+                        "endColumn": 61,
+                        "endOffset": 1285
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 21,
+                    "startColumn": 4,
+                    "startOffset": 1290,
+                    "endColumn": 62,
+                    "endOffset": 1348
+                },
+                "from": {
+                    "file": "E:\\android studio space\\androidstudio_cake\\viewpager_library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 21,
+                        "startColumn": 4,
+                        "startOffset": 1290,
+                        "endColumn": 62,
+                        "endOffset": 1348
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 22,
+                    "startColumn": 4,
+                    "startOffset": 1353,
+                    "endColumn": 77,
+                    "endOffset": 1426
+                },
+                "from": {
+                    "file": "E:\\android studio space\\androidstudio_cake\\viewpager_library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 22,
+                        "startColumn": 4,
+                        "startOffset": 1353,
+                        "endColumn": 77,
+                        "endOffset": 1426
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 23,
+                    "startColumn": 4,
+                    "startOffset": 1431,
+                    "endColumn": 78,
+                    "endOffset": 1505
+                },
+                "from": {
+                    "file": "E:\\android studio space\\androidstudio_cake\\viewpager_library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 23,
+                        "startColumn": 4,
+                        "startOffset": 1431,
+                        "endColumn": 78,
+                        "endOffset": 1505
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 24,
+                    "startColumn": 4,
+                    "startOffset": 1510,
+                    "endColumn": 92,
+                    "endOffset": 1598
+                },
+                "from": {
+                    "file": "E:\\android studio space\\androidstudio_cake\\viewpager_library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 24,
+                        "startColumn": 4,
+                        "startOffset": 1510,
+                        "endColumn": 92,
+                        "endOffset": 1598
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 25,
+                    "startColumn": 4,
+                    "startOffset": 1603,
+                    "endColumn": 92,
+                    "endOffset": 1691
+                },
+                "from": {
+                    "file": "E:\\android studio space\\androidstudio_cake\\viewpager_library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 25,
+                        "startColumn": 4,
+                        "startOffset": 1603,
+                        "endColumn": 92,
+                        "endOffset": 1691
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 26,
+                    "startColumn": 4,
+                    "startOffset": 1696,
+                    "endLine": 28,
+                    "endColumn": 12,
+                    "endOffset": 1813
+                },
+                "from": {
+                    "file": "E:\\android studio space\\androidstudio_cake\\viewpager_library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 26,
+                        "startColumn": 4,
+                        "startOffset": 1696,
+                        "endLine": 28,
+                        "endColumn": 12,
+                        "endOffset": 1813
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 29,
+                    "startColumn": 4,
+                    "startOffset": 1818,
+                    "endLine": 31,
+                    "endColumn": 12,
+                    "endOffset": 1935
+                },
+                "from": {
+                    "file": "E:\\android studio space\\androidstudio_cake\\viewpager_library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 29,
+                        "startColumn": 4,
+                        "startOffset": 1818,
+                        "endLine": 31,
+                        "endColumn": 12,
+                        "endOffset": 1935
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 37,
+                    "startColumn": 4,
+                    "startOffset": 4162,
+                    "endColumn": 61,
+                    "endOffset": 4219
+                },
+                "from": {
+                    "file": "E:\\android studio space\\androidstudio_cake\\viewpager_library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 37,
+                        "startColumn": 4,
+                        "startOffset": 4162,
+                        "endColumn": 61,
+                        "endOffset": 4219
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 38,
+                    "startColumn": 4,
+                    "startOffset": 4224,
+                    "endColumn": 67,
+                    "endOffset": 4287
+                },
+                "from": {
+                    "file": "E:\\android studio space\\androidstudio_cake\\viewpager_library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 38,
+                        "startColumn": 4,
+                        "startOffset": 4224,
+                        "endColumn": 67,
+                        "endOffset": 4287
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 39,
+                    "startColumn": 4,
+                    "startOffset": 4292,
+                    "endColumn": 62,
+                    "endOffset": 4350
+                },
+                "from": {
+                    "file": "E:\\android studio space\\androidstudio_cake\\viewpager_library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 39,
+                        "startColumn": 4,
+                        "startOffset": 4292,
+                        "endColumn": 62,
+                        "endOffset": 4350
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 40,
+                    "startColumn": 4,
+                    "startOffset": 4355,
+                    "endColumn": 64,
+                    "endOffset": 4415
+                },
+                "from": {
+                    "file": "E:\\android studio space\\androidstudio_cake\\viewpager_library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 40,
+                        "startColumn": 4,
+                        "startOffset": 4355,
+                        "endColumn": 64,
+                        "endOffset": 4415
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 41,
+                    "startColumn": 4,
+                    "startOffset": 4420,
+                    "endColumn": 65,
+                    "endOffset": 4481
+                },
+                "from": {
+                    "file": "E:\\android studio space\\androidstudio_cake\\viewpager_library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 41,
+                        "startColumn": 4,
+                        "startOffset": 4420,
+                        "endColumn": 65,
+                        "endOffset": 4481
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 42,
+                    "startColumn": 4,
+                    "startOffset": 4486,
+                    "endColumn": 66,
+                    "endOffset": 4548
+                },
+                "from": {
+                    "file": "E:\\android studio space\\androidstudio_cake\\viewpager_library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 42,
+                        "startColumn": 4,
+                        "startOffset": 4486,
+                        "endColumn": 66,
+                        "endOffset": 4548
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 43,
+                    "startColumn": 4,
+                    "startOffset": 4553,
+                    "endColumn": 77,
+                    "endOffset": 4626
+                },
+                "from": {
+                    "file": "E:\\android studio space\\androidstudio_cake\\viewpager_library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 43,
+                        "startColumn": 4,
+                        "startOffset": 4553,
+                        "endColumn": 77,
+                        "endOffset": 4626
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 44,
+                    "startColumn": 4,
+                    "startOffset": 4631,
+                    "endColumn": 89,
+                    "endOffset": 4716
+                },
+                "from": {
+                    "file": "E:\\android studio space\\androidstudio_cake\\viewpager_library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 44,
+                        "startColumn": 4,
+                        "startOffset": 4631,
+                        "endColumn": 89,
+                        "endOffset": 4716
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 45,
+                    "startColumn": 4,
+                    "startOffset": 4721,
+                    "endColumn": 72,
+                    "endOffset": 4789
+                },
+                "from": {
+                    "file": "E:\\android studio space\\androidstudio_cake\\viewpager_library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 45,
+                        "startColumn": 4,
+                        "startOffset": 4721,
+                        "endColumn": 72,
+                        "endOffset": 4789
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 46,
+                    "startColumn": 4,
+                    "startOffset": 4794,
+                    "endColumn": 68,
+                    "endOffset": 4858
+                },
+                "from": {
+                    "file": "E:\\android studio space\\androidstudio_cake\\viewpager_library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 46,
+                        "startColumn": 4,
+                        "startOffset": 4794,
+                        "endColumn": 68,
+                        "endOffset": 4858
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 47,
+                    "startColumn": 4,
+                    "startOffset": 4863,
+                    "endColumn": 64,
+                    "endOffset": 4923
+                },
+                "from": {
+                    "file": "E:\\android studio space\\androidstudio_cake\\viewpager_library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 47,
+                        "startColumn": 4,
+                        "startOffset": 4863,
+                        "endColumn": 64,
+                        "endOffset": 4923
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 48,
+                    "startColumn": 4,
+                    "startOffset": 4928,
+                    "endColumn": 67,
+                    "endOffset": 4991
+                },
+                "from": {
+                    "file": "E:\\android studio space\\androidstudio_cake\\viewpager_library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 48,
+                        "startColumn": 4,
+                        "startOffset": 4928,
+                        "endColumn": 67,
+                        "endOffset": 4991
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 49,
+                    "startColumn": 4,
+                    "startOffset": 4996,
+                    "endColumn": 65,
+                    "endOffset": 5057
+                },
+                "from": {
+                    "file": "E:\\android studio space\\androidstudio_cake\\viewpager_library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 49,
+                        "startColumn": 4,
+                        "startOffset": 4996,
+                        "endColumn": 65,
+                        "endOffset": 5057
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 50,
+                    "startColumn": 4,
+                    "startOffset": 5062,
+                    "endColumn": 68,
+                    "endOffset": 5126
+                },
+                "from": {
+                    "file": "E:\\android studio space\\androidstudio_cake\\viewpager_library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 50,
+                        "startColumn": 4,
+                        "startOffset": 5062,
+                        "endColumn": 68,
+                        "endOffset": 5126
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 51,
+                    "startColumn": 4,
+                    "startOffset": 5131,
+                    "endColumn": 78,
+                    "endOffset": 5205
+                },
+                "from": {
+                    "file": "E:\\android studio space\\androidstudio_cake\\viewpager_library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 51,
+                        "startColumn": 4,
+                        "startOffset": 5131,
+                        "endColumn": 78,
+                        "endOffset": 5205
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 52,
+                    "startColumn": 4,
+                    "startOffset": 5210,
+                    "endColumn": 69,
+                    "endOffset": 5275
+                },
+                "from": {
+                    "file": "E:\\android studio space\\androidstudio_cake\\viewpager_library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 52,
+                        "startColumn": 4,
+                        "startOffset": 5210,
+                        "endColumn": 69,
+                        "endOffset": 5275
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 53,
+                    "startColumn": 4,
+                    "startOffset": 5280,
+                    "endColumn": 72,
+                    "endOffset": 5348
+                },
+                "from": {
+                    "file": "E:\\android studio space\\androidstudio_cake\\viewpager_library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 53,
+                        "startColumn": 4,
+                        "startOffset": 5280,
+                        "endColumn": 72,
+                        "endOffset": 5348
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 54,
+                    "startColumn": 4,
+                    "startOffset": 5353,
+                    "endColumn": 73,
+                    "endOffset": 5422
+                },
+                "from": {
+                    "file": "E:\\android studio space\\androidstudio_cake\\viewpager_library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 54,
+                        "startColumn": 4,
+                        "startOffset": 5353,
+                        "endColumn": 73,
+                        "endOffset": 5422
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 55,
+                    "startColumn": 4,
+                    "startOffset": 5427,
+                    "endLine": 58,
+                    "endColumn": 12,
+                    "endOffset": 5622
+                },
+                "from": {
+                    "file": "E:\\android studio space\\androidstudio_cake\\viewpager_library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 55,
+                        "startColumn": 4,
+                        "startOffset": 5427,
+                        "endLine": 58,
+                        "endColumn": 12,
+                        "endOffset": 5622
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 59,
+                    "startColumn": 4,
+                    "startOffset": 5627,
+                    "endLine": 62,
+                    "endColumn": 12,
+                    "endOffset": 5875
+                },
+                "from": {
+                    "file": "E:\\android studio space\\androidstudio_cake\\viewpager_library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 59,
+                        "startColumn": 4,
+                        "startOffset": 5627,
+                        "endLine": 62,
+                        "endColumn": 12,
+                        "endOffset": 5875
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 63,
+                    "startColumn": 4,
+                    "startOffset": 5880,
+                    "endColumn": 26,
+                    "endOffset": 5902
+                },
+                "from": {
+                    "file": "E:\\android studio space\\androidstudio_cake\\viewpager_library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 63,
+                        "startColumn": 4,
+                        "startOffset": 5880,
+                        "endColumn": 26,
+                        "endOffset": 5902
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 64,
+                    "startColumn": 4,
+                    "startOffset": 5907,
+                    "endLine": 67,
+                    "endColumn": 12,
+                    "endOffset": 6092
+                },
+                "from": {
+                    "file": "E:\\android studio space\\androidstudio_cake\\viewpager_library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 64,
+                        "startColumn": 4,
+                        "startOffset": 5907,
+                        "endLine": 67,
+                        "endColumn": 12,
+                        "endOffset": 6092
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 68,
+                    "startColumn": 4,
+                    "startOffset": 6097,
+                    "endLine": 78,
+                    "endColumn": 12,
+                    "endOffset": 6694
+                },
+                "from": {
+                    "file": "E:\\android studio space\\androidstudio_cake\\viewpager_library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 68,
+                        "startColumn": 4,
+                        "startOffset": 6097,
+                        "endLine": 78,
+                        "endColumn": 12,
+                        "endOffset": 6694
+                    }
+                }
+            }
+        ]
+    }
+]

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:background="@color/white"
+    android:descendantFocusability="blocksDescendants"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <cn.refactor.library.SmoothCheckBox
+        android:id="@+id/scb_shopcar_item_choose"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_margin="5dp"
+        app:color_checked="@color/radiobutton_text_press"
+        android:layout_centerVertical="true" />
+
+    <ImageView
+        android:id="@+id/iv_shopcar_item_commodity_icon"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_toRightOf="@+id/scb_shopcar_item_choose"
+        android:src="@drawable/ic_launcher" />
+
+    <TextView
+        android:id="@+id/tv_shopcar_item_comodity_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:textColor="#818181"
+        android:layout_margin="8dp"
+        android:layout_toEndOf="@+id/iv_shopcar_item_commodity_icon"
+        android:layout_toRightOf="@+id/iv_shopcar_item_commodity_icon"
+        android:text="xxxxxx蛋糕" />
+
+    <TextView
+        android:id="@+id/tv_shopcar_item_comodity_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/iv_shopcar_item_commodity_icon"
+        android:layout_toRightOf="@+id/iv_shopcar_item_commodity_icon"
+        android:text="￥5元"
+        android:layout_margin="8dp"
+        android:textColor="@color/red" />
+
+
+    <ImageButton
+        android:id="@+id/ibt_shopcar_item_comdity_reduce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/tv_shopcar_item_comodity_num"
+        android:layout_toStartOf="@+id/tv_shopcar_item_comodity_num"
+        android:layout_margin="5dp"
+        android:background="@drawable/shop_car_item_bt_reduce_selector" />
+
+
+    <TextView
+        android:id="@+id/tv_shopcar_item_comodity_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="5dp"
+        android:textColor="#818181"
+        android:layout_toLeftOf="@+id/ibt_shopcar_item_comdity_add"
+        android:layout_toStartOf="@+id/ibt_shopcar_item_comdity_add"
+        android:text="2" />
+
+
+    <ImageButton
+        android:id="@+id/ibt_shopcar_item_comdity_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="5dp"
+        android:background="@drawable/shop_car_item_bt_add_selector" />
+
+</RelativeLayout>

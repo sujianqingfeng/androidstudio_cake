@@ -1,0 +1,72 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/home_bg"
+    tools:context="com.sujian.finalandroid.activity.SearchActivity">
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content">-->
+
+    <!--<Button-->
+    <!--android:id="@+id/bt_return"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="@drawable/ic_launcher" />-->
+
+    <!--<EditText-->
+    <!--android:id="@+id/ed_searchcontent"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_weight="1" />-->
+
+    <!--<Button-->
+    <!--android:id="@+id/bt_search"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="搜索" />-->
+
+    <!--</LinearLayout>-->
+
+    <include layout="@layout/edittext_top_title" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="热门搜索" />
+
+    <com.sujian.finalandroid.ui.TagCloudLayout
+        android:id="@+id/tcl_hotsearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:tagSpacing="15dp"
+        app:lineSpacing="10dp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="历史搜索" />
+
+    <com.sujian.finalandroid.ui.TagCloudLayout
+        android:id="@+id/tcl_historysearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:tagSpacing="15dp"
+        app:lineSpacing="10dp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="清楚搜索历史数据"
+        android:visibility="gone"
+        android:layout_margin="30dp"
+        android:id="@+id/bt_clearhistory" />
+
+
+</LinearLayout>

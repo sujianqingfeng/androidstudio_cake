@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SmoothCheckBox"><attr format="integer" name="duration"/><attr format="dimension" name="stroke_width"/><attr format="color" name="color_tick"/><attr format="color" name="color_checked"/><attr format="color" name="color_unchecked"/><attr format="color" name="color_unchecked_stroke"/></declare-styleable>
+    <string name="app_name">library</string>
+</resources>

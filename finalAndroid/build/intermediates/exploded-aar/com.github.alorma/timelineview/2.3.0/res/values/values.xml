@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="default_drawInternal">false</bool>
+    <color name="colorAccent">#ff29d144</color>
+    <color name="colorPrimary">#ffd8153c</color>
+    <color name="colorPrimaryDark">#ffb31433</color>
+    <declare-styleable name="TimelineView"><attr format="dimension" name="timeline_lineWidth"/><attr format="color" name="timeline_lineColor"/><attr format="dimension" name="timeline_indicatorSize"/><attr format="color" name="timeline_indicatorColor"/><attr format="enum" name="timeline_type"><enum name="hidden" value="-1"/><enum name="start" value="0"/><enum name="middle" value="1"/><enum name="line" value="2"/><enum name="end" value="3"/></attr><attr format="enum" name="timeline_alignment"><enum name="start" value="-1"/><enum name="middle" value="0"/><enum name="end" value="1"/></attr><attr format="enum" name="timeline_lineStyle"><enum name="dashed" value="-1"/><enum name="linear" value="0"/></attr><attr format="boolean" name="timeline_drawInternal"/><attr format="color" name="timeline_internalColor"/><attr format="reference" name="timeline_internalDrawable"/><attr format="dimension" name="timeline_internalPadding"/></declare-styleable>
+    <dimen name="default_internalPadding">2dp</dimen>
+    <dimen name="default_itemSize">6dp</dimen>
+    <dimen name="default_lineWidth">2dp</dimen>
+</resources>

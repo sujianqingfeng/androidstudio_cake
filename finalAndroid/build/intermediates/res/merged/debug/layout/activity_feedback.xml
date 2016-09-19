@@ -1,0 +1,120 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/home_bg"
+    android:orientation="vertical"
+    tools:context="com.sujian.finalandroid.activity.FeedbackActivity">
+
+    <include layout="@layout/top_title" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="您的批评和建议能帮助我们更好完善产品，请你留您的宝贵意见！"
+        android:textColor="@color/drak" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:background="@drawable/feedback_rb_bg"
+            android:textColor="@drawable/feedback_rb_text"
+            android:text="奶酪蛋糕" />
+
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:background="@drawable/feedback_rb_bg"
+            android:textColor="@drawable/feedback_rb_text"
+            android:gravity="center"
+            android:text="重油蛋糕" />
+
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="1"
+            android:background="@drawable/feedback_rb_bg"
+            android:textColor="@drawable/feedback_rb_text"
+            android:button="@null"
+            android:gravity="center"
+            android:text="天使蛋糕" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="1"
+            android:background="@drawable/feedback_rb_bg"
+            android:textColor="@drawable/feedback_rb_text"
+            android:button="@null"
+            android:gravity="center"
+            android:text="戚风蛋糕" />
+
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:background="@drawable/feedback_rb_bg"
+            android:textColor="@drawable/feedback_rb_text"
+            android:gravity="center"
+            android:text="海绵蛋糕" />
+
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:background="@drawable/feedback_rb_bg"
+            android:textColor="@drawable/feedback_rb_text"
+            android:gravity="center"
+            android:text="慕斯蛋糕" />
+
+    </LinearLayout>
+
+
+    <EditText
+        android:id="@+id/ed_feedback"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:gravity="top"
+        android:padding="5dp"
+        android:background="@drawable/feedback_ed_bg"
+        android:layout_margin="10dp"
+        android:textColorHint="@android:color/darker_gray"
+        android:hint="请输入您的宝贵建议，我们会定期抽取幸运用户赠送奖品，欢迎多多反馈（300字内）" />
+
+</LinearLayout>

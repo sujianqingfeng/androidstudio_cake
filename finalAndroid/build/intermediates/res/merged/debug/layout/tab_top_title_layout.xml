@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tab_title_bar"
+    android:layout_width="match_parent"
+    android:layout_height="35dp"
+    android:background="@color/radiobutton_text_press"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:gravity="left|center"
+    android:paddingBottom="3dp">
+
+    <ImageView
+        android:id="@+id/title_left_imageview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:layout_marginLeft="5dp"
+        android:src="@drawable/ic_launcher"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/title_left_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:text="取消"
+        android:textColor="#ffffff"
+        android:textSize="17sp"
+        android:visibility="gone" />
+
+
+    <RadioGroup
+        android:id="@+id/title_middle_radiogroup"
+        android:layout_width="200dip"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="3dip"
+
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_left"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="3dp"
+            android:textSize="14sp"
+            android:textColor="@color/title_text_sel"
+            android:visibility="gone" />
+
+        <RadioButton
+            android:id="@+id/rb_right"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:textColor="@color/title_text_sel"
+            android:gravity="center"
+            android:padding="3dp"
+            android:textSize="14sp"
+            android:visibility="gone" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/title_right_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:paddingRight="8dp"
+        android:text="完成"
+        android:textColor="#ffffff"
+        android:textSize="17sp"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/title_right_imageview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_launcher"
+        android:visibility="gone" />
+
+</RelativeLayout>

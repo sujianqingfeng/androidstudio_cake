@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/home_bg"
+    android:orientation="vertical"
+    tools:context="com.sujian.finalandroid.activity.LocationActivity">
+
+    <include layout="@layout/top_title" />
+
+
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/mv_bmapView"
+        android:layout_width="fill_parent"
+        android:layout_height="250dp"
+        android:clickable="true" />
+
+
+    <ListView
+        android:id="@+id/lv_locationinfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:choiceMode="singleChoice"
+        android:listSelector="@android:color/transparent">
+
+    </ListView>
+
+</LinearLayout>

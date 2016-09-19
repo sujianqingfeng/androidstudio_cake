@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="68dp">
+
+    <TextView
+        android:id="@+id/tv_change_address_item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:textColor="@color/radiobutton_text_normal"
+        android:text="贺聂双" />
+
+    <TextView
+        android:id="@+id/tv_change_address_item_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:textColor="@color/radiobutton_text_normal"
+        android:layout_toRightOf="@+id/tv_change_address_item_name"
+        android:text="15198173915" />
+
+    <TextView
+        android:id="@+id/tv_change_address_item_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/radiobutton_text_normal"
+        android:layout_below="@+id/tv_change_address_item_name"
+        android:layout_margin="8dp"
+        android:text="四川省成都市武侯区成都职业技术学院" />
+
+
+    <ImageView
+        android:id="@+id/iv_change_address_edit_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_margin="9dp"
+        android:paddingRight="20dp"
+        android:paddingLeft="10dp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/icon_editoraddress_nor" />
+
+    <TextView
+        android:layout_width="1dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_toLeftOf="@+id/iv_change_address_edit_icon"
+        android:background="@color/small_drake_line" />
+
+</RelativeLayout>

@@ -1,0 +1,29 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/home_bg"
+    android:orientation="vertical"
+    tools:context="com.sujian.finalandroid.activity.MySettingsActivity">
+
+    <include layout="@layout/top_title" />
+
+    <ListView
+        android:id="@+id/setting_listview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:divider="@color/small_drake_line"
+        android:dividerHeight="1dp"
+        android:paddingTop="15dp" />
+
+    <Button
+        android:id="@+id/bt_setting_sing_out"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@color/radiobutton_text_press"
+        android:text="退出当前账号" />
+
+
+</LinearLayout>

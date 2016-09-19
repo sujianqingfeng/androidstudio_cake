@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\raw\\libs",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\SMSSDK-2.0.2\\res\\raw\\libs"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\raw\\smssdk_pydb",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\SMSSDKGUI-2.0.2\\res\\raw\\smssdk_pydb"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\raw\\beep.ogg",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\androidstudio_cake\\zing_lib\\unspecified\\res\\raw\\beep.ogg"
+    }
+]

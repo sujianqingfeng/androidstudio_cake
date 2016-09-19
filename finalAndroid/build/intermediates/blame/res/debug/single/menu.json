@@ -1,0 +1,66 @@
+[
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\menu\\menu_main.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\exploded-aar\\com.fyales.android\\library\\1.0.2\\res\\menu\\menu_main.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\menu\\login.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\menu\\login.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\menu\\my_news.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\menu\\my_news.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\menu\\home.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\menu\\home.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\menu\\updata.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\menu\\updata.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\menu\\my_order.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\menu\\my_order.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\menu\\splash.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\menu\\splash.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\menu\\about_us.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\menu\\about_us.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\menu\\goods_list.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\menu\\goods_list.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\menu\\guide_acrivity.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\menu\\guide_acrivity.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\menu\\register.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\menu\\register.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\menu\\web.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\menu\\web.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\menu\\feedback.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\menu\\feedback.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\menu\\my_settings.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\menu\\my_settings.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\menu\\my_collection.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\menu\\my_collection.xml"
+    },
+    {
+        "merged": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\build\\intermediates\\res\\merged\\debug\\menu\\search.xml",
+        "source": "E:\\android studio space\\androidstudio_cake\\finalAndroid\\src\\main\\res\\menu\\search.xml"
+    }
+]

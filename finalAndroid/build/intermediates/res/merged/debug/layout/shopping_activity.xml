@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/home_bg">
+
+    <include layout="@layout/top_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_bar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_shoping_commodity_icon"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:background="@color/white"
+                android:src="@drawable/ic_launcher" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/tv_shoping_commodity_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="不知名的蛋糕" />
+
+                <TextView
+                    android:id="@+id/tv_shoping_commodity_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_shoping_commodity_name"
+                    android:layout_margin="5dp"
+                    android:text="￥ 12元"
+                    android:textColor="@color/red" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text="商品类型" />
+
+                <TextView
+                    android:id="@+id/tv_shoping_commodity_kind"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text="慕斯蛋糕" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text="商品尺寸" />
+
+                <TextView
+                    android:id="@+id/tv_shoping_commodity_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text="xxxxx/1个" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:id="@+id/ll_shoping_detail_pics"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text="图文详情" />
+
+                <TextView
+                    android:id="@+id/tv_order_detail_desi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text="描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述描述" />
+
+                <!--<ImageView-->
+                <!--android:id="@+id/iv_shoping_commodity_detail_pic"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:scaleType="fitXY"-->
+                <!--android:src="@drawable/ic_launcher" />-->
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:text="添加商品:" />
+
+        <ImageButton
+            android:id="@+id/bt_shoping_reduce"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:background="@drawable/shop_car_item_bt_reduce_selector" />
+
+        <TextView
+            android:id="@+id/tv_shoping_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="0" />
+
+        <ImageButton
+            android:id="@+id/bt_shoping_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shop_car_item_bt_add_selector" />
+    </LinearLayout>
+
+
+    <com.sujian.finalandroid.ui.BadgeFloatingActionButton
+        android:id="@+id/bfab_shoping_shopcar"
+        android:layout_height="50dp"
+        android:layout_width="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/app_icon"
+        app:badge_dragable="true"
+        app:badge_horizontalMargin="0dp"
+        app:badge_padding="6dp"
+        app:badge_textSize="12sp"
+        app:badge_verticalMargin="0dp"
+        app:borderWidth="1dp"
+        app:fabSize="normal" />
+
+
+</RelativeLayout>
