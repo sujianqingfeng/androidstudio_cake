@@ -85,7 +85,6 @@ public class FeedbackActivity extends BaseActivity {
                                 .url(url)
                                 .addParams("user_id", MyUitls.getUid() + "")
                                 .addParams("feedback_content", content)
-                                .addParams("user_id", SharedPreferencesUitls.getStringValue(Constants.USER_ACOUNT, "无"))
                                 .build()
                                 .execute(new FeedbackCallBack() {
                                     @Override

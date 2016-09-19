@@ -4,10 +4,14 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="重油蛋糕" />
+    <com.jcodecraeer.xrecyclerview.XRecyclerView
+        android:id="@+id/rv_cheese"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#dddddd"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp"
+        android:scrollbars="vertical" />
 
 
 </LinearLayout>

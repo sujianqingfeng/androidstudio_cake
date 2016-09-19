@@ -15,8 +15,11 @@ import com.handmark.pulltorefresh.library.PullToRefreshBase.Mode;
 import com.handmark.pulltorefresh.library.PullToRefreshBase.OnLastItemVisibleListener;
 import com.handmark.pulltorefresh.library.PullToRefreshBase.OnRefreshListener2;
 import com.handmark.pulltorefresh.library.PullToRefreshListView;
+import com.jcodecraeer.xrecyclerview.ProgressStyle;
+import com.jcodecraeer.xrecyclerview.XRecyclerView;
 import com.sujian.finalandroid.activity.R;
 import com.sujian.finalandroid.activity.ShoppingActivity;
+import com.sujian.finalandroid.adapter.CheeseCakeAdapter;
 import com.sujian.finalandroid.base.BaseFragment;
 import com.sujian.finalandroid.constant.Constants;
 import com.sujian.finalandroid.entity.Commodity;
@@ -30,6 +33,7 @@ import com.zhy.http.okhttp.OkHttpUtils;
 
 import android.content.Intent;
 import android.os.AsyncTask;
+import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.text.format.DateUtils;
 import android.util.Log;
 import android.view.View;
@@ -51,34 +55,34 @@ import okhttp3.Call;
 public class AngelCakeFragment extends BaseFragment {
 
 
-    private boolean isFrist = true;
-    // 刷新控件
-    @ViewInject(R.id.ptrlv_angelCake)
-    private PullToRefreshListView mPullRefreshListView;
-    // 判断是下拉，还是上拉的标记
-    private boolean isPullDownRefresh = true;
+    @ViewInject(R.id.rv_cheese)
+    private XRecyclerView rv_cheese;
 
-    private ListView lv_goodslistview;
+    private StaggeredGridLayoutManager staggeredGridLayoutManager;
+
+    private CheeseCakeAdapter adapter;
+
+    // 判断是下拉，还是上拉的标记
+    private boolean isLoadMore;
 
 
     // 装载数据集合
     List<Commodity> dataLists;//dataListswei 为list
 
 
-    private GoodsListViewAdapter goodsListViewAdapter;
+    private CheeseCakeAdapter cheeseCakeAdapter;
 
     private int page;
 
     @Override
     protected View createSuccessView() {
-        View view = View.inflate(getActivity(), R.layout.angelcake_fragment, null);
+        View view = View.inflate(getActivity(), R.layout.poundcake_fragment, null);
         return view;
     }
 
-
     @Override
     protected LoadingPage.LoadResult load() {
-        LogUtil.e("-datalist的个数为" + dataLists.size());
+        LogUtil.e("天使蛋糕 ----datalist的个数为" + dataLists.size());
         if (dataLists.size() > 0) {
             return LoadingPage.LoadResult.success;
         } else if (dataLists.size() == 0) {
@@ -88,51 +92,49 @@ public class AngelCakeFragment extends BaseFragment {
         }
     }
 
-
     @Override
     public void initDatas(View view) {
         super.initDatas(view);
         getDateFromService();
-        initPullToRefresh();
+        initRecyclerView();
     }
 
-    /**
-     * 初始化 刷新控件
-     */
-    private void initPullToRefresh() {
+    private void initRecyclerView() {
 
-        // 设置刷新的模式
-        mPullRefreshListView.setMode(Mode.BOTH);
+        dataLists = new ArrayList<>();
+        rv_cheese.setHasFixedSize(true);
+        rv_cheese.setLoadingMoreEnabled(true);
 
-        //滑动监听
-        mPullRefreshListView.setOnRefreshListener(new OnRefreshListener2<ListView>() {
-            //下拉
+        staggeredGridLayoutManager = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
+        rv_cheese.setLayoutManager(staggeredGridLayoutManager);
+
+
+        adapter = new CheeseCakeAdapter(getActivity(), dataLists);
+        rv_cheese.setAdapter(adapter);
+
+
+        rv_cheese.setLoadingListener(new XRecyclerView.LoadingListener() {
             @Override
-            public void onPullDownToRefresh(PullToRefreshBase<ListView> refreshView) {
-                isPullDownRefresh = true;
-                refreshEvent(refreshView);
+            public void onRefresh() {
+                isLoadMore = false;
+                getDate();
             }
 
-            //上拉
             @Override
-            public void onPullUpToRefresh(PullToRefreshBase<ListView> refreshView) {
-                isPullDownRefresh = false;
-                refreshEvent(refreshView);
+            public void onLoadMore() {
+                isLoadMore = true;
+                getDate();
             }
         });
 
+        //上拉与下拉的样式
+        rv_cheese.setRefreshProgressStyle(ProgressStyle.BallBeat);
+        rv_cheese.setLoadingMoreProgressStyle(ProgressStyle.Pacman);
 
-        dataLists = new ArrayList<>();
-        //得到listview视图
-        lv_goodslistview = mPullRefreshListView.getRefreshableView();
-
-        goodsListViewAdapter = new GoodsListViewAdapter();
-        lv_goodslistview.setAdapter(goodsListViewAdapter);
-
-        //listview 条目点击事件
-        lv_goodslistview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        //条目点击事件
+        adapter.setOnItemClickListener(new CheeseCakeAdapter.OnRecyclerViewItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            public void onItemClick(View view, int position) {
                 long commodity_id = dataLists.get(position).getCommodity_id();
                 Intent intent = new Intent(getActivity(), ShoppingActivity.class);
                 intent.putExtra("id", "" + commodity_id);
@@ -145,11 +147,12 @@ public class AngelCakeFragment extends BaseFragment {
     private void getDateFromService() {
         page = 1;
         String url = Constants.SERVICEADDRESS + "commodity/commodity_commodityselect.action";
-        LogUtil.e(page + "");
+        LogUtil.e("页数" + page);
         OkHttpUtils
                 .get()
                 .addParams("commodity_type_id", String.valueOf(3))
-                .addParams("page", String.valueOf(1))
+                .addParams("page", String.valueOf(page))
+
                 .url(url)
                 .build()
                 .execute(new CommodityCallback() {
@@ -160,42 +163,27 @@ public class AngelCakeFragment extends BaseFragment {
 
                     @Override
                     public void onResponse(CommodityCallBackEntity response, int id) {
-                        LogUtil.e(response.getList().toString());
-                        LogUtil.e(String.valueOf(id));
-                        if (response.isSuccess()) {
-                            dataLists.addAll(response.getList());
-                            goodsListViewAdapter.notifyDataSetChanged();
-                            show();
-                        } else {
-                            ToastUitls.show("获取数据失败！");
+                        if (response.getList().size() > 0) {
+                            LogUtil.e("天使蛋糕的json解析数据" + response.getList().toString());
+                            if (response.isSuccess()) {
+                                dataLists.addAll(response.getList());
+                                adapter.notifyDataSetChanged();
+                                show();
+                            } else {
+                                ToastUitls.show("获取数据失败！");
+                            }
                         }
-
                     }
 
                 });
 
     }
 
-    /**
-     * 下拉与上拉的事件处理
-     *
-     * @param refreshView
-     */
-    private void refreshEvent(PullToRefreshBase<ListView> refreshView) {
-        String label = DateUtils.formatDateTime(getActivity(), System.currentTimeMillis(),
-                DateUtils.FORMAT_SHOW_TIME | DateUtils.FORMAT_SHOW_DATE | DateUtils.FORMAT_ABBREV_ALL);
-
-        // 更新刷新的时间
-        refreshView.getLoadingLayoutProxy().setLastUpdatedLabel(label);
-
-        page = page + 1;
-        //获取数据
-        getDate();
-    }
 
     private void getDate() {
+        page++;
         String url = Constants.SERVICEADDRESS + "commodity/commodity_commodityselect.action";
-        LogUtil.e(page + "");
+        LogUtil.e("刷新的页数" + page);
         OkHttpUtils
                 .get()
                 .addParams("commodity_type_id", String.valueOf(3))
@@ -211,82 +199,31 @@ public class AngelCakeFragment extends BaseFragment {
                     @Override
                     public void onResponse(CommodityCallBackEntity response, int id) {
 
-                        if (response.getList().size() == 0) {
-                            ToastUitls.show("没有更多的蛋糕了！");
-                            show();
-                            // 通知刷新已完成
-                            mPullRefreshListView.onRefreshComplete();
-                        } else {
-                            if (isPullDownRefresh) {
-                                dataLists.addAll(0, response.getList());
-                            } else {//上拉
+                        if (isLoadMore) {//上拉
+                            if (response.getList().size() == 0) {
+                                ToastUitls.show("没有更多的蛋糕了！");
+                                // 通知刷新已完成
+                                rv_cheese.loadMoreComplete();
+                            } else {
                                 dataLists.addAll(response.getList());
+                                rv_cheese.loadMoreComplete();
                             }
-                            show();
-                            goodsListViewAdapter.notifyDataSetChanged();
-                            // 通知刷新已完成
-                            mPullRefreshListView.onRefreshComplete();
+                        } else {//下拉
+                            if (response.getList().size() == 0) {
+                                ToastUitls.show("没有更多的蛋糕了！");
+                                show();
+                                // 通知刷新已完成
+                                rv_cheese.refreshComplete();
+                            } else {
+                                dataLists.addAll(0, response.getList());
+                                rv_cheese.refreshComplete();
+                            }
                         }
+                        show();
+                        adapter.notifyDataSetChanged();
 
                     }
                 });
-
-    }
-
-
-    /**
-     * 商品列表的适配器
-     *
-     * @author 12111
-     */
-    class GoodsListViewAdapter extends BaseAdapter {
-
-        @Override
-        public int getCount() {
-            return dataLists.size();
-        }
-
-        @Override
-        public Object getItem(int position) {
-            return dataLists.get(position);
-        }
-
-        @Override
-        public long getItemId(int position) {
-            return position;
-        }
-
-        @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
-            ViewHolder viewHolder;
-            if (convertView == null) {
-                viewHolder = new ViewHolder();
-                convertView = View.inflate(getActivity(), R.layout.commodity_list_item, null);
-                x.view().inject(viewHolder, convertView);
-                convertView.setTag(viewHolder);
-            } else {
-                viewHolder = (ViewHolder) convertView.getTag();
-            }
-            Commodity map2 = dataLists.get(position);
-            ImageOptions options = new ImageOptions.Builder().setLoadingDrawableId(R.drawable.ic_launcher)
-                    .setFailureDrawableId(R.drawable.ic_launcher).setUseMemCache(true).build();
-            x.image().bind(viewHolder.imageView, Constants.SERVICEADDRESS + map2.getDescription_pcture(), options);
-            viewHolder.title.setText(map2.getCommodity_name());
-            viewHolder.Price.setText("$ " + String.valueOf(map2.getCommodity_price()));
-            viewHolder.size.setText(String.valueOf(map2.getCommodity_size()) + "寸");
-            return convertView;
-        }
-
-        class ViewHolder {
-            @ViewInject(R.id.iv_pic)
-            private ImageView imageView;
-            @ViewInject(R.id.tv_title)
-            private TextView title;
-            @ViewInject(R.id.tv_price)
-            private TextView Price;
-            @ViewInject(R.id.tv_size)
-            private TextView size;
-        }
 
     }
 
