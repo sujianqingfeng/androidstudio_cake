@@ -22,7 +22,8 @@
   - .....
   
 # 截图
-
+主页
+![主页](https://github.com/sujianqingfeng/androidstudio_cake/blob/master/Screenshot/%E4%B8%BB%E9%A1%B5.jpg "主页")
 
 
 # 项目参与人员
